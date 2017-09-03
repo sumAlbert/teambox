@@ -1,24 +1,40 @@
-@charset "utf8";
+@charset "utf-8";
 
+//less设置
 .pos(@pos){position:@pos;}
 .flex-row(){display:flex;display:-webkit-flex;flex-direction:row;-webkit-flex-direction:row}
 .flex(@scale){flex:@scale;-webkit-flex:@scale;}
-.flex-jus(@kind){justify-content:@kind;}
-.flex-align(@kind){align-items:@kind}
+.flex-justify-content(@kind){justify-content:@kind;}
+.flex-align-items(@kind){align-items:@kind}
 
+//css全局属性
 html,body{.main;}
-.main{.pos(relative);margin:0;padding:0;height:100%;width:100%;font-size:16px;.flex-align(center)}
+.main{.pos(relative);margin:0;padding:0;height:100%;width:100%;font-size:16px;.flex-align-items(center);background: #ededed;}
+a{text-decoration:none;}
+.pic{height: 100%;width: 100%;}
 
-/*椤堕儴瀵艰埅鏍忕殑鏍峰紡*/
-.header{.pos(absolute);.flex-row;.flex-align(center);height:3.5em;width:100%;box-shadow:0 .1em .4em .02em hsla(0,0%,60%,.6);}
-
-.logo{.pos(relative);height: 3.5em;width: 11.25em;margin:0 .06em 0 1em;background: url(../images/logo1.png) 0% 60% no-repeat;background-size: 100% 71%;}
-
-.page-name{font-size:1.01em;font-weight:bold;color: #666;}
-
+//标题栏
+.header{.pos(absolute);.flex-row;.flex-align-items(center);height:3.5em;width:100%;box-shadow:0 .1em .4em .02em hsla(0,0%,60%,.6);background: white;}
+//标题栏左部的logo和页面名称
+.logo{.pos(relative);height: 3.5em;width: 11.25em;margin:0 .06em 0 1em;background: url(../images/header/logo1.png) 0% 60% no-repeat;background-size: 100% 71%;}
+.page-name{font-size:1.01em;font-weight:bold;color:#666;}
 .flex-space{.flex(1);}
 
-.person-menu{.pos(relative);margin:0 1em 0;}
+//标题栏右部的个人信息菜单
+.person-menu{.pos(relative);margin:0 2em 0;}
+.person-menu-hidden{.pos(absolute);top:3.5em;overflow:hidden;border-radius: .2em;box-shadow: .1em .1em .1em .05em hsla(0,0%,70%,.3);overflow: hidden;}
+//标题栏右边的个人菜单的每一行
+.person-info{.pos(relative);.flex-row();.flex-align-items(center);width:10em;line-height:2em;}
+.person-hidden-info{.pos(relative);.flex-row();.flex-align-items(center);width:10em;line-height:2em;margin: 0 0 .05em;background: white;}
+.person-hidden-info:hover{background:hsla(0,0%,100%,.8);}
+//标题栏右边个人菜单每一行的icon
+.person-info-logo{width: 2.5em; height: 2.5em; margin: 0 1em 0;border-radius: 50% 50%}
+.person-hidden-info-logo{width: 2.5em; height: 2.5em;margin:0 1em 0;}
+.person-hidden-info:nth-child(1)> .person-hidden-info-logo{background: url(../images/header/setting.png) center center no-repeat; background-size: 60% 60%;}
+.person-hidden-info:nth-child(2)> .person-hidden-info-logo{background: url(../images/header/exit.png) center center no-repeat; background-size: 60% 60%;}
+//标题栏右边个人菜单每一行的name
+.person-info-name{color:#666;overflow:hidden;word-wrap:break-word;width:5.5em;white-space:nowrap;}
+.person-hidden-info-name{color: #666;}
 
-/*椤甸潰姝ｆ枃閮ㄥ垎*/
-.content{padding:3.5em 0 0;}
+//页面的主体部分
+.content{padding:3.5em 0 1em;}

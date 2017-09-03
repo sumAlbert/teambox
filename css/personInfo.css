@@ -1,4 +1,4 @@
-@charset "utf8";
+@charset "utf-8";
 html,
 body {
   position: relative;
@@ -8,6 +8,7 @@ body {
   width: 100%;
   font-size: 16px;
   align-items: center;
+  background: #ededed;
 }
 .main {
   position: relative;
@@ -17,8 +18,15 @@ body {
   width: 100%;
   font-size: 16px;
   align-items: center;
+  background: #ededed;
 }
-/*顶部导航栏的样式*/
+a {
+  text-decoration: none;
+}
+.pic {
+  height: 100%;
+  width: 100%;
+}
 .header {
   position: absolute;
   display: flex;
@@ -29,13 +37,14 @@ body {
   height: 3.5em;
   width: 100%;
   box-shadow: 0 0.1em 0.4em 0.02em rgba(153, 153, 153, 0.6);
+  background: white;
 }
 .logo {
   position: relative;
   height: 3.5em;
   width: 11.25em;
   margin: 0 .06em 0 1em;
-  background: url(../images/logo1.png) 0% 60% no-repeat;
+  background: url(../images/header/logo1.png) 0% 60% no-repeat;
   background-size: 100% 71%;
 }
 .page-name {
@@ -49,9 +58,69 @@ body {
 }
 .person-menu {
   position: relative;
+  margin: 0 2em 0;
+}
+.person-menu-hidden {
+  position: absolute;
+  top: 3.5em;
+  border-radius: .2em;
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
+  overflow: hidden;
+}
+.person-info {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  width: 10em;
+  line-height: 2em;
+}
+.person-hidden-info {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  width: 10em;
+  line-height: 2em;
+  margin: 0 0 .05em;
+  background: white;
+}
+.person-hidden-info:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+.person-info-logo {
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 1em 0;
+  border-radius: 50% 50%;
+}
+.person-hidden-info-logo {
+  width: 2.5em;
+  height: 2.5em;
   margin: 0 1em 0;
 }
-/*页面正文部分*/
+.person-hidden-info:nth-child(1) > .person-hidden-info-logo {
+  background: url(../images/header/setting.png) center center no-repeat;
+  background-size: 60% 60%;
+}
+.person-hidden-info:nth-child(2) > .person-hidden-info-logo {
+  background: url(../images/header/exit.png) center center no-repeat;
+  background-size: 60% 60%;
+}
+.person-info-name {
+  color: #666;
+  overflow: hidden;
+  word-wrap: break-word;
+  width: 5.5em;
+  white-space: nowrap;
+}
+.person-hidden-info-name {
+  color: #666;
+}
 .content {
-  padding: 3.5em 0 0;
+  padding: 3.5em 0 1em;
 }
