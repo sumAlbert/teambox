@@ -242,3 +242,16 @@ a {
   color: #222;
 }
 /*part one basic infomation*/
+.content-part-item {
+  height: 4em;
+  width: 100%;
+  line-height: 4em;
+  vertical-align: middle;
+}
+.content-part-item-name {
+  width: 30%;
+  height: 100%;
+  padding: 0 0 0 1.2em;
+  vertical-align: middle;
+  color: #777;
+}
