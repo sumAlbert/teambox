@@ -1,4 +1,6 @@
 @charset "utf-8";
+/*less setting*/
+/*css global settings*/
 html,
 body {
   position: relative;
@@ -27,6 +29,7 @@ a {
   height: 100%;
   width: 100%;
 }
+/*title bar*/
 .header {
   position: absolute;
   display: flex;
@@ -39,6 +42,7 @@ a {
   box-shadow: 0 0.1em 0.4em 0.02em rgba(153, 153, 153, 0.6);
   background: white;
 }
+/*the left part of title bar(logo and page name)*/
 .logo {
   position: relative;
   height: 3.5em;
@@ -56,6 +60,7 @@ a {
   flex: 1;
   -webkit-flex: 1;
 }
+/*thie right part of title bar(person info menu)*/
 .person-menu {
   position: relative;
   margin: 0 2em 0;
@@ -67,6 +72,7 @@ a {
   box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
   overflow: hidden;
 }
+/*every line of person info menu*/
 .person-info {
   position: relative;
   display: flex;
@@ -92,6 +98,7 @@ a {
 .person-hidden-info:hover {
   background: rgba(255, 255, 255, 0.8);
 }
+/*every line icon of person info menu*/
 .person-info-logo {
   width: 2.5em;
   height: 2.5em;
@@ -111,6 +118,7 @@ a {
   background: url(../images/header/exit.png) center center no-repeat;
   background-size: 60% 60%;
 }
+/*every line name of person info menu*/
 .person-info-name {
   color: #666;
   overflow: hidden;
@@ -121,6 +129,60 @@ a {
 .person-hidden-info-name {
   color: #666;
 }
+/*the main body of the web*/
 .content {
-  padding: 3.5em 0 1em;
+  padding: 4.5em 0 1em;
+  max-width: 55em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*the guidance part of the web */
+.content-catalog {
+  position: relative;
+  width: 35%;
+  font-size: 16px;
+}
+/*the person info in the guidance part of the web */
+.content-info {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 7em;
+  background: white;
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
+}
+.content-avatar {
+  min-height: 4em;
+  min-width: 4em;
+  height: 4em;
+  width: 4em;
+  margin: 0 1.5em;
+}
+.content-username {
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+/*the main body in the guidance part of the web */
+.content-items {
+  position: relative;
+  width: 100%;
+  margin: 3em 0 0 0;
+}
+.content-item {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  line-height: 5em;
+  width: 100%;
+  background: white;
+  margin: 0 0 .05em 0;
 }
