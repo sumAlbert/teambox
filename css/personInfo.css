@@ -1,0 +1,57 @@
+@charset "utf8";
+html,
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  align-items: center;
+}
+.main {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  align-items: center;
+}
+/*顶部导航栏的样式*/
+.header {
+  position: absolute;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  height: 3.5em;
+  width: 100%;
+  box-shadow: 0 0.1em 0.4em 0.02em rgba(153, 153, 153, 0.6);
+}
+.logo {
+  position: relative;
+  height: 3.5em;
+  width: 11.25em;
+  margin: 0 .06em 0 1em;
+  background: url(../images/logo1.png) 0% 60% no-repeat;
+  background-size: 100% 71%;
+}
+.page-name {
+  font-size: 1.01em;
+  font-weight: bold;
+  color: #666;
+}
+.flex-space {
+  flex: 1;
+  -webkit-flex: 1;
+}
+.person-menu {
+  position: relative;
+  margin: 0 1em 0;
+}
+/*页面正文部分*/
+.content {
+  padding: 3.5em 0 0;
+}
