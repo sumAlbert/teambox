@@ -142,6 +142,7 @@ a {
   position: relative;
   width: 35%;
   font-size: 16px;
+  display: inline-block;
 }
 /*the person info in the guidance part of the web */
 .content-info {
@@ -162,6 +163,7 @@ a {
   height: 4em;
   width: 4em;
   margin: 0 1.5em;
+  border-radius: 50% 50%;
 }
 .content-username {
   overflow: hidden;
@@ -173,7 +175,8 @@ a {
 .content-items {
   position: relative;
   width: 100%;
-  margin: 3em 0 0 0;
+  margin: 1em 0 0 0;
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
 }
 .content-item {
   position: relative;
@@ -181,8 +184,61 @@ a {
   display: -webkit-flex;
   flex-direction: row;
   -webkit-flex-direction: row;
-  line-height: 5em;
+  align-items: center;
+  justify-content: center;
+  line-height: 3.5em;
   width: 100%;
   background: white;
   margin: 0 0 .05em 0;
 }
+/*the substance in every line of guidance part*/
+.content-item-icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 .5em 0 0;
+}
+.content-item-name {
+  font-size: 1.25m;
+  color: #666;
+  margin: 0 4em 0 0;
+}
+.content-item:nth-child(1) > .content-item-icon {
+  background: url(../images/personInfo/personInfo.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.content-item:nth-child(2) > .content-item-icon {
+  background: url(../images/personInfo/accountPw.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.content-item:nth-child(3) > .content-item-icon {
+  background: url(../images/personInfo/safeSetting.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.content-item:nth-child(4) > .content-item-icon {
+  background: url(../images/personInfo/teamManage.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.content-item:nth-child(5) > .content-item-icon {
+  background: url(../images/personInfo/myCollection.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+/*now main page of personInfo*/
+.content-main {
+  display: inline-block;
+  width: 63%;
+  float: right;
+  position: relative;
+}
+.content-part {
+  display: block;
+  padding: 1em 0 1em 1.7em;
+  background: white;
+  margin: 0 0 1em 0;
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
+}
+.content-part-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #222;
+}
+/*part one basic infomation*/
