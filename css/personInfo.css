@@ -263,7 +263,7 @@ input[type="file"] {
   display: inline-block;
   width: 15%;
   height: 100%;
-  padding: 0 0 0 1.2em;
+  padding: 0 1.3em 0 0;
   vertical-align: middle;
   color: #777;
 }
@@ -438,4 +438,76 @@ input[type="file"] {
   font-size: 1.1em;
   color: #666;
   margin: 0 0 0 .2em;
+}
+/*personSpecialty*/
+.content-part-item-specialty {
+  line-height: 12em;
+  height: 12em;
+  position: relative;
+}
+.content-part-item-specialty > .content-part-item-name {
+  vertical-align: top;
+  line-height: 1em;
+  margin: 1.2em 0 0 0;
+  height: 1em;
+}
+.content-part-item-specialty > .content-part-item-substance {
+  line-height: 10em;
+  height: 10em;
+  text-align: center;
+}
+#feature {
+  width: 95%;
+  vertical-align: middle;
+  height: 90%;
+  outline: none;
+  border: none;
+  margin: .5em auto;
+  resize: none;
+  font-size: 1.1em;
+}
+#feature::-webkit-scrollbar {
+  display: none;
+}
+/*personExperience*/
+.content-part-item-experience {
+  line-height: 12em;
+  height: 12em;
+  position: relative;
+}
+.content-part-item-experience > .content-part-item-name {
+  vertical-align: top;
+  line-height: 1em;
+  margin: 1.2em 0 0 0;
+  height: 1em;
+}
+.content-part-item-experience > .content-part-item-substance {
+  line-height: 10em;
+  height: 10em;
+  text-align: center;
+}
+#experience {
+  width: 95%;
+  vertical-align: middle;
+  height: 90%;
+  outline: none;
+  border: none;
+  margin: .5em auto;
+  resize: none;
+  font-size: 1.1em;
+}
+#feature::-webkit-scrollbar {
+  display: none;
+}
+/*submit button*/
+.content-part-item-submit {
+  margin-top: 1.2em;
+}
+.content-part-item-submit-button {
+  color: white;
+  border: #3da8f5 0.01em solid;
+  background: #3da8f5;
+  border-radius: .3em;
+  text-align: center;
+  cursor: pointer;
 }
