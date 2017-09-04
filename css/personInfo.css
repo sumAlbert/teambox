@@ -34,7 +34,7 @@ input[type="file"] {
 }
 /*title bar*/
 .header {
-  position: absolute;
+  position: fixed;
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -44,6 +44,7 @@ input[type="file"] {
   width: 100%;
   box-shadow: 0 0.1em 0.4em 0.02em rgba(153, 153, 153, 0.6);
   background: white;
+  z-index: 10;
 }
 /*the left part of title bar(logo and page name)*/
 .logo {
@@ -74,6 +75,8 @@ input[type="file"] {
   border-radius: .2em;
   box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
   overflow: hidden;
+  display: none;
+  height: 0;
 }
 /*every line of person info menu*/
 .person-info {
@@ -84,7 +87,7 @@ input[type="file"] {
   -webkit-flex-direction: row;
   align-items: center;
   width: 10em;
-  line-height: 2em;
+  line-height: 3.5em;
 }
 .person-hidden-info {
   position: relative;
@@ -201,9 +204,11 @@ input[type="file"] {
   margin: 0 .5em 0 0;
 }
 .content-item-name {
-  font-size: 1.25m;
   color: #666;
   margin: 0 4em 0 0;
+}
+.content-item:nth-child(1) > .content-item-name {
+  font-size: 1.25em;
 }
 .content-item:hover {
   background: rgba(255, 255, 255, 0.8);
@@ -394,6 +399,8 @@ input[type="file"] {
   background: #999 center center repeat;
   background-size: 100% 100%;
   border-radius: .2em;
+  display: none;
+  height: 0em;
 }
 .data-list-item {
   line-height: 2.4em;
@@ -431,6 +438,46 @@ input[type="file"] {
 }
 /*campus line*/
 .input-campus {
+  outline: none;
+  border: none;
+  position: relative;
+  width: 95%;
+  font-size: 1.1em;
+  color: #666;
+  margin: 0 0 0 .2em;
+}
+/*tel line*/
+.input-tel {
+  outline: none;
+  border: none;
+  position: relative;
+  width: 95%;
+  font-size: 1.1em;
+  color: #666;
+  margin: 0 0 0 .2em;
+}
+/*qq line*/
+.input-qq {
+  outline: none;
+  border: none;
+  position: relative;
+  width: 95%;
+  font-size: 1.1em;
+  color: #666;
+  margin: 0 0 0 .2em;
+}
+/*email line*/
+.input-email {
+  outline: none;
+  border: none;
+  position: relative;
+  width: 95%;
+  font-size: 1.1em;
+  color: #666;
+  margin: 0 0 0 .2em;
+}
+/*wechat line*/
+.input-wechat {
   outline: none;
   border: none;
   position: relative;
