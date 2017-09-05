@@ -21,7 +21,7 @@ $(document).ready(function(){
 		{	
 			hover_lock=true;
 			$(".person-menu-hidden").fadeIn(50);
-			$(".person-menu-hidden").animate({height:'5em'},100,function(){
+			$(".person-menu-hidden").animate({height:'7em'},100,function(){
 				hover_lock=false;
 			});
 		}
@@ -29,6 +29,19 @@ $(document).ready(function(){
 		$(".person-menu-hidden").animate({height:'0em'},200);
 		$(".person-menu-hidden").fadeOut(100);
 	});
+	/*选中后的颜色*/
+	$("input[type='text']").focus(function () {
+		$(this).parent().css({"border": "#868686 1px solid"});
+    });
+    $("input[type='text']").blur(function () {
+        $(this).parent().css({"border": "#c9c9c9 1px solid"});
+    });
+    $("textarea").focus(function () {
+        $(this).parent().css({"border": "#868686 1px solid"});
+    });
+    $("textarea").blur(function () {
+        $(this).parent().css({"border": "#c9c9c9 1px solid"});
+    });
 	/*入学日期*/
 	$(".data-box").hover(function(){
 		if(!hover_lock){
@@ -68,22 +81,22 @@ $(document).ready(function(){
 	},function(){
 		$(this).children(".data-list").animate({height:'0em'},100);
 		$(this).children(".data-list").fadeOut(0);		
-	})
+	});
 	/*选择年份*/
 	$(".data-list-item-year").click(function(){
 		$(".data-show-info-year").html($(this).html());
 		enter_year=$(this).html();
-	})
+	});
 	/*选择月份*/
 	$(".data-list-item-month").click(function(){
 		$(".data-show-info-month").html($(this).html());
 		enter_month=$(this).html();
-	})
+	});
 	/*选择日期*/
 	$(".data-list-item-day").click(function(){
 		$(".data-show-info-day").html($(this).html());
 		enter_day=$(this).html();
-	})
+	});
 	/*表单提交*/
 	$(".content-part-item-submit-button").click(function(){
 		name=$(".input-name").val();
@@ -94,7 +107,7 @@ $(document).ready(function(){
 		qq=$(".input-qq").val();
 		wechat=$(".input-wechat").val();
 		email=$(".input-email").val();
-		specialty=$("#experience").val();
+		specialty=$("#feature").val();
 		experience=$("#experience").val();
 		$.ajax({
 			type:"post",
