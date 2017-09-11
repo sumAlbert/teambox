@@ -28,7 +28,7 @@ class TeamModel extends Model{
 	}
 	function setTask($teamId,$date,$starttime,$endtime,$taskname,$task,$importance){
 		$columns=array("teamId","date","starttime","endtime","taskname","task","importance");
-		$values=array("teamId","'date'","'")
+		$values=array("teamId","'date'","'");
 		$this->insertItme("task", $columns, $values);
 	}
 }

@@ -10,7 +10,10 @@ class UserModel extends Model{
 		$this->selectItem(self::table, "id", $id);
 		return $this->_result[0];
 	}
-	
+	/*获取（一位）用户信息*/
+	function getUserInfo($id){
+		return $this->selectUser($id);
+	}
 	/*用户注册*/
 	function signup($email,$password){
 		$this->selectItem(self::table, "email", $email);

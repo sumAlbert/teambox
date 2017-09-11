@@ -8,6 +8,9 @@ class Controller{
 		$this->_controller=$controller;
 		$this->_action=$action;
 		$this->_view=new View();
+		if(!method_exists($this,$action)){
+			echo "{'state':'Wrong Action'}";
+		}else $this->$action();
 	}
 	
 	function set($name,$value){

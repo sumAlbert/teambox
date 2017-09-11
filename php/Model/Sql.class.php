@@ -5,7 +5,7 @@ class Sql {
 	protected $_result;//用于获取对sql进行select操作得到的结果
 	
 	/* 连接数据库  */
-	function connect($hostName,$dbUser,$dbPassWord,$dbName){
+	function connect($hostName=HOSTNAME,$dbUser=DBUSER,$dbPassWord=DBPASSWORD,$dbName=DBNAME){
 		$this->_dbLink=new mysqli($hostName,$dbUser,$dbPassWord,$dbName);
 		if(mysqli_connect_errno())
 			return 0;//连接失败
