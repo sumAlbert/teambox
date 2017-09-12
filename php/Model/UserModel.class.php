@@ -56,7 +56,7 @@ class UserModel extends Model{
 		}
 		$result=array();//存储最终结果
 		$result['user']=array();
-		$result['team']=array();
+		$result['team']=array();  
 		
 		for($i=0;$i<count($favor_user);$i++){
 			$this->selectItem("user", 'id', $favor_user[$i]);

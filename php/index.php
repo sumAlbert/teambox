@@ -10,7 +10,6 @@ $loader=new Loader();
 $class="Test"; //$_POST['class'];
 $action="testMetho";//$_POST['action'];
 
-echo "1\n";
 $controllerName=$class."Controller";
 $controller=new $controllerName($class,$action);
 
