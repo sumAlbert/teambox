@@ -10,7 +10,7 @@ class Controller{
 		$this->_view=new View();
 		if(!method_exists($this,$action)){
 			$this->set('state', 'Wrong Action');
-			exit(1);
+			exit(0);
 		}else $this->$action();
 	}
 	function postCheck($paraNames){
@@ -18,7 +18,7 @@ class Controller{
 		for($i=0;$i<$len;$i++){
 			if(!isset($_POST[$paraNames[$i]])){
 				$this->set('state', 'Missing Argument');
-				exit(1);
+				exit(0);
 			}
 		}
 	}

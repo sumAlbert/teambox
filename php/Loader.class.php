@@ -21,7 +21,10 @@ class Loader{
 			require $controller;
 			require $model;
 		}else{
-			echo "{'state':'Wrong Class'}";
+			//echo "{'state':'Wrong Class'}";
+			$result=array();
+			$result['state']='Wrong Class';
+			echo json_encode($result);
 			exit(0);
 		}
 	}
