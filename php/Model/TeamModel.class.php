@@ -5,6 +5,7 @@ class TeamModel extends Model{
 		$this->selectItem(self::table,"id", $id);
 		return $this->_result;
 	}
+	/*通过teamid获取成员信息*/
 	function members($teamId){
 		$columns=array("secondid","secondtype");
 		$values=array("$teamId","'team'");
@@ -22,10 +23,12 @@ class TeamModel extends Model{
 		}
 		return $memberInfo;
 	}
+	/*通过teamid获取任务信息*/
 	function getTask($teamId){
 		$this->selectItem("task","teamid", $teamId);
 		return $this->_result;
 	}
+	/*为team建立新的task*/
 	function setTask($teamId,$date,$starttime,$endtime,$taskname,$task,$importance){
 		$columns=array("teamId","date","starttime","endtime","taskname","task","importance");
 		$values=array("teamId","'date'","'");
