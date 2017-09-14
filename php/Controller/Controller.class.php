@@ -26,7 +26,7 @@ class Controller{
 		$this->_view->set($name,$value);
 	}
 	function success(){
-		$this->set('state', 'success');
+		$this->set('state', 'Success');
 	}
 	function __destruct(){
 		$this->_view->send();

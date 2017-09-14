@@ -15,33 +15,44 @@ class UserModel extends Model{
 		return $this->selectUser($id);
 	}
 	/*用户注册*/
-	function signup($email,$password){
+	function signUp($email,$password){
 		$this->selectItem(self::table, "email", $email);
 		if(!empty($this->_result)){
-			return "邮箱已被注册";
+			return 0;
 		}
 		else{
 			$columns=array("email","password");
 			$values=array("'$email'","'$password'");
 			$this->insertItme(self::table,$columns,$values);
+			
 			return 1; 
 		}
 	}
 	/*用户登录*/
-	function login($email,$password){
+	function logIn($email,$password){
 		$this->selectItem(self::table, "email", $email);
+		if(empty($this->_result)){
+			return 0;
+		}
+		else if($password!=$this->_result['password']){
+			return 0;
+		}
+		$_SESSION['user_id']=$this->_result['id'];
+		$_SESSION['user_email']=$email;
+		$_SESSION['user_name']=$this->_result['username'];
+		return 1;
 		
 	}
 	/*获得用户ID*/
-	function getId(){
-		$email=$_SESSION['user_email'];
+	function getId($email){
+		//$email=$_SESSION['user_email'];
 		$this->selectItem(self::table, "email", $email);
 		return $this->_result['id'];
 	}
 	
 	/*收藏夹*/
-	function favorite(){
-		$id=$this->getId();//获取用户id
+	function favorite($id){
+		//$id=$this->getId();//获取用户id
 		
 		$this->selectItem('relation', 'firstid', "$id");//从关系表中寻找用户收藏
 		$result=$this->_result;
@@ -69,7 +80,13 @@ class UserModel extends Model{
 		return $result;
 	}
 	
-	/**/
+	/*修改用户信息*/
+	function updateInfo($id,$info){
+		$columns=array_keys($info);
+		$values=array_values($info);
+		return $this->updateItme('user', $columns, $values, 'id', $id);
+
+	}
 }
 
 ?>

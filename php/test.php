@@ -1,4 +1,5 @@
 <?php
-echo isset($_POST['b']).'?'.isset($_POST['c']).'?';
-if(!isset($_POST['b'])) echo 'no'; else echo'yes';
+$a=array('a'=>'a','b'=>'c','c'=>'b');
+echo json_encode(array_keys($a)).'</br>';
+echo json_encode(array_values($a));
 ?>
