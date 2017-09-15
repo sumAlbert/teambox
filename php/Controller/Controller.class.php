@@ -5,6 +5,7 @@ class Controller{
 	protected $_view;
 	
 	function __construct($controller,$action){
+		session_start();
 		$this->_controller=$controller;
 		$this->_action=$action;
 		$this->_view=new View();

@@ -71,10 +71,15 @@ class UserController extends Controller{
 	 *  'password' md5密码
 	 *  
 	 *  返回值:
-	 *  'state': 'Success'(登录成功) / 'Fail'(错误用户名或密码)
+	 *  'state': 'Success'(登录成功) / 'Fail'(错误用户名或密码) / 'Logged'(已经登录)
 	 *  
 	 */
 	function logIn(){
+		if(isset($_SESSION['user_id'])){
+			//已经登录
+			$this->set('state', 'Logged');
+			exit(0);
+		}
 		$this->postCheck(array('email','password'));
 		$user=new UserModel();
 		$result=$user->logIn($email, $password);
@@ -85,6 +90,40 @@ class UserController extends Controller{
 		else{
 			$this->success();
 		}
+	}
+	/*  用户注销
+	 *  Post参数:无
+	 *  
+	 *  返回值:
+	 *  'state':'Success'(注销成功) / 'Fail'(未登录)
+	 */
+	function logOut(){
+		if(!isset($_SESSION['user_id'])){
+			//未登录
+			$this->set('state', 'Fail');
+			exit(0);
+		}
+		unset($_SESSION['user_id']);
+		unset($_SESSION['user_email']);
+		unset($_SESSION['user_name']);
+		$this->success();
+	}
+	/*  获取已登录用户的信息
+	 *  Post参数:无
+	 *  
+	 *  返回值:
+	 *  'state': 'Success'(查询成功) / 'Fail'(未登录)
+	 *  'result': {'id':'','email':'','username':''}
+	 */
+	function logged(){
+		if(!isset($_SESSION['user_id'])){
+			//未登录
+			$this->set('state', 'Fail');
+			exit(0);
+		}
+		$result=array('id'=>$_SESSION['user_id'],'email'=>$_SESSION['user_email'],'username'=>$_SESSION['user_name']);
+		$this->set('result', $result);
+		$this->success();
 	}
 	/*  修改用户信息
 	 * 
@@ -123,6 +162,13 @@ class UserController extends Controller{
 		$_SESSION['user_email']=$info['email'];
 		$_SESSION['user_name']=$info['username'];
 	
+	}
+	/* 更改可公开消息
+	 * 
+	 * Post参数:  
+	 */
+	function visibleChange(){
+		
 	}
 }
 ?>

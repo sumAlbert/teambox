@@ -42,7 +42,7 @@ class UserModel extends Model{
 		$_SESSION['user_name']=$this->_result['username'];
 		return 1;
 		
-	}
+	}	
 	/*获得用户ID*/
 	function getId($email){
 		//$email=$_SESSION['user_email'];
