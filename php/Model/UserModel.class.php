@@ -79,14 +79,57 @@ class UserModel extends Model{
 		}
 		return $result;
 	}
-	
+	/* 翻转收藏  */
+	function favoriteChange($userid,$type,$secondid){
+		//检测secondid
+		$this->selectItem($type,'id',$secondid);
+		$result=$this->_result;
+		if(empty($this->_result)) return 0;//secondid不存在
+		
+		
+		$this->selectItem('relation','firstid',$userid);
+		$result=$this->_result;
+		if(empty($result)) {
+			//添加 
+			$this->insertItme('relation',array("firstid","secondid","secondtype","relation"),
+					array($userid,$secondid,"'$type'","'favorite'"));
+			return 1;
+		}
+		$count=count($result);
+		$flag=0;
+		for($i=0;$i<$count;$i++){
+			if($result[$i]['secondtype']==$type && $result[$i]['relation']='favorite'){
+				$flag=1;
+				break;
+			}
+		}
+		if($flag){
+			//删除
+			$this->deleteItems('relation',array("firstid","secondid","secondtype","relation"),
+					array($userid,$secondid,"'$type'","'favorite'"));
+		}else{
+			$this->insertItme('relation',array("firstid","secondid","secondtype","relation"),
+					array($userid,$secondid,"'$type'","'favorite'"));
+		}
+		
+	}
 	/*修改用户信息*/
 	function updateInfo($id,$info){
 		$columns=array_keys($info);
 		$values=array_values($info);
 		return $this->updateItme('user', $columns, $values, 'id', $id);
-
 	}
+	
+	
+	/*获取用户群并加权*/
+	function findperson(){
+		
+	}
+	/*为关键词加权*/
+	private function setValue(){
+		
+	}
+	
 }
 
 ?>

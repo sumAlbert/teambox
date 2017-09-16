@@ -1,6 +1,6 @@
 <?php
 class UserController extends Controller{
-	/*获取（一位）用户具体信息
+	/*获取当前用户具体信息
 	 * 
 	 * Post参数: 无
 	 * 
@@ -165,10 +165,55 @@ class UserController extends Controller{
 	}
 	/* 更改可公开消息
 	 * 
-	 * Post参数:  
+	 * Post参数: 
+	 *  'name_v' 姓名公开
+	 *  'college_v'学院
+	 *  'phone_v'电话
+	 *  'qq_v' qq
+	 *  'wechat_v'微信
+	 *  'state': 'hot'/'warm'
+	 *  'visible'
+	 *  'protection'
+	 * 
+	 * 返回值:
+	 *   'state':'Success'/'Fail'
 	 */
 	function visibleChange(){
-		
+		$keys=array('name_v','college_v','phone_v','qq_v','wechat_v','state','visible','protection');
+		$this->postCheck($keys);
+		$post=array();
+		for($i=0;$i<count($keys);$i++){
+			$post[$keys[$i]]=$_POST[$keys[$i]];
+		}
+		$user=new UserModel();
+		$id=$_SESSION['user_id'];
+		if(!$user->updateInfo($id,$post)){
+			//更新失败
+			$this->set('state','Fail');
+			exit(0);
+		}
+		$this->success();
+	}
+	/* 设置收藏
+	 * 
+	 * Post参数:
+	 *  'type':'team'/'user'
+	 *  'id'
+	 *  
+	 * 返回值:
+	 *  'state':'Fail'/'Success'
+	 */
+	function favoriteChange(){
+		$this->postCheck(array('type','id'));
+		$user=new UserModel();
+		$userid=$_SESSION['user_id'];
+		$type=$_POST['type'];
+		$secondid=$_POST['id'];
+		if(!$user->favoriteChange($userid, $type, $secondid)){
+			$this->set('state', 'Fail');
+			exit(0);
+		}
+		$this->success();
 	}
 }
 ?>

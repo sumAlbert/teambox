@@ -128,6 +128,21 @@ class Sql {
 		if($res == false) return 0;//查询失败
 		else return 1;
 	}
+	/*删除内容2*/
+	function deleteItems($tableName,$columns,$values){
+		if($this->_dbLink==NULL) return 0;
+		$count=count($columns);
+		$delete="delete from `$tableName` where ";
+		for($i=0;$i<$count;$i++){
+			$delete=$delete."`$columns[$i]` = $values";
+			if($count >1 && $i<$count-1){
+				$delete=$delete.' and ';
+			}
+		}
+		$res=$this->_dbLink->query($delete);
+		if($res == false) return 0;
+		else return 1;
+	}
 	
 }
 
