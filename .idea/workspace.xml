@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce5f9955-dad5-4e1d-9875-0cf383568b7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/personAccountSafe.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/personAccountSafe.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less/personAccountSafe.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/personAccountSafe.css" afterPath="$PROJECT_DIR$/css/personAccountSafe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/personAccountSafe.js" afterPath="$PROJECT_DIR$/js/personAccountSafe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/personAccountSafe.less" afterPath="$PROJECT_DIR$/less/personAccountSafe.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personAccountSafe.html" afterPath="$PROJECT_DIR$/personAccountSafe.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,28 +19,55 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="personAccountSafe.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="92" column="62" lean-forward="false" selection-start-line="92" selection-start-column="62" selection-end-line="92" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="personAccountSafe.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.46840826">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file leaf-file-name="personAccountSafe.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="245">
+                  <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+                  <folding>
+                    <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="personAccountSafe.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="552">
+                  <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+          <file leaf-file-name="personAccountSafe.less" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="536">
+                  <caret line="92" column="96" lean-forward="false" selection-start-line="92" selection-start-column="96" selection-end-line="92" selection-end-column="96" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="安全设置.png" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/design/png/安全设置.png">
+              <provider selected="true" editor-type-id="images">
+                <state />
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -54,6 +81,7 @@
       <find>content-part-item</find>
       <find>content-part-item-</find>
       <find>back</find>
+      <find>overflow</find>
     </findStrings>
     <replaceStrings>
       <replace>90%</replace>
@@ -138,6 +166,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,23 +177,34 @@
             <path>
               <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
               <item name="teambox" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
               <item name="teambox" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teambox" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teambox" type="462c0819:PsiDirectoryNode" />
+              <item name="design" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+              <item name="teambox1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
               <item name="teambox" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
               <item name="png" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teambox" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
@@ -176,7 +216,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,22 +244,26 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.personAccountSafe.html">
-    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/teambox/index.html" />
+    <configuration name="团队管理.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/teambox/design/HTML/HTML/teambox1/团队管理.html" />
+    <configuration name="安全设置.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/teambox/design/HTML/HTML/teambox1/安全设置.html" />
+    <configuration name="安全设置.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/teambox/design/HTML/HTML/teambox1/安全设置.html" />
     <configuration name="personAccountSafe.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/teambox/personAccountSafe.html" />
+    <configuration name="personAccountSafe.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="personAccountSafe.js" working-dir="$PROJECT_DIR$/js" />
     <configuration name="personInfo.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/teambox/personInfo.html" />
-    <configuration name="personInfo.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="personInfo.js" working-dir="$PROJECT_DIR$/js" />
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.personInfo.html" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.personInfo.js" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.personAccountSafe.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.personAccountSafe.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.团队管理.html" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.personAccountSafe.js" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.安全设置.html" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.personAccountSafe.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.personInfo.html" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.personInfo.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.personAccountSafe.js" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.安全设置.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.团队管理.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.personInfo.html" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +281,8 @@
       <workItem from="1504535963291" duration="2242000" />
       <workItem from="1504574513811" duration="5970000" />
       <workItem from="1505365741146" duration="4778000" />
-      <workItem from="1505634144377" duration="27000" />
+      <workItem from="1505634144377" duration="4686000" />
+      <workItem from="1505701204897" duration="4448000" />
     </task>
     <task id="LOCAL-00001" summary="plan to use webstorm develop this web">
       <created>1504535360843</created>
@@ -261,11 +305,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504576927143</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="plan to use webstorm develop this web">
+      <created>1505634179284</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1505634179284</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15031000" />
+    <option name="totallyTimeSpent" value="24138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -304,6 +355,37 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="75" column="51" lean-forward="true" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/png/安全设置.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2116">
@@ -329,7 +411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -337,7 +418,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -357,6 +440,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3588">
           <caret line="156" column="42" lean-forward="true" selection-start-line="156" selection-start-column="42" selection-end-line="156" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -401,13 +485,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/personInfo.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/personInfo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -429,29 +506,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2024">
-          <caret line="88" column="58" lean-forward="false" selection-start-line="88" selection-start-column="58" selection-end-line="88" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="92" column="62" lean-forward="false" selection-start-line="92" selection-start-column="62" selection-end-line="92" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/design/png/个人信息.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/personInfo.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414">
+          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/HTML/HTML/teambox1/安全设置.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/design/png/安全设置.png">
@@ -461,8 +537,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        <state relative-caret-position="552">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="107" column="19" lean-forward="false" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
+          <folding>
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="92" column="96" lean-forward="false" selection-start-line="92" selection-start-column="96" selection-end-line="92" selection-end-column="96" />
           <folding />
         </state>
       </provider>

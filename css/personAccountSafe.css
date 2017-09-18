@@ -243,7 +243,7 @@ input[type="file"] {
   background: url(../images/personInfo/myCollection.png) center center no-repeat;
   background-size: 100% 100%;
 }
-/*now main page of personInfo*/
+/*now main page of personAccountSafe*/
 .content-main {
   display: inline-block;
   width: 63%;
@@ -252,32 +252,34 @@ input[type="file"] {
 }
 .content-part {
   display: block;
-  padding: 1em 0 1em 1.7em;
   background: white;
   margin: 0 0 1em 0;
+  padding: 1em 0 0;
   box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
 }
 .content-part-name {
   font-weight: bold;
+  margin: 0 0 0 1em;
   font-size: 1.1em;
   color: #222;
 }
 .content-part-extra {
-  margin: 1.5em 0 0;
+  margin: 1.5em 0 1em 1em;
   font-weight: normal;
   font-size: 1em;
 }
 /*the line in content-part-line*/
 .content-part-line {
   display: block;
-  height: 2.5em;
-  line-height: 2.5em;
+  height: 3.5em;
+  line-height: 3.5em;
   width: 100%;
-  border-top: .2em solid #ededed;
+  border-top: .1em solid #ededed;
 }
 .content-part-line-name {
   display: inline-block;
   vertical-align: middle;
+  margin: 0 0 0 1em;
 }
 .content-part-line-switch {
   display: inline-block;
@@ -285,9 +287,58 @@ input[type="file"] {
   float: right;
   vertical-align: middle;
   width: 5em;
-  height: 1.5em;
+  margin: 0 1em 0 0;
+  line-height: 3.5em;
+  height: 3.5em;
 }
 /*the part in switch button */
+.switch-outter {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  float: none;
+  vertical-align: middle;
+  width: 4em;
+  overflow: hidden;
+  border-radius: 1em;
+  position: relative;
+  cursor: pointer;
+}
 .switch-inner {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-align-content: center;
   height: 100%;
+  width: 6em;
+  background: #1abc9c;
+  position: relative;
+}
+.switch-inner-part {
+  display: block;
+  position: relative;
+  float: left;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+}
+.switch-inner-left {
+  color: white;
+  font-size: 80%;
+  text-align: right;
+}
+.switch-inner-right {
+  color: white;
+  font-size: 80%;
+  text-align: left;
+}
+.switch-inner-middle {
+  background: white;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: .75em;
 }
