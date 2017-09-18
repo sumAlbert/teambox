@@ -39,6 +39,7 @@ class Sql {
 		$i=0;
 		while($row=$res->fetch_assoc()){
 			$this->_result[$i]=$row;
+			$i++;
 		}
 		return 1;
 	}
@@ -56,6 +57,7 @@ class Sql {
 		$i=0;
 		while($row=$res->fetch_assoc()){
 			$this->_result[$i]=$row;
+			$i++;
 		}
 		return 1;
 		
@@ -79,6 +81,7 @@ class Sql {
 		$i=0;
 		while($row=$res->fetch_assoc()){
 			$this->_result[$i]=$row;
+			$i++;
 		}
 		return 1;
 	}

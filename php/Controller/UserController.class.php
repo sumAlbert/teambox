@@ -215,5 +215,19 @@ class UserController extends Controller{
 		}
 		$this->success();
 	}
+	/*  查询用户群 加权并删除隐私
+	 * 
+	 *  Post参数: 无
+	 * 
+	 *  返回值:
+	 *  'state':'Fail'/'Success'
+	 *  
+	 */
+	function findperson(){
+		$user=new UserModel();
+		$result=$user->findperson();
+		$this->success();
+		$this->set('result', $result);
+	}
 }
 ?>
