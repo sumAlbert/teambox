@@ -122,7 +122,7 @@ class UserModel extends Model{
 	
 	
 	/*获取用户群 加权 隐藏信息*/
-	function findperson(){
+	function findperson($search){
 		$users=$this->selectAllUsers();
 		$count=count($users);
 		$columns=array('金融/经济','心理','教育','设计/美术','软件/计算机','机械','电子信息工程','航空/飞行器','体健',
@@ -137,6 +137,8 @@ class UserModel extends Model{
 		);
 		
 		for($i=0;$i<$count;$i++){
+			//关键字加权
+			$users[$i]['key']=$this->setValue($users[$i]['experience'].$users[$i]['other'], $search)*50;
 			for($j=0;$j<count($columns);$j++){
 				$users[$i][$columns[$j]]=$this->setValue($users[$i]['experience'].$users[$i]['other'], $keys[$j]);
 			}

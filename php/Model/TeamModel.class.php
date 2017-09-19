@@ -28,16 +28,12 @@ class TeamModel extends Model{
 		$this->selectItem("task","teamid", $teamId);
 		return $this->_result;
 	}
-<<<<<<< HEAD
-	/*function setTask($teamId,$date,$starttime,$endtime,$taskname,$task,$importance){
-		$columns=array("teamid","date","starttime","endtime","taskname","task","importance");
-		$values=array("teamid","'date'","'");
-=======
+
 	/*为team建立新的task*/
 	function setTask($teamId,$date,$starttime,$endtime,$taskname,$task,$importance){
 		$columns=array("teamId","date","starttime","endtime","taskname","task","importance");
 		$values=array("teamId","'date'","'");
->>>>>>> origin/master
+
 		$this->insertItme("task", $columns, $values);
-	}*/
+	}
 }

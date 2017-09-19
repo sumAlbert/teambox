@@ -15,23 +15,7 @@ class UserController extends Controller{
 		$this->success();
 		$this->set("result", $result);
 	}
-	/* 获取用户收藏内容
-	 * 
-	 * Post参数: 无
-	 *  
-	 * 返回值:
-	 *  'state':'Success'(获取成功)
-	 *  'result':{'user':[]},{'team':[]}
-	 * */
-	function favorite(){
-		$user=new UserModel();
-		//$email=$_SESSION['user_email'];
-		//$id=$user->getId($email);
-		$id=$_SESSION['user_id'];
-		$result=$user->favorite($id);
-		$this->success();
-		$this->set("result",$result);
-	}
+
 	/*  用户注册
 	 *
 	 * Post参数：
@@ -194,6 +178,23 @@ class UserController extends Controller{
 		}
 		$this->success();
 	}
+	/* 获取用户收藏内容
+	 *
+	 * Post参数: 无
+	 *
+	 * 返回值:
+	 *  'state':'Success'(获取成功)
+	 *  'result':{'user':[]},{'team':[]}
+	 * */
+	function favorite(){
+		$user=new UserModel();
+		//$email=$_SESSION['user_email'];
+		//$id=$user->getId($email);
+		$id=$_SESSION['user_id'];
+		$result=$user->favorite($id);
+		$this->success();
+		$this->set("result",$result);
+	}
 	/* 设置收藏
 	 * 
 	 * Post参数:
@@ -217,15 +218,20 @@ class UserController extends Controller{
 	}
 	/*  查询用户群 加权并删除隐私
 	 * 
-	 *  Post参数: 无
+	 *  Post参数: 
+	 *  'key' 关键词搜索
 	 * 
 	 *  返回值:
 	 *  'state':'Fail'/'Success'
 	 *  
 	 */
 	function findperson(){
+		$key=null;
+		if(isset($_POST['key'])){
+			$key=$_POST['key'];
+		}
 		$user=new UserModel();
-		$result=$user->findperson();
+		$result=$user->findperson($key);
 		$this->success();
 		$this->set('result', $result);
 	}
