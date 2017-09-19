@@ -6,6 +6,7 @@ class Sql {
 	
 	/* 连接数据库  */
 	function connect($hostName=HOSTNAME,$dbUser=DBUSER,$dbPassWord=DBPASSWORD,$dbName=DBNAME){
+		//echo $hostName.$dbName.$dbPassWord.$dbName;
 		$this->_dbLink=new mysqli($hostName,$dbUser,$dbPassWord,$dbName);
 		if(mysqli_connect_errno())
 			return 0;//连接失败
@@ -86,28 +87,29 @@ class Sql {
 		return 1;
 	}
 	/*插入内容*/
-	function  insertItme($tableName,$columns,$values){
+	function  insertItem($tableName,$columns,$values){
 		if($this->_dbLink==NULL) return 0;
+		
 		$insert="insert into `$tableName` (";
 		$len=count($columns);
 		for ($i=0;$i<$len;$i++){
 			$insert=$insert."$columns[$i]";
 			if($i!=$len-1) $insert=$insert.",";
-		}
+		}	
 		$insert=$insert.") values(";
 		for ($i=0;$i<$len;$i++){
 			$insert=$insert."$values[$i]";
 			if($i!=$len-1) $insert=$insert.",";
 		}
 		$insert=$insert.")";
-		
-		$res=$this->_dbLink->query($update);
+		//echo $insert;
+		$res=$this->_dbLink->query($insert);
 		if($res == false) return 0;
 		else return 1;
 	}
 	
 	/*修改内容*/
-	function updateItme($tableName,$columns,$values,$keyCol,$keyVal){
+	function updateItem($tableName,$columns,$values,$keyCol,$keyVal){
 		if($this->_dbLink==NULL) return 0;
 		$update="update `$tableName` set ";
 		$len=count($columns);

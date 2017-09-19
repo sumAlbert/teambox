@@ -23,7 +23,7 @@ class UserModel extends Model{
 		else{
 			$columns=array("email","password");
 			$values=array("'$email'","'$password'");
-			$this->insertItme(self::table,$columns,$values);
+			$this->insertItem(self::table,$columns,$values);
 			
 			return 1; 
 		}
@@ -91,7 +91,7 @@ class UserModel extends Model{
 		$result=$this->_result;
 		if(empty($result)) {
 			//添加 
-			$this->insertItme('relation',array("firstid","secondid","secondtype","relation"),
+			$this->insertItem('relation',array("firstid","secondid","secondtype","relation"),
 					array($userid,$secondid,"'$type'","'favorite'"));
 			return 1;
 		}
@@ -108,7 +108,7 @@ class UserModel extends Model{
 			$this->deleteItems('relation',array("firstid","secondid","secondtype","relation"),
 					array($userid,$secondid,"'$type'","'favorite'"));
 		}else{
-			$this->insertItme('relation',array("firstid","secondid","secondtype","relation"),
+			$this->insertItem('relation',array("firstid","secondid","secondtype","relation"),
 					array($userid,$secondid,"'$type'","'favorite'"));
 		}
 		
@@ -117,7 +117,7 @@ class UserModel extends Model{
 	function updateInfo($id,$info){
 		$columns=array_keys($info);
 		$values=array_values($info);
-		return $this->updateItme('user', $columns, $values, 'id', $id);
+		return $this->updateItem('user', $columns, $values, 'id', $id);
 	}
 	
 	

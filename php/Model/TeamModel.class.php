@@ -1,10 +1,12 @@
 <?php
 class TeamModel extends Model{
 	const table = "team";
+	/*获取一个团队*/
 	function selectTeam($id){
 		$this->selectItem(self::table,"id", $id);
 		return $this->_result;
 	}
+	
 	/*通过teamid获取成员信息*/
 	function members($teamId){
 		$columns=array("secondid","secondtype");
@@ -23,6 +25,7 @@ class TeamModel extends Model{
 		}
 		return $memberInfo;
 	}
+	
 	/*通过teamid获取任务信息*/
 	function getTask($teamId){
 		$this->selectItem("task","teamid", $teamId);
@@ -34,6 +37,6 @@ class TeamModel extends Model{
 		$columns=array("teamId","date","starttime","endtime","taskname","task","importance");
 		$values=array("teamId","'date'","'");
 
-		$this->insertItme("task", $columns, $values);
+		$this->insertItem("task", $columns, $values);
 	}
 }

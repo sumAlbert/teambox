@@ -1,15 +1,24 @@
 <?php
-$columns=array('金融/经济','心理','教育','设计/美术','软件/计算机','机械','电子信息工程','航空/飞行器','体健',
-		'微信/软文','PS/AI','视频制作','音频制作','PPT制作','英语','日语','法语','韩语',
-		'Web前端','数据库','App开发','桌面应用开发','IOS应用开发','Java','PHP','C/C++',
-		'语言表达','播音主持','撰文排版','LOL','守望先锋','狼人杀'
-);
-$keys=array('金融/经济','心理','教育','设计/美术','软件/计算机','机械','电子信息工程','航空/飞行器','体健',
-		'微信/软文','PS/图像/AI/ps/Ps/Ai/ai','视频/AE/PR','音频/Audition','PPT','英语/English/english','日语','法语','韩语',
-		'Web/web/前端','数据库','App/app','桌面/PC/pc','IOS/ios','java/Java/Android','php/PHP','C/C++',
-		'语言/表达','播音/主持','撰文/排版/写作/文案','LOL/英雄联盟','守望先锋/OW','狼人/杀人'
-);
-for($i=0;$i<count($columns);$i++){
-	echo $columns[$i].' : '.$keys[$i].'<br/>';
-}
+defined('ROOT') or define('ROOT', __DIR__.'/');
+defined('APP_PATH') or define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
+//defined('CONFIG_PATH') or define('CONFIG_PATH', APP_PATH.'config/');
+//defined('RUNTIME_PATH') or define('RUNTIME_PATH', APP_PATH.'runtime/');
+require APP_PATH."config.php";
+require APP_PATH."Loader.class.php";
+
+/*$mysqli=mysqli_connect(HOSTNAME,DBUSER,DBPASSWORD,DBNAME);
+echo mysqli_connect_errno();
+echo $mysqli->query("insert into `user` (email,password) values('aa','aa')");*/
+$_POST['class']='User';//class name
+$class=$_POST['class'];
+$loader=new Loader($class);
+
+$modelName=$class.'Model';
+
+$model=new UserModel();
+$result=$model->signUp("abca","aabc");
+
+unset($model);
+echo json_encode($result);
+
 ?>
