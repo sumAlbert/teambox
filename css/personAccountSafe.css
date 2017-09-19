@@ -217,7 +217,7 @@ input[type="file"] {
   margin: 0 4em 0 0;
   font-weight: 200;
 }
-.content-item:nth-child(1) > .content-item-name {
+.content-item:nth-child(3) > .content-item-name {
   font-weight: 700;
 }
 .content-item:hover {
@@ -274,7 +274,16 @@ input[type="file"] {
   height: 3.5em;
   line-height: 3.5em;
   width: 100%;
-  border-top: .1em solid #ededed;
+  border-top: .05em solid #ededed;
+}
+.content-part-line-extra {
+  display: block;
+  height: 2.5em;
+  line-height: 2.5em;
+  width: 100%;
+  font-size: 70%;
+  padding: 0 0 0 1em;
+  font-weight: 100;
 }
 .content-part-line-name {
   display: inline-block;
