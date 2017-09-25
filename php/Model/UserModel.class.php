@@ -1,20 +1,28 @@
 <?php
 class UserModel extends Model{
 	const table="user";
+	/*checked*/
 	function selectAllUsers(){
 		$this->selectAll(self::table);
 		return $this->_result;
 	}
-	
+	/*checked*/
 	function selectUser($id){
 		$this->selectItem(self::table, "id", $id);
 		return $this->_result[0];
 	}
-	/*获取（一位）用户信息*/
+	/*获取（一位）用户信息 checked*/
 	function getUserInfo($id){
-		return $this->selectUser($id);
+		$result=$this->selectUser($id);
+		
+		if($result['name_v']=='yes') $result['username']='';
+		if($result['college_v']=='yes') $result['college']='';
+		if($result['phone_v']=='yes') $result['phone']='';
+		if($result['qq_v']=='yes') $result['qq']='';
+		if($result['weChat_v']=='yes') $result['weChat']='';
+		return $result;
 	}
-	/*用户注册*/
+	/*用户注册 checked*/
 	function signUp($email,$password){
 		$this->selectItem(self::table, "email", $email);
 		if(!empty($this->_result)){
@@ -28,9 +36,10 @@ class UserModel extends Model{
 			return 1; 
 		}
 	}
-	/*用户登录*/
+	/*用户登录 checked*/
 	function logIn($email,$password){
 		$this->selectItem(self::table, "email", $email);
+		$this->_result=$this->_result[0];
 		if(empty($this->_result)){
 			return 0;
 		}
@@ -50,7 +59,7 @@ class UserModel extends Model{
 		return $this->_result['id'];
 	}
 	
-	/*收藏夹*/
+	/*收藏夹 user_checked*/
 	function favorite($id){
 		//$id=$this->getId();//获取用户id
 		
@@ -70,8 +79,8 @@ class UserModel extends Model{
 		$result['team']=array();  
 		
 		for($i=0;$i<count($favor_user);$i++){
-			$this->selectItem("user", 'id', $favor_user[$i]);
-			$result['user'][$i]=$this->_result[0];
+			$temp=$this->getUserInfo($favor_user[$i]);
+			$result['user'][$i]=$temp;
 		}
 		for($i=0;$i<count($favor_team);$i++){
 			$this->selectItem("team", 'id', $favor_team[$i]);
@@ -79,7 +88,7 @@ class UserModel extends Model{
 		}
 		return $result;
 	}
-	/* 翻转收藏  */
+	/* 翻转收藏  checked*/
 	function favoriteChange($userid,$type,$secondid){
 		//检测secondid
 		$this->selectItem($type,'id',$secondid);
@@ -91,25 +100,29 @@ class UserModel extends Model{
 		$result=$this->_result;
 		if(empty($result)) {
 			//添加 
-			$this->insertItem('relation',array("firstid","secondid","secondtype","relation"),
-					array($userid,$secondid,"'$type'","'favorite'"));
-			return 1;
+			$result=$this->insertItem('relation',array("firstid","secondid","secondtype","relation"),
+					array($userid,$secondid,"$type","favorite"));
+			return $result;
 		}
 		$count=count($result);
 		$flag=0;
 		for($i=0;$i<$count;$i++){
-			if($result[$i]['secondtype']==$type && $result[$i]['relation']='favorite'){
+			if($result[$i]['secondtype']==$type && $result[$i]['relation']='favorite' && $result[$i]['secondid']==$secondid){
 				$flag=1;
 				break;
 			}
 		}
+		//echo $flag.'a';
 		if($flag){
 			//删除
-			$this->deleteItems('relation',array("firstid","secondid","secondtype","relation"),
-					array($userid,$secondid,"'$type'","'favorite'"));
+			$result=$this->deleteItems('relation',array("firstid","secondid","secondtype","relation"),
+					array($userid,$secondid,"$type","favorite"));
+			
+			return $result;
 		}else{
-			$this->insertItem('relation',array("firstid","secondid","secondtype","relation"),
-					array($userid,$secondid,"'$type'","'favorite'"));
+			$result=$this->insertItem('relation',array("firstid","secondid","secondtype","relation"),
+					array($userid,$secondid,"$type","favorite"));
+			return $result;
 		}
 		
 	}
@@ -121,7 +134,7 @@ class UserModel extends Model{
 	}
 	
 	
-	/*获取用户群 加权 隐藏信息*/
+	/*获取用户群 加权 隐藏信息 checked*/
 	function findperson($search){
 		$users=$this->selectAllUsers();
 		$count=count($users);
@@ -143,7 +156,7 @@ class UserModel extends Model{
 				$users[$i][$columns[$j]]=$this->setValue($users[$i]['experience'].$users[$i]['other'], $keys[$j]);
 			}
 			//隐藏信息
-			if($users[$i]['name_v']=='yes') $users[$i]['name']='';
+			if($users[$i]['name_v']=='yes') $users[$i]['username']='';
 			if($users[$i]['college_v']=='yes') $users[$i]['college']='';
 			if($users[$i]['phone_v']=='yes') $users[$i]['phone']='';
 			if($users[$i]['qq_v']=='yes') $users[$i]['qq']='';

@@ -12,13 +12,11 @@ echo $mysqli->query("insert into `user` (email,password) values('aa','aa')");*/
 $_POST['class']='User';//class name
 $class=$_POST['class'];
 $loader=new Loader($class);
-
 $modelName=$class.'Model';
 
 $model=new UserModel();
-$result=$model->signUp("abca","aabc");
+$result=$model->favorite(3);
 
-unset($model);
 echo json_encode($result);
 
 ?>

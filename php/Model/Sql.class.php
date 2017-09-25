@@ -49,7 +49,7 @@ class Sql {
 	function selectItem($tableName,$column,$value){
 		$this->_result=array();
 		if($this->_dbLink==NULL) return 0;
-		
+		if(is_string($value)) $value="'".$value."'";
 		$select="select * from `$tableName` where `$column` = $value ";
 		$res=$this->_dbLink->query($select);
 		
@@ -68,7 +68,7 @@ class Sql {
 	function selectItem2($tableName,$columes,$values){
 		$this->_result=array();
 		if($this->_dbLink==NULL) return 0;
-		
+		$values=$this->cleanParas($values);
 		$select="select * from `$tableName` where ";
 		for($i=0;$i<count($columes);$i++){
 			$select=$select."`$columes[$i]` = $values[$i] ";
@@ -89,7 +89,7 @@ class Sql {
 	/*插入内容*/
 	function  insertItem($tableName,$columns,$values){
 		if($this->_dbLink==NULL) return 0;
-		
+		$values=$this->cleanParas($values);
 		$insert="insert into `$tableName` (";
 		$len=count($columns);
 		for ($i=0;$i<$len;$i++){
@@ -111,6 +111,7 @@ class Sql {
 	/*修改内容*/
 	function updateItem($tableName,$columns,$values,$keyCol,$keyVal){
 		if($this->_dbLink==NULL) return 0;
+		$values=$this->cleanParas($values);
 		$update="update `$tableName` set ";
 		$len=count($columns);
 		for($i=0;$i<$len;$i++){
@@ -135,11 +136,12 @@ class Sql {
 	}
 	/*删除内容2*/
 	function deleteItems($tableName,$columns,$values){
+		$values=$this->cleanParas($values);
 		if($this->_dbLink==NULL) return 0;
 		$count=count($columns);
 		$delete="delete from `$tableName` where ";
 		for($i=0;$i<$count;$i++){
-			$delete=$delete."`$columns[$i]` = $values";
+			$delete=$delete."`$columns[$i]` = $values[$i]";
 			if($count >1 && $i<$count-1){
 				$delete=$delete.' and ';
 			}
@@ -148,7 +150,15 @@ class Sql {
 		if($res == false) return 0;
 		else return 1;
 	}
-	
+	/*为参数中的字符串加引号*/
+	function cleanParas($para){
+		$count=count($para);
+		for($i=0;$i<$count;$i++){
+			if(is_string($para[$i]))
+				$para[$i]="'".$para[$i]."'";
+		}
+		return $para;
+	}
 }
 
 ?>
