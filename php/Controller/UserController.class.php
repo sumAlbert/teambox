@@ -1,23 +1,24 @@
 <?php
 class UserController extends Controller{
 	/*获取当前用户具体信息
-	 * 
+	 * checked
 	 * Post参数: 无
 	 * 
 	 * 返回值:
 	 *  'state':'Success'(获取成功)
 	 *  'result':{}
 	 * */
-	function getUserInfo(){
+	function getSelfInfo(){
 		$id=$_SESSION['user_id'];
 		$user=new UserModel();
-		$result=$user->getUserInfo($id);
+		$result=$user->getSelfInfo($id);
 		$this->success();
 		$this->set("result", $result);
 	}
 
 	/*  用户注册
 	 *
+	 * checked
 	 * Post参数：
 	 *  'verify' 验证码
 	 *  'email' 邮箱
@@ -33,7 +34,7 @@ class UserController extends Controller{
 			exit(0);
 		}
 		$user=new UserModel();
-		$password=md5($_POST['password']);
+		$password=$_POST['password'];
 		$email=$_POST['email'];
 		if($user->signUp($email, $password)){
 			//注册成功
@@ -49,7 +50,7 @@ class UserController extends Controller{
 		}
 	}
 	/*  用户登录
-	 * 
+	 *  checked
 	 * Post参数:
 	 *  'email' 邮箱
 	 *  'password' md5密码
@@ -65,6 +66,8 @@ class UserController extends Controller{
 			exit(0);
 		}
 		$this->postCheck(array('email','password'));
+		$email=$_POST['email'];
+		$password=$_POST['password'];
 		$user=new UserModel();
 		$result=$user->logIn($email, $password);
 		if(!$result){
@@ -76,6 +79,7 @@ class UserController extends Controller{
 		}
 	}
 	/*  用户注销
+	 *  checked
 	 *  Post参数:无
 	 *  
 	 *  返回值:
@@ -90,9 +94,11 @@ class UserController extends Controller{
 		unset($_SESSION['user_id']);
 		unset($_SESSION['user_email']);
 		unset($_SESSION['user_name']);
+		session_unset();
 		$this->success();
 	}
 	/*  获取已登录用户的信息
+	 *  checked
 	 *  Post参数:无
 	 *  
 	 *  返回值:
@@ -110,7 +116,7 @@ class UserController extends Controller{
 		$this->success();
 	}
 	/*  修改用户信息
-	 * 
+	 *  checked
 	 *  Post参数:
 	 *   'username' 姓名
 	 *   'date' 入学日期
@@ -135,11 +141,12 @@ class UserController extends Controller{
 		for($i=0;$i<count($keys);$i++){
 			$info[$keys[$i]]=$_POST[$keys[$i]];
 		}
+		//echo json_encode($info);
 		$user=new UserModel();
 		$id=$_SESSION['user_id'];
 		if(!$user->updateInfo($id, $info)){
 			//更新失败
-			$this->set('state', 'Fail');
+			$this->set('state', 'Faail');
 			exit(0);
 		}
 		$this->success();
@@ -148,7 +155,7 @@ class UserController extends Controller{
 	
 	}
 	/* 更改可公开消息
-	 * 
+	 * checked
 	 * Post参数: 
 	 *  'name_v' 姓名公开
 	 *  'college_v'学院
@@ -168,6 +175,23 @@ class UserController extends Controller{
 		$post=array();
 		for($i=0;$i<count($keys);$i++){
 			$post[$keys[$i]]=$_POST[$keys[$i]];
+			if($post[$keys[$i]]!='yes' && $post[$keys[$i]]!='no'){
+				if($keys[$i]!='state'){
+					$this->set('state', 'Fail');
+					exit(0);
+				}
+				else if($post[$keys[$i]]!='warm' && $post[$keys[$i]]!='hot'){
+					$this->set('state', 'Fail');
+					exit(0);
+				}
+			}
+			if($keys[$i]=='state'){
+				if($post[$keys[$i]]!='warm' && $post[$keys[$i]]!='hot'){
+					$this->set('state', 'Fail');
+					exit(0);
+				}
+			}
+			
 		}
 		$user=new UserModel();
 		$id=$_SESSION['user_id'];

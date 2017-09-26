@@ -11,7 +11,12 @@ class UserModel extends Model{
 		$this->selectItem(self::table, "id", $id);
 		return $this->_result[0];
 	}
-	/*获取（一位）用户信息 checked*/
+	/*获取用户完整信息 checked */
+	function getSelfInfo($id){
+		$result=$this->selectUser($id);
+		return $result;
+	}
+	/*获取（不含隐藏）用户信息 checked*/
 	function getUserInfo($id){
 		$result=$this->selectUser($id);
 		
@@ -30,7 +35,7 @@ class UserModel extends Model{
 		}
 		else{
 			$columns=array("email","password");
-			$values=array("'$email'","'$password'");
+			$values=array("$email","$password");
 			$this->insertItem(self::table,$columns,$values);
 			
 			return 1; 
@@ -40,6 +45,7 @@ class UserModel extends Model{
 	function logIn($email,$password){
 		$this->selectItem(self::table, "email", $email);
 		$this->_result=$this->_result[0];
+		//echo json_decode('11');
 		if(empty($this->_result)){
 			return 0;
 		}
@@ -56,7 +62,7 @@ class UserModel extends Model{
 	function getId($email){
 		//$email=$_SESSION['user_email'];
 		$this->selectItem(self::table, "email", $email);
-		return $this->_result['id'];
+		return $this->_result[0]['id'];
 	}
 	
 	/*收藏夹 user_checked*/

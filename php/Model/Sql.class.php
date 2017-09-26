@@ -128,7 +128,7 @@ class Sql {
 	/*删除内容*/
 	function deleteItem($tableName,$column,$value){
 		if($this->_dbLink==NULL) return 0;
-		
+		if(is_string($value)) $value="'".$value."'";
 		$delete="delete from `$tableName` where `$column` = $value";
 		$res=$this->_dbLink->query($delete);
 		if($res == false) return 0;//查询失败
