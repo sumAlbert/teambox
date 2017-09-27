@@ -163,7 +163,7 @@ class UserController extends Controller{
 	 *  'qq_v' qq
 	 *  'wechat_v'微信
 	 *  'state': 'hot'/'warm'
-	 *  'visible'
+	 *  'visible'  gaiyixiazhushi
 	 *  'protection'
 	 * 
 	 * 返回值:
