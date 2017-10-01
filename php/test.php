@@ -27,19 +27,16 @@ require APP_PATH."config.php";
 require APP_PATH."Loader.class.php";
 
 $_POST['class']="User";
-$_POST['action']="visibleChange";
+$_POST['action']="favoriteChange";
 session_start();
 $_SESSION['user_id']=3;
 $_SESSION['user_email']='email';
-$_SESSION['user_name']='username';
+$_SESSION['user_name']='useaaae';
 // $_POST["verify"]=123;
 // $_SESSION['Verify_Code']=123;
 // session_unset();
-$keys=array('name_v','college_v','phone_v','qq_v',
-		'wechat_v','state','visible','protection');
-$values=array('yes','yes','yes','yes',
-		'yes','hot','yes','yes',
-);
+$keys=array('type','id');
+$values=array('user',7);
 
 for($i=0;$i<count($keys);$i++){
 	$_POST[$keys[$i]]=$values[$i];

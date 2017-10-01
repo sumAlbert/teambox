@@ -4,7 +4,16 @@ class UserModel extends Model{
 	/*checked*/
 	function selectAllUsers(){
 		$this->selectAll(self::table);
-		return $this->_result;
+		$result=$this->_result;
+		$final=array();
+		$count=count($result);
+		for($i=$j=0;$i<$count;$i++){
+			if($result[$i]['visible']=='yes'){
+				$final[$j]=$result[$i];
+				$j++;
+			}
+		}
+		return $final;
 	}
 	/*checked*/
 	function selectUser($id){
@@ -84,9 +93,12 @@ class UserModel extends Model{
 		$result['user']=array();
 		$result['team']=array();  
 		
-		for($i=0;$i<count($favor_user);$i++){
+		for($i=$j=0;$i<count($favor_user);$i++){
 			$temp=$this->getUserInfo($favor_user[$i]);
-			$result['user'][$i]=$temp;
+			if($temp['visible']=='yes'){
+				$result['user'][$j]=$temp;
+				$j++;
+			}		
 		}
 		for($i=0;$i<count($favor_team);$i++){
 			$this->selectItem("team", 'id', $favor_team[$i]);

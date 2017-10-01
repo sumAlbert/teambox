@@ -203,7 +203,7 @@ class UserController extends Controller{
 		$this->success();
 	}
 	/* 获取用户收藏内容
-	 *
+	 *checked
 	 * Post参数: 无
 	 *
 	 * 返回值:
@@ -220,7 +220,7 @@ class UserController extends Controller{
 		$this->set("result",$result);
 	}
 	/* 设置收藏
-	 * 
+	 * checked
 	 * Post参数:
 	 *  'type':'team'/'user'
 	 *  'id'
