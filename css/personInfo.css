@@ -372,7 +372,7 @@ input[type="file"] {
   height: 100%;
   width: 30%;
   border-radius: .2em;
-  border: #c9c9c9 .01em solid;
+  border: #c9c9c9 1px solid;
   cursor: pointer;
 }
 .data-show {
@@ -406,7 +406,7 @@ input[type="file"] {
   overflow-y: scroll;
   overflow-x: hidden;
   color: #666;
-  border: #999 .01em solid;
+  border: #999 1px solid;
   background: #999 center center repeat;
   background-size: 100% 100%;
   border-radius: .2em;
