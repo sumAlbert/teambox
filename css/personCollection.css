@@ -1,0 +1,515 @@
+@charset "utf-8";
+/*less setting*/
+/*css global settings*/
+html,
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  align-items: center;
+  background: #ededed;
+}
+.main {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  align-items: center;
+  background: #ededed;
+}
+a {
+  text-decoration: none;
+}
+.pic {
+  height: 100%;
+  width: 100%;
+}
+input[type="file"] {
+  cursor: pointer;
+}
+/*title bar*/
+.header {
+  position: fixed;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  height: 3.5em;
+  width: 100%;
+  box-shadow: 0 0.1em 0.4em 0.02em rgba(153, 153, 153, 0.6);
+  background: white;
+  z-index: 10;
+}
+/*the left part of title bar(logo and page name)*/
+.logo {
+  position: relative;
+  height: 3.5em;
+  width: 11.25em;
+  margin: 0 .06em 0 1em;
+  background: url(../images/header/logo1.png) 0% 60% no-repeat;
+  background-size: 100% 71%;
+}
+.page-name {
+  font-size: 1.01em;
+  font-weight: bold;
+  color: #666;
+  margin: 0;
+}
+.flex-space {
+  flex: 1;
+  -webkit-flex: 1;
+}
+/*thie right part of title bar(person info menu)*/
+.person-menu {
+  position: relative;
+  margin: 0 2em 0;
+}
+.person-menu-hidden {
+  position: absolute;
+  top: 3.5em;
+  border-radius: .2em;
+  overflow: hidden;
+  display: none;
+  height: 0;
+}
+/*every line of person info menu*/
+.person-info {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  width: 10em;
+  line-height: 3.5em;
+}
+.person-hidden-info {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  width: 10em;
+  line-height: 2em;
+  margin: 0 0 .05em;
+  background: white;
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
+}
+.person-hidden-info:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+.person-hidden-info-special {
+  background: transparent;
+  line-height: 1em;
+  height: 1em;
+}
+.person-hidden-info-special:hover {
+  background: none;
+}
+/*every line icon of person info menu*/
+.person-info-logo {
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 1em 0;
+  border-radius: 50% 50%;
+}
+.person-hidden-info-logo {
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 1em 0;
+}
+.person-hidden-info:nth-child(2) > .person-hidden-info-logo {
+  background: url(../images/header/setting.png) center center no-repeat;
+  background-size: 60% 60%;
+}
+.person-hidden-info:nth-child(3) > .person-hidden-info-logo {
+  background: url(../images/header/exit.png) center center no-repeat;
+  background-size: 60% 60%;
+}
+/*every line name of person info menu*/
+.person-info-name {
+  color: #666;
+  overflow: hidden;
+  word-wrap: break-word;
+  width: 5.5em;
+  white-space: nowrap;
+}
+.person-hidden-info-name {
+  color: #666;
+}
+/*the main body of the web*/
+.content {
+  padding: 4.5em 0 1em;
+  max-width: 55em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*the guidance part of the web */
+.content-catalog {
+  position: relative;
+  width: 35%;
+  font-size: 16px;
+  display: inline-block;
+}
+/*the person info in the guidance part of the web */
+.content-info {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 7em;
+  background: white;
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
+}
+.content-avatar {
+  min-height: 4em;
+  min-width: 4em;
+  height: 4em;
+  width: 4em;
+  margin: 0 1.5em;
+  border-radius: 50% 50%;
+}
+.content-username {
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+/*the main body in the guidance part of the web */
+.content-items {
+  position: relative;
+  width: 100%;
+  margin: 1em 0 0 0;
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
+}
+.content-item {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  line-height: 3.5em;
+  width: 100%;
+  background: white;
+  margin: 0 0 .05em 0;
+}
+/*the substance in every line of guidance part*/
+.content-item-icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 .5em 0 0;
+}
+.content-item-name {
+  color: #333;
+  margin: 0 4em 0 0;
+  font-weight: 200;
+}
+.content-item:nth-child(5) > .content-item-name {
+  font-weight: 700;
+}
+.content-item:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+.content-item:nth-child(1) > .content-item-icon {
+  background: url(../images/personInfo/personInfo.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.content-item:nth-child(2) > .content-item-icon {
+  background: url(../images/personInfo/accountPw.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.content-item:nth-child(3) > .content-item-icon {
+  background: url(../images/personInfo/safeSetting.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.content-item:nth-child(4) > .content-item-icon {
+  background: url(../images/personInfo/teamManage.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+.content-item:nth-child(5) > .content-item-icon {
+  background: url(../images/personInfo/myCollection.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+/*now main page of personInfo*/
+.content-main {
+  display: inline-block;
+  width: 63%;
+  float: right;
+  position: relative;
+}
+.content-main-person-name {
+  display: block;
+  line-height: 3em;
+  font-size: 120%;
+  position: relative;
+}
+.content-main-person-teams {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+/*person small card part*/
+.person-card {
+  display: block;
+  position: relative;
+  width: 15em;
+  padding: 1em  0;
+  background: white;
+  border-radius: .4em;
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
+  margin: 1em 1em 0 0;
+  transition: all .5s;
+}
+.person-card:hover {
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.8);
+  left: -0.5px;
+  cursor: pointer;
+}
+.person-card-line {
+  display: block;
+  line-height: 2em;
+  height: 2em;
+  width: 85%;
+  margin: 0 auto ;
+}
+.person-name {
+  display: inline-block;
+  font-size: 120%;
+  vertical-align: middle;
+  margin: 0 .4em 0 0;
+  color: #222;
+}
+.person-hot {
+  display: inline-block;
+  line-height: 1.5em;
+  height: 1.2em;
+  width: 1.2em;
+  vertical-align: middle;
+  background: url("../images/personCollection/hot.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.person-collection {
+  display: inline-block;
+  position: relative;
+  float: right;
+  width: 2em;
+  height: 2em;
+  background: url("../images/personCollection/star_selected.png") center center no-repeat;
+  background-size: 70% 70%;
+  cursor: pointer;
+  right: -0.3em;
+}
+.person-extra-info {
+  display: block;
+  color: #666;
+  line-height: 2em;
+  height: 2em;
+  width: 85%;
+  margin: 0 auto ;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+.person-gender {
+  position: relative;
+  display: inline-block;
+  font-size: 90%;
+}
+.person-school {
+  position: relative;
+  display: inline-block;
+  font-size: 90%;
+}
+.person-info-special-name {
+  position: relative;
+  display: block;
+  font-size: 90%;
+  font-weight: 400;
+  width: 85%;
+  margin: .8em auto;
+}
+.person-info-special {
+  font-size: 86%;
+  width: 85%;
+  margin: 0 auto 2em;
+  max-height: 4.2em;
+  overflow: hidden;
+  color: #888;
+}
+.person-info-experience {
+  font-size: 86%;
+  width: 85%;
+  margin: 0 auto 2em;
+  max-height: 4.2em;
+  overflow: hidden;
+  color: #888;
+}
+.person-info-email {
+  font-size: 88%;
+  width: 85%;
+  margin: 0 auto .5em;
+  max-height: 4.2em;
+  overflow: hidden;
+  color: #888;
+}
+.person-info-tel {
+  font-size: 88%;
+  width: 85%;
+  margin: 0 auto .5em;
+  max-height: 4.2em;
+  overflow: hidden;
+  color: #888;
+}
+.person-info-email:after {
+  position: relative;
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0 0 0 1em;
+  top: .2em;
+  background: url("../images/personCollection/send_email.png") center center no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  content: "";
+}
+/*team small card part*/
+.team-card {
+  display: block;
+  position: relative;
+  width: 15em;
+  padding: 1em  0;
+  background: white;
+  border-radius: .4em;
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.3);
+  margin: 1em 1em 0 0;
+  transition: all .5s;
+}
+.team-card:hover {
+  box-shadow: 0.1em 0.1em 0.1em 0.05em rgba(179, 179, 179, 0.8);
+  left: -0.5px;
+  cursor: pointer;
+}
+.team-card-line {
+  display: block;
+  line-height: 2em;
+  height: 2em;
+  width: 85%;
+  margin: 0 auto ;
+}
+.team-name {
+  display: inline-block;
+  font-size: 120%;
+  vertical-align: middle;
+  margin: 0 .4em 0 0;
+  color: #222;
+}
+.team-collection {
+  display: inline-block;
+  position: relative;
+  float: right;
+  width: 2em;
+  height: 2em;
+  background: url("../images/personCollection/star_selected.png") center center no-repeat;
+  background-size: 70% 70%;
+  cursor: pointer;
+  right: -0.3em;
+}
+.team-extra-info {
+  display: block;
+  color: #666;
+  line-height: 2em;
+  height: 2em;
+  width: 85%;
+  margin: 0 auto ;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+.team-date {
+  position: relative;
+  display: inline-block;
+  font-size: 90%;
+}
+.team-aim {
+  position: relative;
+  display: inline-block;
+  font-size: 90%;
+}
+.team-info-special-name {
+  position: relative;
+  display: block;
+  font-size: 90%;
+  font-weight: 400;
+  width: 85%;
+  margin: .8em auto;
+}
+.team-info-intro {
+  font-size: 86%;
+  width: 85%;
+  margin: 0 auto 2em;
+  max-height: 4.2em;
+  overflow: hidden;
+  color: #888;
+}
+.team-info-need {
+  font-size: 86%;
+  width: 85%;
+  margin: 0 auto 2em;
+  max-height: 4.2em;
+  overflow: hidden;
+  color: #888;
+}
+.team-info-email {
+  font-size: 88%;
+  width: 85%;
+  margin: 0 auto .5em;
+  max-height: 4.2em;
+  overflow: hidden;
+  color: #888;
+}
+.team-info-tel {
+  font-size: 88%;
+  width: 85%;
+  margin: 0 auto .5em;
+  max-height: 4.2em;
+  overflow: hidden;
+  color: #888;
+}
+.team-info-email:after {
+  position: relative;
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0 0 0 1em;
+  top: .2em;
+  background: url("../images/personCollection/send_email.png") center center no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  content: "";
+}
+/*the small cards in part to join team*/
+.content-main-team-name {
+  display: block;
+  line-height: 3em;
+  font-size: 120%;
+  position: relative;
+}
+.content-main-team-teams {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 0 2em 0;
+}
