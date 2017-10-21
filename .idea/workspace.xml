@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce5f9955-dad5-4e1d-9875-0cf383568b7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/personTeamManager/team_bg_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/personTeamManager/team_bg_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/personTeamManager/team_bg_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/personTeamManager/team_card_add.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/personTeamManager/team_card_add_selected.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/personTeamManager/team_card_change.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/personTeamManager/team_card_delete.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/personTeamManager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/personAccountPW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less/personAccountPW.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personAccountPW.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/personTeamManager.css" afterPath="$PROJECT_DIR$/css/personTeamManager.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/personTeamManager.less" afterPath="$PROJECT_DIR$/less/personTeamManager.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personTeamManager.html" afterPath="$PROJECT_DIR$/personTeamManager.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,51 +18,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40863115">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="personAccountSafe.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-                  <folding>
-                    <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                  </folding>
-                </state>
+          <file leaf-file-name="账户密码.png" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/design/png/账户密码.png">
+              <provider selected="true" editor-type-id="images">
+                <state />
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="personTeamManager.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/personTeamManager.html">
+          <file leaf-file-name="personInfo.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/personInfo.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="575">
-                  <caret line="80" column="12" lean-forward="false" selection-start-line="80" selection-start-column="12" selection-end-line="83" selection-end-column="26" />
-                  <folding>
-                    <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="personTeamManager.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/js/personTeamManager.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="690">
-                  <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+                <state relative-caret-position="332">
+                  <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="personAccountSafe.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
+          <file leaf-file-name="personAccountPW.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/personAccountPW.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="169">
-                  <caret line="32" column="69" lean-forward="true" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+                <state relative-caret-position="153">
+                  <caret line="69" column="42" lean-forward="true" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="personAccountPW.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/personAccountPW.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="437">
+                  <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -79,12 +61,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="personTeamManager.less" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/less/personTeamManager.less">
+        <leaf>
+          <file leaf-file-name="personInfo.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/personInfo.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="605">
-                  <caret line="106" column="24" lean-forward="false" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+                <state relative-caret-position="260">
+                  <caret line="235" column="30" lean-forward="true" selection-start-line="235" selection-start-column="30" selection-end-line="235" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -99,7 +81,6 @@
       <find>95%</find>
       <find>content-item-name</find>
       <find>data-show-icon</find>
-      <find>content-part-item-substance</find>
       <find>c9c9c9</find>
       <find>person-hidden-info-special</find>
       <find>person-menu-hidden</find>
@@ -108,6 +89,8 @@
       <find>back</find>
       <find>overflow</find>
       <find>data-box</find>
+      <find>content-part-item-substance</find>
+      <find>2.4em</find>
       <find>b</find>
     </findStrings>
     <replaceStrings>
@@ -132,6 +115,9 @@
         <option value="$PROJECT_DIR$/personTeamManager.html" />
         <option value="$PROJECT_DIR$/less/personTeamManager.less" />
         <option value="$PROJECT_DIR$/js/personTeamManager.js" />
+        <option value="$PROJECT_DIR$/less/personAccountPW.less" />
+        <option value="$PROJECT_DIR$/personAccountPW.html" />
+        <option value="$PROJECT_DIR$/js/personAccountPW.js" />
       </list>
     </option>
   </component>
@@ -239,37 +225,7 @@
               <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
               <item name="teambox" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="teambox1" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teambox" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="HTML" type="462c0819:PsiDirectoryNode" />
-              <item name="teambox1" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="团队管理" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teambox" type="462c0819:PsiDirectoryNode" />
-              <item name="design" type="462c0819:PsiDirectoryNode" />
               <item name="png" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teambox" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="teambox" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="personTeamManager" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
@@ -298,10 +254,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\git\github\workspace\teambox\images\personTeamManager" />
       <recent name="D:\git\github\workspace\teambox\js" />
       <recent name="D:\git\github\workspace\teambox\less" />
       <recent name="D:\git\github\workspace\teambox" />
+      <recent name="D:\git\github\workspace\teambox\images\personTeamManager" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -360,7 +316,7 @@
       <workItem from="1508029105950" duration="68000" />
       <workItem from="1508310631644" duration="606000" />
       <workItem from="1508474669036" duration="934000" />
-      <workItem from="1508545635187" duration="6746000" />
+      <workItem from="1508545635187" duration="8322000" />
     </task>
     <task id="LOCAL-00001" summary="plan to use webstorm develop this web">
       <created>1504535360843</created>
@@ -411,17 +367,24 @@
       <option name="project" value="LOCAL" />
       <updated>1508475587404</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="finish the personTeamManager.html">
+      <created>1508552433940</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1508552433940</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36699000" />
+    <option name="totallyTimeSpent" value="38275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22760417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -448,42 +411,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="plan to use webstorm develop this web" />
     <MESSAGE value="add the personTeamManager web" />
-    <option name="LAST_COMMIT_MESSAGE" value="add the personTeamManager web" />
+    <MESSAGE value="finish the personTeamManager.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish the personTeamManager.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/png/安全设置.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2116">
-          <caret line="92" column="62" lean-forward="false" selection-start-line="92" selection-start-column="62" selection-end-line="92" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/design/png/安全设置.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -567,61 +502,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/HTML/HTML/teambox1/安全设置.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/png/个人信息.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/png/个人界面.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/personInfo.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="118" column="153" lean-forward="false" selection-start-line="118" selection-start-column="153" selection-end-line="118" selection-end-column="153" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1840">
-          <caret line="95" column="66" lean-forward="false" selection-start-line="95" selection-start-column="66" selection-end-line="95" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/png/项目管理中心.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/png/我的收藏.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/png/安全设置.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/design/HTML/HTML/teambox1/团队管理.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -650,28 +530,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/personTeamManager.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="236" column="1" lean-forward="true" selection-start-line="236" selection-start-column="1" selection-end-line="236" selection-end-column="1" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/png/团队管理.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/design/HTML/HTML/teambox1/images/团队管理/u510.png">
@@ -729,6 +593,68 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/personTeamManager/team_card_add_selected.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/HTML/HTML/teambox1/安全设置.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/png/安全设置.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/png/项目管理中心.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/personTeamManager.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="91" column="44" lean-forward="false" selection-start-line="91" selection-start-column="44" selection-end-line="91" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/png/团队管理.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/png/个人界面.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/png/我的收藏.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/personAccountSafe.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="76" column="38" lean-forward="false" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/personInfo.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -737,29 +663,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/personInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/personTeamManager/team_card_add_selected.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/personTeamManager.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="80" column="12" lean-forward="false" selection-start-line="80" selection-start-column="12" selection-end-line="83" selection-end-column="26" />
+        <state relative-caret-position="414">
+          <caret line="73" column="42" lean-forward="false" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="30" column="48" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/png/个人信息.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/personTeamManager.js">
@@ -770,10 +699,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/personTeamManager.less">
+    <entry file="file://$PROJECT_DIR$/less/personAccountPW.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="106" column="24" lean-forward="false" selection-start-line="106" selection-start-column="24" selection-end-line="106" selection-end-column="24" />
+        <state relative-caret-position="738">
+          <caret line="97" column="64" lean-forward="true" selection-start-line="97" selection-start-column="64" selection-end-line="97" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/personInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design/png/账户密码.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personAccountPW.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="69" column="42" lean-forward="true" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/personAccountPW.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="235" column="30" lean-forward="true" selection-start-line="235" selection-start-column="30" selection-end-line="235" selection-end-column="30" />
           <folding />
         </state>
       </provider>
