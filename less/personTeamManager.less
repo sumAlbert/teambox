@@ -73,7 +73,7 @@ input[type="file"]{cursor:pointer;}
 /*the substance in every line of guidance part*/
 .content-item-icon{width:1.5em; height: 1.5em; margin: 0 .5em 0 0;}
 .content-item-name{color: #333;margin: 0 4em 0 0;font-weight: 200;}
-.content-item:nth-child(1)>.content-item-name{font-weight: 700;}
+.content-item:nth-child(4)>.content-item-name{font-weight: 700;}
 .content-item:hover {background:hsla(0,0%,100%,.8);}
 .content-item:nth-child(1)>.content-item-icon{background: url(../images/personInfo/personInfo.png) center center no-repeat;background-size: 100% 100%;}
 .content-item:nth-child(2)>.content-item-icon{background: url(../images/personInfo/accountPw.png) center center no-repeat;background-size: 100% 100%;}
@@ -85,3 +85,30 @@ input[type="file"]{cursor:pointer;}
 
 /*now main page of personInfo*/
 .content-main{display:inline-block;width: 63%;float: right;.pos(relative);}
+
+.content-main-create-name{display: block;line-height: 3em;font-size: 120%;position: relative;}
+.content-main-create-teams{  display: flex; position: relative;flex-direction: row;justify-content: flex-start; align-items: center;flex-wrap: wrap}
+
+/*the small cards in part to creating team*/
+.create-team-card{  width: 15em;height: 9em;line-height: 9em;display: block;position: relative;margin: 0 2em 2em 0;border-radius: .2em;cursor: pointer}
+.create-team-card:hover{box-shadow: .2em .2em 1em .2em hsla(0,0%,80%,.5);left: -1px;}
+.create-team-card-bg1{ background: url("../images/personTeamManager/team_bg_1.png") no-repeat center center;background-size: 100% 100%; }
+.create-team-card-bg2{ background: url("../images/personTeamManager/team_bg_2.png") no-repeat center center;background-size: 100% 100%; }
+.create-team-card-bg3{ background: url("../images/personTeamManager/team_bg_3.png") no-repeat center center;background-size: 100% 100%; }
+
+.create-team-card-name{position: relative;line-height: 3em;margin: 0 0 0 1.2em;font-size: 110%;color: white;display: inline-block;vertical-align: top;}
+.create-team-card-change{ display: inline-block;position: relative;float: right;height: 3.3em;width: 3.3em;background: url("../images/personTeamManager/team_card_change.png") no-repeat center center;background-size: 45% 45%;}
+
+
+/*the card to add team*/
+.create-team-card-add{  .create-team-card;  text-align: center;background: white;transition: color 1s;}
+.create-team-card-add:hover{  box-shadow: .2em .2em 1em .2em hsla(0,0%,80%,.5);left: -1px;}
+
+.create-team-card-content{vertical-align: middle;display: inline-block;}
+.create-team-card-icon{ background: url("../images/personTeamManager/team_card_add.png") center center no-repeat;background-size: 100% 100%;width: 3em;height: 3em;margin: 0 auto 1em;transition: all .5s;}
+.create-team-card-icon-name{line-height: 1em;color: #8a8a8a;transition: all .5s;}
+
+/*the small cards in part to join team*/
+.content-main-join-name{display: block;line-height: 3em;font-size: 120%;position: relative;}
+.content-main-join-teams{  display: flex; position: relative;flex-direction: row;justify-content: flex-start; align-items: center;flex-wrap: wrap}
+.create-team-card-delete{ display: inline-block;position: relative;float: right;height: 3.3em;width: 3.3em;background: url("../images/personTeamManager/team_card_delete.png") no-repeat center center;background-size: 35% 35%;}

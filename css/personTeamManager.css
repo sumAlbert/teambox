@@ -250,3 +250,121 @@ input[type="file"] {
   float: right;
   position: relative;
 }
+.content-main-create-name {
+  display: block;
+  line-height: 3em;
+  font-size: 120%;
+  position: relative;
+}
+.content-main-create-teams {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/*the small cards in part to creating team*/
+.create-team-card {
+  width: 15em;
+  height: 9em;
+  line-height: 9em;
+  display: block;
+  position: relative;
+  margin: 0 2em 2em 0;
+  border-radius: .2em;
+  cursor: pointer;
+}
+.create-team-card:hover {
+  box-shadow: 0.2em 0.2em 1em 0.2em rgba(204, 204, 204, 0.5);
+  left: -1px;
+}
+.create-team-card-bg1 {
+  background: url("../images/personTeamManager/team_bg_1.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+.create-team-card-bg2 {
+  background: url("../images/personTeamManager/team_bg_2.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+.create-team-card-bg3 {
+  background: url("../images/personTeamManager/team_bg_3.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+.create-team-card-name {
+  position: relative;
+  line-height: 3em;
+  margin: 0 0 0 1.2em;
+  font-size: 110%;
+  color: white;
+  display: inline-block;
+  vertical-align: top;
+}
+.create-team-card-change {
+  display: inline-block;
+  position: relative;
+  float: right;
+  height: 3.3em;
+  width: 3.3em;
+  background: url("../images/personTeamManager/team_card_change.png") no-repeat center center;
+  background-size: 45% 45%;
+}
+/*the card to add team*/
+.create-team-card-add {
+  width: 15em;
+  height: 9em;
+  line-height: 9em;
+  display: block;
+  position: relative;
+  margin: 0 2em 2em 0;
+  border-radius: .2em;
+  cursor: pointer;
+  text-align: center;
+  background: white;
+  transition: color 1s;
+}
+.create-team-card-add:hover {
+  box-shadow: 0.2em 0.2em 1em 0.2em rgba(204, 204, 204, 0.5);
+  left: -1px;
+}
+.create-team-card-content {
+  vertical-align: middle;
+  display: inline-block;
+}
+.create-team-card-icon {
+  background: url("../images/personTeamManager/team_card_add.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 3em;
+  height: 3em;
+  margin: 0 auto 1em;
+  transition: all .5s;
+}
+.create-team-card-icon-name {
+  line-height: 1em;
+  color: #8a8a8a;
+  transition: all .5s;
+}
+/*the small cards in part to join team*/
+.content-main-join-name {
+  display: block;
+  line-height: 3em;
+  font-size: 120%;
+  position: relative;
+}
+.content-main-join-teams {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.create-team-card-delete {
+  display: inline-block;
+  position: relative;
+  float: right;
+  height: 3.3em;
+  width: 3.3em;
+  background: url("../images/personTeamManager/team_card_delete.png") no-repeat center center;
+  background-size: 35% 35%;
+}
