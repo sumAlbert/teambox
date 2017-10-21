@@ -1,0 +1,98 @@
+
+@charset "utf-8";
+
+
+/*less setting*/
+.pos(@pos){position:@pos;}
+.flex-row(){display:flex;display:-webkit-flex;flex-direction:row;-webkit-flex-direction:row}
+.flex(@scale){flex:@scale;-webkit-flex:@scale;}
+.flex-justify-content(@kind){justify-content:@kind;}
+.flex-align-items(@kind){align-items:@kind}
+
+
+/*css global settings*/
+html,body{.main;}
+.main{.pos(relative);margin:0;padding:0;height:100%;width:100%;font-size:16px;.flex-align-items(center);background: #ededed;}
+a{text-decoration:none;}
+.pic{height: 100%;width: 100%;}
+input[type="file"]{cursor:pointer;}
+
+
+/*title bar*/
+.header{.pos(fixed);.flex-row;.flex-align-items(center);height:3.5em;width:100%;box-shadow:0 .1em .4em .02em hsla(0,0%,60%,.6);background: white;z-index:10;}
+
+
+/*the left part of title bar(logo and page name)*/
+.logo{.pos(relative);height: 3.5em;width: 11.25em;margin:0 2em 0 1em;background: url(../images/header/logo1.png) 0% 60% no-repeat;background-size: 100% 71%;}
+.page-name{font-size:1.01em;color:#666;margin:0 .5em;padding: .4em .7em;}
+.page-name:hover{background: #3da8f5;color: white;cursor: pointer;border-radius: 5px;}
+.flex-space{.flex(1);}
+
+/*The input box in the headers*/
+.page-search-box{height: 2em;line-height: 2em;width: 20em;border: 1px solid #666;border-radius: 5px;margin: 0 0 0 1em;}
+.input-page-search{padding:0;margin:0 1em;width: 18em;border:none;display:inline-block;vertical-align: middle;outline: none;}
+.page-search-icon{display: inline-block;height: 2em;width: 2em;background: url("../images/personSearch/search.png") center center no-repeat;background-size: 80% 80%;float: right}
+
+/*thie right part of title bar(person info menu)*/
+.person-menu{.pos(relative);margin:0 2em 0;}
+.person-menu-hidden{.pos(absolute);top:3.5em;overflow:hidden;border-radius: .2em;overflow: hidden;display:none;height:0;}
+
+
+/*catalog part*/
+.flag-page-catalogs{background: white;width: 100%;line-height: 3.3em;height: 3.3em;border-bottom: 3px solid #3da8f5;margin: 0 auto;vertical-align: top;font-size: 89%}
+.flag-page-catalog{display: inline-block;line-height: 3.3em;text-align: center;width: 6.6em;vertical-align: top;cursor: pointer;}
+.flag-page-catalog-active{background: #3da8f5;color: white;}
+.flag-page-catalog:hover{background: #3da8f5;color: white;}
+
+/*catalog page in detail*/
+.flag-page-items{width:100%;background:white;display: flex;display: -webkit-flex;flex-direction: row;-webkit-flex-direction: row;justify-content: flex-start;-webkit-justify-content: flex-start;align-items: center;-webkit-align-items: center;}
+.flag-page-item{display: block;margin: 1em 2em 1em 1em;line-height: 1em;}
+.radio{display: inline-block;width: 1em;height: 1em;background: url("../images/personSearch/radio.png") center center no-repeat;background-size: 100% 100%;vertical-align: middle;cursor: pointer;}
+.radio-name{display: inline-block;vertical-align: middle;}
+
+/*every line of person info menu*/
+.person-info{.pos(relative);.flex-row();.flex-align-items(center);width:10em;line-height:3.5em;}
+.person-hidden-info{.pos(relative);.flex-row();.flex-align-items(center);width:10em;line-height:2em;margin: 0 0 .05em;background: white;box-shadow: .1em .1em .1em .05em hsla(0,0%,70%,.3);}
+.person-hidden-info:hover{background:hsla(0,0%,100%,.8);}
+.person-hidden-info-special{background: transparent; line-height: 1em;height: 1em;}
+.person-hidden-info-special:hover{background: none;}
+
+/*every line icon of person info menu*/
+.person-info-logo{width: 2.5em; height: 2.5em; margin: 0 1em 0;border-radius: 50% 50%}
+.person-hidden-info-logo{width: 2.5em; height: 2.5em;margin:0 1em 0;}
+.person-hidden-info:nth-child(2)> .person-hidden-info-logo{background: url(../images/header/setting.png) center center no-repeat; background-size: 60% 60%;}
+.person-hidden-info:nth-child(3)> .person-hidden-info-logo{background: url(../images/header/exit.png) center center no-repeat; background-size: 60% 60%;}
+
+
+/*every line name of person info menu*/
+.person-info-name{color:#666;overflow:hidden;word-wrap:break-word;width:5.5em;white-space:nowrap;}
+.person-hidden-info-name{color: #666;}
+
+
+/*the main body of the web*/
+.content{padding:5.5em 0 1em;max-width:55em;width: 100%;margin-left: auto;margin-right: auto;}
+.person-search{display: flex; position: relative;flex-direction: row;justify-content: space-between; align-items: flex-start;flex-wrap: wrap}
+
+/*team small card part*/
+.team-card{display: block;position: relative;width: 15em;padding: 1em  0;background: white;border-radius: .4em;box-shadow: .1em .1em .1em .05em hsla(0,0%,70%,.3);margin: 1em 1em 0 0;transition: all .5s;}
+.team-card:hover{box-shadow: .1em .1em .1em .05em hsla(0,0%,70%,.8);left: -.5px;cursor: pointer}
+.team-card-line{display: block;line-height: 2em;height: 2em;width: 85%;margin: 0 auto ;}
+
+.team-name{display: inline-block;font-size:120%;vertical-align: middle;margin:0 .4em 0 0;color: #222;}
+.team-collection{display:inline-block;position:relative;float: right;width: 2em;height: 2em;background: url("../images/personCollection/star_selected.png") center center no-repeat;background-size: 70% 70%;cursor: pointer;right: -.3em;}
+
+.team-extra-info{display: block;color:#666;line-height: 2em;height: 2em;width: 85%;margin: 0 auto ;border-bottom: 1px solid hsla(0,0%,80%,.5);}
+.team-date{position:relative;display:inline-block;font-size: 90%;}
+.team-aim{position:relative;display:inline-block;font-size: 90%;}
+
+.team-info-special-name{position: relative;display: block;font-size: 90%;font-weight: 400;width: 85%;margin: .8em auto;}
+.team-info-intro{font-size: 86%;width: 85%;margin: 0 auto 2em;max-height: 4.2em;overflow: hidden;color: #888;}
+.team-info-need{font-size: 86%;width: 85%;margin: 0 auto 2em;max-height: 4.2em;overflow: hidden;color: #888;}
+.team-info-email{font-size: 88%;width: 85%;margin: 0 auto .5em;max-height: 4.2em;overflow: hidden;color: #888;}
+.team-info-tel{font-size: 88%;width: 85%;margin: 0 auto .5em;max-height: 4.2em;overflow: hidden;color: #888;}
+.team-info-email:after{position: relative;width: 1.2em;height: 1.2em;margin:0 0 0 1em;top:.2em;background: url("../images/personCollection/send_email.png") center center no-repeat;background-size: 100% 100%;display: inline-block;content: "";}
+
+/*page change button*/
+.page-changes{display: block;text-align: center;margin: 2em 0 2em 0;}
+.page-change-item{display: inline-block;text-align: center;line-height: 2.5em;width: 2.5em; background: white;border-radius: 3px;font-weight: 400;}
+.page-change-item:hover{color: white;background: #3da8f5;cursor: pointer;}
