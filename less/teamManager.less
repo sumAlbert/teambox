@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+
+/*less setting*/
+.pos(@pos){position:@pos;}
+.flex-row(){display:flex;display:-webkit-flex;flex-direction:row;-webkit-flex-direction:row}
+.flex(@scale){flex:@scale;-webkit-flex:@scale;}
+.flex-justify-content(@kind){justify-content:@kind;}
+.flex-align-items(@kind){align-items:@kind}
+
+
+/*css global settings*/
+html,body{.main;}
+.main{.pos(relative);margin:0;padding:0;height:100%;width:100%;font-size:16px;.flex-align-items(center);background: #ededed;}
+a{text-decoration:none;}
+.pic{height: 100%;width: 100%;}
+input[type="file"]{cursor:pointer;}
+
+
+/*title bar*/
+.header{.pos(fixed);.flex-row;.flex-align-items(center);height:3.5em;width:100%;box-shadow:0 .1em .4em .02em hsla(0,0%,60%,.6);background: white;z-index:10;}
+
+
+/*the left part of title bar(logo and page name)*/
+.logo{.pos(relative);height: 3.5em;width: 11.25em;margin:0 .06em 0 1em;background: url(../images/header/logo1.png) 0% 60% no-repeat;background-size: 100% 71%;}
+.page-name{font-size:1.01em;font-weight:bold;color:#666;margin:0;}
+.flex-space{.flex(1);}
+
+
+/*thie right part of title bar(person info menu)*/
+.person-menu{.pos(relative);margin:0 2em 0;}
+.person-menu-hidden{.pos(absolute);top:3.5em;overflow:hidden;border-radius: .2em;overflow: hidden;display:none;height:0;}
+
+
+/*every line of person info menu*/
+.person-info{.pos(relative);.flex-row();.flex-align-items(center);width:10em;line-height:3.5em;}
+.person-hidden-info{.pos(relative);.flex-row();.flex-align-items(center);width:10em;line-height:2em;margin: 0 0 .05em;background: white;box-shadow: .1em .1em .1em .05em hsla(0,0%,70%,.3);}
+.person-hidden-info:hover{background:hsla(0,0%,100%,.8);}
+.person-hidden-info-special{background: transparent; line-height: 1em;height: 1em;}
+.person-hidden-info-special:hover{background: none;}
+
+/*every line icon of person info menu*/
+.person-info-logo{width: 2.5em; height: 2.5em; margin: 0 1em 0;border-radius: 50% 50%}
+.person-hidden-info-logo{width: 2.5em; height: 2.5em;margin:0 1em 0;}
+.person-hidden-info:nth-child(2)> .person-hidden-info-logo{background: url(../images/header/setting.png) center center no-repeat; background-size: 60% 60%;}
+.person-hidden-info:nth-child(3)> .person-hidden-info-logo{background: url(../images/header/exit.png) center center no-repeat; background-size: 60% 60%;}
+
+
+/*every line name of person info menu*/
+.person-info-name{color:#666;overflow:hidden;word-wrap:break-word;width:5.5em;white-space:nowrap;}
+.person-hidden-info-name{color: #666;}
+
+
+/*the main body of the web*/
+.content{padding:4.5em 0 1em;max-width:55em;width: 100%;margin-left: auto;margin-right: auto;}
+
+
+/*the guidance part of the web */
+.content-members{.pos(relative);width: 35%;font-size: 16px;display: inline-block;background: white;box-shadow: .1em .1em .1em .05em hsla(0,0%,70%,.3);padding: 0 0 1em 0;border-radius: 3px;}
+.content-members-header{display: block;width: 85%;line-height: 3em;height: 3em;margin: 0 auto;font-weight: 500;text-align: center;font-size: 120%;color:#444;border-bottom: 1px solid #aaa;}
+/*input box*/
+.content-members-add{display: block;margin: .5em auto;width: 85%;border: 1px solid #aaa;line-height: 2em;height: 2em;border-radius: 3px;}
+.content-members-add-show{display:block;width: 100%;height: 2em;line-height: 2em;}
+.input-members-add{display: inline-block;width: 80%;height: 2.4em;line-height: 2.4em;padding:0;vertical-align: middle;border:none;outline:none;margin: 0 0 0 1em;position: relative;float: left;}
+.content-members-icon{display: inline-block;vertical-align: middle;height: 2em;line-height: 2em;width: 2em;background: url("../images/teamManager/input_add.png") center center no-repeat;background-size: 80% 80%;float: right;}
+/*content member line*/
+.content-member{width: 85%;line-height: 3.5em;height: 3.5em;margin: .5em auto;}
+.img-avatar{vertical-align: middle;display: inline-block;height: 2em;width: 2em;margin: 0 0 0 .5em;border-radius:  50% 50%;}
+.content-member-infos{display: inline-block;vertical-align: middle;line-height: 1em;margin: 0 0 0 .5em;}
+.content-member-email{font-size: 80%;color: #777;position: relative;top: 5px;}
+.content-member-name{font-size: 115%;margin: 0 0 .4em 0;color:#444;position: relative;top: 5px;}
+
+/*right main part of content*/
+.content-add-task{width: 100%;line-height: 4em;height: 4em;text-align: center;background: white;box-shadow: .1em .1em .1em .05em hsla(0,0%,70%,.3);border-radius: 3px;cursor: pointer;}
+.content-add-task-box{display:inline-block;vertical-align: baseline;position: relative;height: 4em;line-height: 4em;}
+.img-task-add{height: 2em;width: 2em;display: inline-block;vertical-align: middle;position: relative;top:-2px;}
+.content-add-task-header{display: inline-block;vertical-align: baseline;line-height: 4em;height: 4em;position: relative}
+/*cut off line*/
+.content-task-cut-off{display: flex;width: 85%;margin: 3.5em auto 1.5em;flex-direction: row;justify-content: center;align-items: center;flex-wrap: nowrap;}
+.content-task-cut-off-line{flex: 1;background: #ccc;height: 1px;}
+.content-task-cut-off-name{margin: 0 1em;font-size: 115%;}
+
+/*task card part*/
+.content-task-list{display: block;width: 100%;background: white;padding:0 0 1.5em 0;box-shadow:  .1em .1em .1em .05em hsla(0,0%,70%, .3);border-radius: 3px;}
+.content-task-item{display: block;width: 100%;background: white;margin: 1em auto;}
+.content-task-item-headers{width: 85%;line-height: 3em;height: 3em;margin:0 auto;}
+.content-task-item-day{display: inline-block;vertical-align: baseline;font-weight: 500;color: #222;}
+.content-task-item-data{display: inline-block;vertical-align: baseline;color: #777;}
+
+.content-task-infos{border-top: 1px solid #ccc;width: 85%;margin: 0 auto;position: relative;display: flex;flex-direction: row;flex-wrap: nowrap;}
+
+.content-task-duration{display: block;width: 9em;line-height: 1.8em;color: #aaa;text-align: center;margin: 1em 0 0 0;}
+.content-task-main-infos{display: block;flex: 1;line-height: 1.8em;margin: 1em 0 0 1em;}
+.content-task-name{font-weight: 500;color: #111;font-size: 115%;}
+.content-task-requirement{color: #666;}
+.content-task-stars{line-height: 3em;height: 3em;display: flex;flex-direction: row;justify-content: flex-start;align-items: center}
+.content-task-star{background: url("../images/teamManager/star.png") center center no-repeat;background-size: 100% 100%;width: 1.6em;height:1.6em;};
+
+
+
+
+/*now main page of personInfo*/
+.content-main{display:inline-block;width: 63%;float: right;.pos(relative);padding: 0 0 2em 0;}
