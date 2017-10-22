@@ -39,4 +39,9 @@ class TeamModel extends Model{
 
 		$this->insertItem("task", $columns, $values);
 	}
+	
+	/*创建新的Team*/
+	function setNewTeam(){
+		
+	}
 }
