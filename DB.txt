@@ -1,0 +1,77 @@
+CREATE DATABASE `db_teambox2` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+CREATE TABLE `task` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `teamid` int(11) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `starttime` datetime DEFAULT NULL,
+  `endtime` datetime DEFAULT NULL,
+  `taskname` varchar(45) DEFAULT NULL,
+  `task` varchar(45) DEFAULT NULL,
+  `importance` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `relation` (
+  `firstid` int(11) NOT NULL,
+  `secondid` int(11) NOT NULL,
+  `secondtype` varchar(45) NOT NULL DEFAULT 'team',
+  `relation` varchar(45) NOT NULL DEFAULT 'create'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `team` (
+  `id` int(11) NOT NULL,
+  `leadernumber` int(11) NOT NULL,
+  `membernumbers` varchar(255) DEFAULT NULL,
+  `applicantnumbers` varchar(255) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `projectname` varchar(255) NOT NULL,
+  `introduction` varchar(3000) NOT NULL,
+  `requirement` varchar(3000) DEFAULT NULL,
+  `aim` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `qq` varchar(45) DEFAULT NULL,
+  `weChat` varchar(45) DEFAULT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `picture_n` int(11) DEFAULT NULL,
+  `video_n` int(11) DEFAULT NULL,
+  `audio_n` int(11) DEFAULT NULL,
+  `web_n` int(11) DEFAULT NULL,
+  `pc_n` int(11) DEFAULT NULL,
+  `android_n` int(11) DEFAULT NULL,
+  `ios_n` int(11) DEFAULT NULL,
+  `talk_n` int(11) DEFAULT NULL,
+  `write_n` int(11) DEFAULT NULL,
+  `sell_n` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `number_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` char(32) NOT NULL,
+  `date` date DEFAULT NULL,
+  `education` varchar(45) DEFAULT NULL,
+  `school` varchar(45) DEFAULT NULL,
+  `college` varchar(45) DEFAULT NULL,
+  `phone` varchar(45) DEFAULT NULL,
+  `qq` varchar(45) DEFAULT NULL,
+  `wechat` varchar(45) DEFAULT NULL,
+  `other` varchar(3000) DEFAULT NULL,
+  `experience` varchar(3000) DEFAULT NULL,
+  `record` varchar(255) DEFAULT NULL,
+  `sex` char(20) DEFAULT NULL,
+  `state` varchar(45) DEFAULT 'warm',
+  `visible` varchar(45) DEFAULT 'no',
+  `protection` varchar(45) DEFAULT 'no',
+  `name_v` varchar(45) DEFAULT 'yes',
+  `college_v` varchar(45) DEFAULT 'yes',
+  `phone_v` varchar(45) DEFAULT 'no',
+  `qq_v` varchar(45) DEFAULT 'no',
+  `wechat_v` varchar(45) DEFAULT 'no',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

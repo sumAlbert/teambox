@@ -10,8 +10,10 @@ class Sql {
 		$this->_dbLink=new mysqli($hostName,$dbUser,$dbPassWord,$dbName);
 		if(mysqli_connect_errno())
 			return 0;//连接失败
-		else 
+		else{
+			$this->_dbLink->query("set names 'utf8'");
 			return 1;
+		}
 	}
 	
 	/* 关闭数据库 */

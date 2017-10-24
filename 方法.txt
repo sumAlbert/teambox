@@ -1,0 +1,150 @@
+--------------------------------
+获取已登录用户的信息
+Post参数:
+class:User
+action:logged
+返回值:
+'state': 'Success'(查询成功) / 'Fail'(未登录)
+'result': {'id':'','email':'','username':''}
+
+注:用来检测用户登录
+--------------------------------
+用户注销
+Post参数:
+class:User
+action:logOut
+返回值:
+'state':'Success'(注销成功) / 'Fail'(未登录)
+--------------------------------
+
+获取当前登录用户的信息
+Post参数：
+class:User
+action:getSelfInfo
+
+返回值：
+
+"state":"Success"(获取成功),"Fail"(失败)
+"result":{数据库列名}
+
+示例:
+{
+ "state":"Success",
+ "result":{"id":"3","username":"useaaae","email":"email","password":"bb","date":"1998-01-01","education":"education","school":"school","college":"college","phone":"phone","qq":"qq","wechat":"wechat","other":"other","experience":"experience","record":null,"sex":null,"state":"hot","visible":"yes","protection":"yes","name_v":"yes","college_v":"yes","phone_v":"yes","qq_v":"yes","wechat_v":"yes"}
+}
+
+------------------------------
+更新当前用户信息
+Post参数:
+class:User
+action:updateInfo
+'username' 姓名
+'date' 入学日期
+'education' 学历
+'school' 学校
+'college' 学院
+'phone' 电话
+'email' 邮箱
+'wechat' 微信
+'qq' qq
+'other' 特长
+'experience' 经历
+
+返回值:
+'state': 'Fail'(更新失败) / 'Success'(更新成功)
+
+-----------------------------
+更新用户可见信息
+Post参数:
+class:User
+action:visibleChange
+'name_v' 姓名公开 :"yse"/"no" 下同
+'college_v'学院公开
+'phone_v'电话公开
+'qq_v' qq公开
+'wechat_v'微信公开
+'state': 'hot'/'warm'
+'visible':"yes"（可见）/"no"(不可见)
+'protection':"yes"（密保）/"no"
+
+返回值:
+'state':'Success'/'Fail'
+
+------------------------------
+获取用户收藏内容
+Post参数:
+class:User
+action:favorite
+
+返回值:
+'state':'Success'(获取成功)
+'result':{'user':[]},{'team':[]}
+
+示例:
+{
+"state":"Success",
+"result":
+	{
+	"user":[{"id":"10","username":"","email":"abcde","password":"aabcd","date":null,"education":null,"school":null,"college":"","phone":null,"qq":null,"wechat":null,"other":null,"experience":null,"record":null,"sex":null,"state":"warm","visible":"yes","protection":"no","name_v":"yes","college_v":"yes","phone_v":"no","qq_v":"no","wechat_v":"no"}],
+	"team":[]
+	}
+}
+--------------------------------
+添加或删除收藏内容
+Post参数:
+class:User
+action:favoriteChange
+'type':'team'/'user' 所要收藏的对象的类型
+'id' 所要收藏的对象的id
+
+返回值:
+'state':'Fail'/'Success'
+--------------------------------
+查询用户群 加权并删除隐私
+Post参数: 
+class:User
+action:findPerson
+'key' 关键词搜索(可无)
+返回值:
+'state':'Fail'/'Success'
+'result’:[]
+
+示例:
+{
+"state":"Success",
+"result":[
+	{"id":"3","username":"","email":"email","password":"bb","date":"1998-01-01","education":"education","school":"school","college":"","phone":"","qq":"","wechat":"wechat","other":"other","experience":"experience","record":null,"sex":null,"state":"hot","visible":"yes","protection":"yes","name_v":"yes","college_v":"yes","phone_v":"yes","qq_v":"yes","wechat_v":"yes","key":0,"金融\/经济":0,"心理":0,"教育":0,"设计\/美术":0,"软件\/计算机":0,"机械":0,"电子信息工程":0,"航空\/飞行器":0,"体健":0,"微信\/软文":0,"PS\/AI":0,"视频制作":0,"音频制作":0,"PPT制作":0,"英语":0,"日语":0,"法语":0,"韩语":0,"Web前端":0,"数据库":0,"App开发":0,"桌面应用开发":0,"IOS应用开发":0,"Java":0,"PHP":0,"C\/C++":0,"语言表达":0,"播音主持":0,"撰文排版":0,"LOL":0,"守望先锋":0,"狼人杀":0},
+	{"id":"10","username":"","email":"abcde","password":"aabcd","date":null,"education":null,"school":null,"college":"","phone":null,"qq":null,"wechat":null,"other":null,"experience":null,"record":null,"sex":null,"state":"warm","visible":"yes","protection":"no","name_v":"yes","college_v":"yes","phone_v":"no","qq_v":"no","wechat_v":"no","key":0,"金融\/经济":0,"心理":0,"教育":0,"设计\/美术":0,"软件\/计算机":0,"机械":0,"电子信息工程":0,"航空\/飞行器":0,"体健":0,"微信\/软文":0,"PS\/AI":0,"视频制作":0,"音频制作":0,"PPT制作":0,"英语":0,"日语":0,"法语":0,"韩语":0,"Web前端":0,"数据库":0,"App开发":0,"桌面应用开发":0,"IOS应用开发":0,"Java":0,"PHP":0,"C\/C++":0,"语言表达":0,"播音主持":0,"撰文排版":0,"LOL":0,"守望先锋":0,"狼人杀":0}
+	]
+}
+
+注： 加权的key中文索引
+'金融/经济','心理','教育','设计/美术','软件/计算机','机械','电子信息工程','航空/飞行器','体健',
+'微信/软文','PS/AI','视频制作','音频制作','PPT制作','英语','日语','法语','韩语',
+'Web前端','数据库','App开发','桌面应用开发','IOS应用开发','Java','PHP','C/C++',
+'语言表达','播音主持','撰文排版','LOL','守望先锋','狼人杀'
+
+--------------------------------
+获取已登录用户的信息
+Post参数:
+class:User
+action:logged
+返回值:
+'state': 'Success'(查询成功) / 'Fail'(未登录)
+'result': {'id':'','email':'','username':''}
+
+注:用来检测用户登录
+--------------------------------
+用户注销
+Post参数:
+class:User
+action:logOut
+返回值:
+'state':'Success'(注销成功) / 'Fail'(未登录)
+--------------------------------
+
+
+
+
+
+

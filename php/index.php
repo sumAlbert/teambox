@@ -5,10 +5,10 @@ defined('APP_PATH') or define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'
 //defined('RUNTIME_PATH') or define('RUNTIME_PATH', APP_PATH.'runtime/');
 require APP_PATH."config.php";
 require APP_PATH."Loader.class.php";
-$_POST['class']="Test";
+//$_POST['class']="Test";
 $loader=new Loader();
-$class="Test"; //$_POST['class'];
-$action="testMetho";//$_POST['action'];
+$class=$_POST['class'];
+$action=$_POST['action'];
 
 $controllerName=$class."Controller";
 $controller=new $controllerName($class,$action);

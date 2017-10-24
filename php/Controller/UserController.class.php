@@ -249,13 +249,13 @@ class UserController extends Controller{
 	 *  'state':'Fail'/'Success'
 	 *  
 	 */
-	function findperson(){
+	function findPerson(){
 		$key=null;
 		if(isset($_POST['key'])){
 			$key=$_POST['key'];
 		}
 		$user=new UserModel();
-		$result=$user->findperson($key);
+		$result=$user->findPerson($key);
 		$this->success();
 		$this->set('result', $result);
 	}

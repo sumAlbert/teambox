@@ -1,4 +1,5 @@
 <?php
+header("Content-type: text/html; charset=ascii");
 /*defined('ROOT') or define('ROOT', __DIR__.'/');
 defined('APP_PATH') or define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
 //defined('CONFIG_PATH') or define('CONFIG_PATH', APP_PATH.'config/');
@@ -27,7 +28,7 @@ require APP_PATH."config.php";
 require APP_PATH."Loader.class.php";
 
 $_POST['class']="User";
-$_POST['action']="favoriteChange";
+$_POST['action']="findPerson";
 session_start();
 $_SESSION['user_id']=3;
 $_SESSION['user_email']='email';
@@ -35,8 +36,8 @@ $_SESSION['user_name']='useaaae';
 // $_POST["verify"]=123;
 // $_SESSION['Verify_Code']=123;
 // session_unset();
-$keys=array('type','id');
-$values=array('user',7);
+$keys=array('type','id','key');
+$values=array('user',7,'关键词');
 
 for($i=0;$i<count($keys);$i++){
 	$_POST[$keys[$i]]=$values[$i];
