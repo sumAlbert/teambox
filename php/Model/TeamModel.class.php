@@ -2,11 +2,21 @@
 class TeamModel extends Model{
 	const table = "team";
 	/*获取一个团队*/
-	function selectTeam($id){
+	function getTeamInfo($id){
 		$this->selectItem(self::table,"id", $id);
-		return $this->_result;
+		return $this->_result[0];
 	}
-	
+	/*通过userid获取创建的团队ID以及name*/
+	function getSelfteam($id){
+		$this->selectItem(self::table, "leadernumber", $id);
+		$res=$this->_result;
+		$newres=array();
+		for($i=0;$i<count($res);$i++){
+			$newres[$i]['id']=$res[$i]['id'];
+			$newres[$i]['projectname']=$res[$i]['projectname'];
+		}
+		return $newres;
+	}
 	/*通过teamid获取成员信息*/
 	function members($teamId){
 		$columns=array("secondid","secondtype");

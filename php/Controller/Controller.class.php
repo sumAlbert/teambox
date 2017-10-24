@@ -9,6 +9,12 @@ class Controller{
 		$this->_controller=$controller;
 		$this->_action=$action;
 		$this->_view=new View();
+		
+		$user=new UserModel();
+		if(!$user->_isLink){
+			$this->set('state', 'Connecting Error');
+			exit(0);
+		}
 		if(!method_exists($this,$action)){
 			$this->set('state', 'Wrong Action');
 			exit(0);

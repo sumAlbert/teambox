@@ -1,3 +1,9 @@
+常规State：
+'Wrong Action'方法错误
+'Missing Argument'缺少参数
+'Connecting Error'数据库连接失败
+'Success'成功
+'Fail'失败
 --------------------------------
 获取已登录用户的信息
 Post参数:

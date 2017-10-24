@@ -259,5 +259,15 @@ class UserController extends Controller{
 		$this->success();
 		$this->set('result', $result);
 	}
+	/*  获取用户创建的团队
+	 *  Post参数:
+	 *  无
+	 *  
+	 *  返回值:
+	 *  'state':'Success'
+	 */
+	function getSelfteam(){
+		
+	}
 }
 ?>
