@@ -1,5 +1,20 @@
 <?php
 class TeamController extends Controller{
+	function setTask(){
+		$keys=array("teamId","date","starttime","endtime","taskname","task","importance");
+		$this->postCheck($keys);
+		$info=array();
+		for($i=0;$i<count($keys);$i++){
+			$info[$keys[$i]]=$_POST[$keys[$i]];
+		}
+		$team=new TeamModel();
+		$result=$team->setTask($info);
+		if(!$result){
+			$this->set('state', 'Fail');
+			exit(0);
+		}
+		$this->success();
+	}
 	/* 获取团队的任务
 	 * Post参数:
 	 * 'teamid'团队id

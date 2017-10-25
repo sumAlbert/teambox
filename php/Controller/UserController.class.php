@@ -146,7 +146,7 @@ class UserController extends Controller{
 		$id=$_SESSION['user_id'];
 		if(!$user->updateInfo($id, $info)){
 			//更新失败
-			$this->set('state', 'Faail');
+			$this->set('state', 'Fail');
 			exit(0);
 		}
 		$this->success();

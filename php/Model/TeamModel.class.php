@@ -43,11 +43,10 @@ class TeamModel extends Model{
 	}
 
 	/*为team建立新的task*/
-	function setTask($teamId,$date,$starttime,$endtime,$taskname,$task,$importance){
-		$columns=array("teamId","date","starttime","endtime","taskname","task","importance");
-		$values=array("teamId","'date'","'");
-
-		$this->insertItem("task", $columns, $values);
+	function setTask($info){
+		$columns=array_keys($info);
+		$values=array_values($info);
+		return $this->insertItem("task", $columns, $values);
 	}
 	
 	/*创建新的Team*/
