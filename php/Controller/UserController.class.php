@@ -259,15 +259,28 @@ class UserController extends Controller{
 		$this->success();
 		$this->set('result', $result);
 	}
-	/*  获取用户创建的团队
-	 *  Post参数:
-	 *  无
-	 *  
-	 *  返回值:
-	 *  'state':'Success'
+	/* 更改密码
+	 * 
+	 * Post参数：
+	 * 'oldPassWord'
+	 * 'newPassWord'
+	 * 
+	 * 返回值:
+	 * 'state':'Success'/'Wrong PassWord'/'Fail'
 	 */
-	function getSelfteam(){
-		
+	function changePassWord(){
+		$this->postCheck(array("oldPassWord","newPassWord"));
+		$id=$_SESSION["user_id"];
+		$oldPasswd=$_POST["oldPassWord"];
+		$newPasswd=$_POST['newPassWord'];
+		$user=new UserModel();
+		$result=$user->changePassWord($id, $oldPasswd, $newPasswd);
+		if($result == 1){
+			$this->success();
+		}else if($result == -1){
+			$this->set("state", "Wrong PassWord");
+		}
+		else $this->set('state', "Fail");
 	}
 }
 ?>

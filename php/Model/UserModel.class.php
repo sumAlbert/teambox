@@ -198,7 +198,14 @@ class UserModel extends Model{
 		}
 		return $sum;
 	}
-	
+	/*更改密码*/
+	function changePassWord($id,$oldPasswd,$newPasswd){
+		$userInfo=$this->selectUser($id);
+		if($oldPasswd != $userInfo["password"]){
+			return -1;
+		}
+		return $this->updateItem(self::table,array("password"),array($newPasswd),"id",$id );
+	}
 }
 
 ?>

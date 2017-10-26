@@ -7,7 +7,7 @@ class TeamModel extends Model{
 		return $this->_result[0];
 	}
 	/*通过userid获取创建的团队ID以及name*/
-	function getSelfteam($id){
+	function getSelfTeam($id){
 		$this->selectItem(self::table, "leadernumber", $id);
 		$res=$this->_result;
 		$newres=array();
@@ -16,6 +16,24 @@ class TeamModel extends Model{
 			$newres[$i]['projectname']=$res[$i]['projectname'];
 		}
 		return $newres;
+	}
+	/*获取用户加入的团队*/
+	function getJoinedTeam($id){
+		$columns=array("firstid","secondtype","relation");
+		$values=array($id,"team","join");
+		$this->selectItem2("relation", $columes, $values);
+		$result=$this->_result;
+		$teams=array();
+		for($i=0;$i<count($result);$i++){
+			array_push($teams, $result['secondid']);
+		}
+		$model = new UserModel();
+		$result=array();
+		$newres=array();
+		for($i=0;$i<count($users);$i++){
+			$result[$i]=$this->getTeamInfo($teams[$i]);
+		}
+		return $result;
 	}
 	/*通过teamid获取成员信息*/
 	function members($teamId){

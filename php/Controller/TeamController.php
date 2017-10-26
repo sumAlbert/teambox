@@ -46,9 +46,24 @@ class TeamController extends Controller{
 	function getSelfTeam(){
 		$id=$_SESSION['user_id'];
 		$team=new TeamModel();
-		$result=$team->getSelfteam($id);
+		$result=$team->getSelfTeam($id);
 		$this->success();
 		$this->set('result',$result);
+	}
+	/* 获取用户加入的团队ID以及name
+	 * Post参数:
+	 * 无
+	 * 
+	 * 返回值：
+	 * 'state':'Success'
+	 * 'result':[{'id':,'projectname':},]
+	 */
+	function getJoinedTeam(){
+		$id=$_SESSION['user_id'];
+		$team= new TeamModel();
+		$result=$team->getJoinedTeam($id);
+		$this->success();
+		$this->set("result",$result);
 	}
 	/* 获取一个团队的信息
 	 * Post参数:
