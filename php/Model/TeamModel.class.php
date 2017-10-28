@@ -67,8 +67,11 @@ class TeamModel extends Model{
 		return $this->insertItem("task", $columns, $values);
 	}
 	
-	/*创建新的Team*/
-	function setNewTeam(){
-		
+	/*创建新的Team checked*/
+	function setNewTeam($info){
+		$columns=array_keys($info);
+		$values=array_values($info);
+		//echo json_encode($info);
+		return $this->insertItem("team", $columns, $values);
 	}
 }

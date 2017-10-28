@@ -1,5 +1,5 @@
 <?php
-header("Content-type: text/html; charset=ascii");
+//header("Content-type: text/html; charset=ascii");
 /*defined('ROOT') or define('ROOT', __DIR__.'/');
 defined('APP_PATH') or define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
 //defined('CONFIG_PATH') or define('CONFIG_PATH', APP_PATH.'config/');
@@ -27,8 +27,8 @@ defined('APP_PATH') or define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'
 require APP_PATH."config.php";
 require APP_PATH."Loader.class.php";
 
-$_POST['class']="User";
-$_POST['action']="findPerson";
+$_POST['class']="Team";
+$_POST['action']="setNewTeam";
 session_start();
 $_SESSION['user_id']=3;
 $_SESSION['user_email']='email';
@@ -36,8 +36,10 @@ $_SESSION['user_name']='useaaae';
 // $_POST["verify"]=123;
 // $_SESSION['Verify_Code']=123;
 // session_unset();
-$keys=array('type','id','key');
-$values=array('user',7,'关键词');
+$keys=array("projectname","introduction","requirement","date",
+				"aim","phone","email","qq","weChat","link");
+$values=array("projectname","introduction","requirement","1998-01-02",
+				"aim","1234567","email","1234","weChat","link");
 
 for($i=0;$i<count($keys);$i++){
 	$_POST[$keys[$i]]=$values[$i];
@@ -45,11 +47,11 @@ for($i=0;$i<count($keys);$i++){
 $loader=new Loader();
 $class=$_POST['class'];
 $action=$_POST['action'];
-
-$controllerName=$class."Controller";
+//echo "a";
+$controllerName=$class."Controller";echo $controllerName;
 $controller=new $controllerName($class,$action);
 
-echo $_SESSION['user_id'].' ';
+//echo $_SESSION['user_id'].' ';
 // echo $_SESSION['user_email'].' ';
 // echo $_SESSION['user_name'].' ';
 // session_unset();

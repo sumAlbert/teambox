@@ -102,5 +102,41 @@ class TeamController extends Controller{
 		$this->success();
 		$this->set('result', $result);
 	}
+	/* 创建新的团队
+	 * Post参数:
+	 * projectname 项目名
+	 * introduction 介绍
+	 * requirement 需求
+	 * aim 目的
+	 * phone 
+	 * email 
+	 * qq
+	 * weChat
+	 * link
+	 * 
+	 * 返回值:
+	 * 'state'
+	 * 'result':{'teamId':}
+	 */
+	function setNewTeam(){
+		$this->success();
+		$keys=array("projectname","introduction","requirement",
+				"aim","phone","email","qq","weChat","link");
+		$this->postCheck($keys);
+		$info=array();
+		for($i=0;$i<count($keys);$i++){
+			$info[$keys[$i]]=$_POST[$keys[$i]];
+		}
+		$info["leadernumber"]=$_SESSION['user_id'];
+		$team=new TeamModel();
+		$result=$team->setNewTeam($info);
+		if($result){
+			$this->success();
+			//$this->set(, $value)
+		}else{
+			$this->set("state", "Fail");
+		}
+		
+	}
 }
 ?>

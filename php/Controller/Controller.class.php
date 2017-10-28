@@ -9,9 +9,10 @@ class Controller{
 		$this->_controller=$controller;
 		$this->_action=$action;
 		$this->_view=new View();
-		
-		$user=new UserModel();
-		if(!$user->_isLink){
+		$modelName=$controller."Model";
+		$model=new $modelName();
+		//echo $modelName;
+		if(!$model->_isLink){
 			$this->set('state', 'Connecting Error');
 			exit(0);
 		}
