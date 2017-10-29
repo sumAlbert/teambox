@@ -8,27 +8,29 @@ $(document).ready(function(){
 		  if(pass())
 		  {
 		  	$.ajax({
-		  		url:"login.php",
+		  		url:"./php/index.php",
 		  		type:"post",
 		  		data:
 		  		{
+		  			class:"User",
+		  			action:"logIn",
 		  			email:$login_email.val(),
-		  			password:$login_password.val()
+		  			password:$.md5($login_password.val())
 		  		},
 		  		success:function($ans)
 		  		{
-		  			if($ans=='Link Error')
+		  			if($ans.indexOf('Connecting Error')!=-1)
 		  				alert("连接失败");
-		  			if($ans=='Have not registered')
-		  				alert("账号不存在");
-		  			if($ans=='Succeed')
+		  			if($ans.indexOf('Fail')!=-1)
+		  				alert("账号不存在或者密码错误");
+		  			if($ans.indexOf('Success')!=-1)
 		  			{
 		  				alert("登录成功");
 		  				toindex();
 		  				
 		  			}
-		  			if($ans=='Wrong Password')
-		  				alert("密码错误");
+		  			/*if($ans=='Wrong Password')
+		  				alert("密码错误");*/
 		  		},
 		  		error:function()
 		  		{

@@ -1,5 +1,19 @@
 <?php
 class TeamController extends Controller{
+	/* 建立新的任务
+	 * Post参数:
+	 * teamId
+	 * date
+	 * starttime
+	 * endtime
+	 * task
+	 * importance
+	 * 
+	 * 返回值：
+	 * 'state':'Success'/'Fail'
+	 * 
+	 * 
+	 */
 	function setTask(){
 		$keys=array("teamId","date","starttime","endtime","taskname","task","importance");
 		$this->postCheck($keys);

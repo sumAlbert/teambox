@@ -148,9 +148,37 @@ action:logOut
 返回值:
 'state':'Success'(注销成功) / 'Fail'(未登录)
 --------------------------------
+用户注册
+Post参数：
+class:User
+action:signUp
+ 'verify' 验证码
+ 'email' 邮箱
+ 'password' MD5密文口令
 
+返回值：
+ 'state':  'Success'(注册成功)/ 'Same Email'(Email被注册) /'Wrong Verify'(验证码错误)
 
+--------------------------------
+用户登录
+class:User
+action:logIn
+ Post参数:
+ 'email' 邮箱
+'password' md5密码
+返回值:
+'state': 'Success'(登录成功) / 'Fail'(错误用户名或密码) / 'Logged'(已经登录)
 
+--------------------------------
+更改密码
 
+Post参数：
+class:User
+action:changePassWord
+'oldPassWord'
+'newPassWord'
 
+返回值:
+ 'state':'Success'/'Wrong PassWord'/'Fail'
+--------------------------------
 
