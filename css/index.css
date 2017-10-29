@@ -18,6 +18,11 @@ div {
   color: #666666;
   font-family: Microsoft YaHei;
 }
+a {
+  text-decoration: none;
+  out-line: none;
+  color: #666;
+}
 @media screen and (max-width: 767px) {
   /*the header of the web such as the logo , guide ,login and regist*/
   .header {

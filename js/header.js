@@ -7,7 +7,18 @@ $(document).ready(function () {
             action:"logged"
         },
         success:function (data) {
-            console.log(data);
+            var data_JSON=JSON.parse(data);
+            if (data_JSON.state === "Success") {
+                initLoginState(true,data_JSON.result);
+                console.log("登陆成功");
+            }
+            else{
+                console.log("未登录");
+                initLoginState(false);
+            }
+        },
+        error: function () {
+            console.log("error");
         }
     })
 });

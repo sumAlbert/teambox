@@ -56,4 +56,15 @@ $(document).ready(function(){
 			$item_box_mob.animate({height:'0px'},500);
 		}
 	});
+
+    initLoginState=function initd(state,data){
+    	if(state){
+            $("#username").html(data.username);
+            $("#logout").html("注销");
+		}
+		else{
+            $("#username").html("登录");
+            $("#logout").html("注册");
+		}
+    };
 });
