@@ -26,19 +26,16 @@ $(document).ready(function(){
 				//转移至php
 				//alert("b");
 				$.ajax({
-					url:"./php/index.php",
+					url:"signup.php",
 					type:"post",
 					data:{
-						class:"User",
-						action:"signUp",
 						email:$email.val(),
-						password:$.md5($pass1.val()),
+						password:$pass1.val(),
 						verify:$("#verify").val()
 					},
 					success:function($ans)
 					{
-						var ans=JSON.parse($ans);
-						if($ans.indexOf('Success')!=-1)
+						if($ans.indexOf('succeed')!=-1)
 						{
 							alert("注册成功");
 							//window.location.href="TeamBox.html";
@@ -51,17 +48,17 @@ $(document).ready(function(){
 							$(".verify_box>img").attr("src","veri_code.php?"+Math.random());
 							return 1;
 						}
-						if($ans.indexOf('Same Email')!=-1)
+						if($ans.indexOf('Already Registered')!=-1)
 						{
 							alert("邮箱已被注册");
 							return 1;
 						}
-						if($ans.indexOf('Connecting Error')!=-1)
+						if($ans.indexOf('Link Error')!=-1)
 						{
 							alert("出现连接错误");
 							return 1;
 						}
-						if($ans.indexOf('Fail')!=-1)
+						if($ans.indexOf('fail')!=-1)
 						{
 							alert("Unknown Error");
 							return 1;
