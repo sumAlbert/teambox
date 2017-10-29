@@ -289,7 +289,7 @@ a.normal {
   top: 250px;
   margin: 20px  auto;
   width: 298px;
-  left: 39%;
+  left: calc(40.675%);
 }
 .line {
   height: 47px;
