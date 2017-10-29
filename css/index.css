@@ -1,0 +1,1339 @@
+/*the total page of the web*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  height: 100%;
+  width: 100%;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+div {
+  color: #666666;
+  font-family: Microsoft YaHei;
+}
+@media screen and (max-width: 767px) {
+  /*the header of the web such as the logo , guide ,login and regist*/
+  .header {
+    height: 50px;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .header_m {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .header_f,
+  .header_b {
+    display: none;
+  }
+  .b_logo_item {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .item_e {
+    display: none;
+  }
+  .item_e_active {
+    display: none;
+  }
+  /*the content in the header*/
+  .logo_box {
+    margin-left: 10px;
+    height: 100%;
+    width: 120px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .item_box {
+    height: 100%;
+    width: 40px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .login_box {
+    margin-left: 15px;
+    margin-right: 10px;
+    height: 100%;
+    width: 40px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  /*in the logo_box*/
+  .logo_u,
+  .logo_d {
+    width: 100%;
+    box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+  }
+  .logo_c {
+    width: 100%;
+    height: 40px;
+  }
+  /*in the item_box*/
+  .item_u,
+  .item_d {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+  }
+  .item_c {
+    height: 40px;
+    background: url("../images/index/menu.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #item_c_pc {
+    display: none;
+  }
+  .login_u,
+  .login_d {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+  }
+  .login_c {
+    height: 40px;
+    background: url("../images/index/menu.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  /*the item element when web was visited in the moblephone*/
+  .item_box_mob {
+    background: #efefef;
+    width: 100%;
+    height: 0px;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .item_e_mob {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .item_e_mob:active {
+    background-color: #6699ff;
+    color: white;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .item_e_mob_u,
+  .item_e_mob_d {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+  }
+  .item_e_mob_c {
+    text-align: center;
+    font-size: 16px;
+  }
+  /*the content area such as some subpage (1,2,3,4)*/
+  .subpage {
+    width: 100%;
+    height: 200px;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  #subpage3 > img {
+    display: block;
+  }
+  /*subpage1 about carousel*/
+  #subpage1 {
+    position: relative;
+  }
+  .carousel_box {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+  .carousel {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  /*subpage2 about server*/
+  #subpage2 {
+    width: 100%;
+    height: auto;
+  }
+  .server_f,
+  .server_b {
+    height: 100%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    display: none;
+  }
+  .server_m {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  /*the element of the server title*/
+  .server_title {
+    width: 100%;
+    height: 135px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-pack: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .server_title_c {
+    word-spacing: 3px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  /*the element of the server item*/
+  .server_item {
+    width: 100%;
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .server_item_ver {
+    height: 400px;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-pack: justify;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+  }
+  .server_item_hor {
+    width: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    margin-bottom: 13px;
+  }
+  .server_item_pic_box {
+    width: 100%;
+    height: 80px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-pack: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+  }
+  .server_item_pic_box > img {
+    width: 100px;
+  }
+  .server_item_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px;
+  }
+  .server_item_info {
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+  }
+  /*subpage4 about the cooperator*/
+  #subpage4 {
+    height: auto;
+  }
+  .cooperator_m {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .cooperator_f,
+  .cooperator_b {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .coo_title {
+    width: 100%;
+    height: 135px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .coo_content {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+    height: auto;
+  }
+  .coo_font,
+  .coo_US_font,
+  .coo_bottom_line {
+    width: 100%;
+    text-align: center;
+  }
+  .coo_font {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .coo_bottom_line {
+    height: 25px;
+    width: 30px;
+    border-bottom: 5px solid #6699ff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .coo_school {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .school_box {
+    height: 188px;
+    width: 188px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: transform 2s;
+    -webkit-transition: -webkit-transform 2s;
+  }
+  .school_box:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+  /*some extra info in the footer*/
+  .footer {
+    width: 100%;
+    height: 270px;
+    display: -webkit-box;
+    display: -moz-box;
+    background: #fbfbfb;
+  }
+  .footer_m {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .footer_f {
+    display: none;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+  }
+  .footer_b {
+    display: none;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+  }
+  /*the left part of the footer about logo and logo info*/
+  .footer_logo,
+  .footer_logo_font {
+    width: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    box-pack: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+  }
+  .footer_logo {
+    box-align: end;
+    -webkit-box-align: end;
+    -moz-box-align: end;
+  }
+  .footer_logo_box {
+    display: block;
+    height: 50px;
+    width: 225px;
+    margin-bottom: 10px;
+  }
+  .footer_logo_font {
+    font-size: 14px;
+  }
+  /*the middle part of the footer with some introduce to web*/
+  .footer_part {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .footer_part_title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+  }
+  .footer_part_info {
+    text-align: center;
+    font-size: 14px;
+    color: #888888;
+    margin: 8px;
+  }
+  /*the right part of the footer including some address and tel*/
+  .footer_b_title {
+    width: 100%;
+    color: #6699ff;
+    font-size: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+    margin-bottom: 13px;
+  }
+  .footer_b_info {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 919px) {
+  /*the header of the web such as the logo , guide ,login and regist*/
+  .header {
+    height: 50px;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .header_m {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .header_f,
+  .header_b {
+    display: none;
+  }
+  .b_logo_item {
+    height: 100%;
+    box-flex: 1;
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .item_e {
+    display: none;
+  }
+  .item_e_active {
+    display: none;
+  }
+  /*the content in the header*/
+  .logo_box {
+    margin-left: 10px;
+    height: 100%;
+    width: 120px;
+    display: -webkit-box;
+    display: -moz-box;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .item_box {
+    height: 100%;
+    width: 40px;
+    display: -webkit-box;
+    display: -moz-box;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .login_box {
+    margin-left: 15px;
+    margin-right: 10px;
+    height: 100%;
+    width: 40px;
+    display: -webkit-box;
+    display: -moz-box;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  /*in the logo_box*/
+  .logo_u,
+  .logo_d {
+    width: 100%;
+    box-flex: 1;
+    -ms-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+  }
+  .logo_c {
+    width: 100%;
+    height: 40px;
+  }
+  /*in the item_box*/
+  .item_u,
+  .item_d {
+    box-flex: 1;
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+  }
+  .item_c {
+    height: 40px;
+    background: url("../images/index/menu.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #item_c_pc {
+    display: none;
+  }
+  .login_u,
+  .login_d {
+    box-flex: 1;
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+  }
+  .login_c {
+    height: 40px;
+    background: url("../images/index/menu.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  /*the item element when web was visited in the moblephone*/
+  .item_box_mob {
+    background: #efefef;
+    width: 100%;
+    height: 0px;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .item_e_mob {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .item_e_mob:active {
+    background-color: #6699ff;
+    color: white;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -ms-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .item_e_mob_u,
+  .item_e_mob_d {
+    box-flex: 1;
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+  }
+  .item_e_mob_c {
+    text-align: center;
+    font-size: 16px;
+  }
+  /*the content area such as some subpage (1,2,3,4)*/
+  .subpage {
+    width: 100%;
+    height: 450px;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  #subpage3 > img {
+    display: block;
+  }
+  /*subpage1 about carousel*/
+  #subpage1 {
+    position: relative;
+  }
+  .carousel_box {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+  .carousel {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  /*subpage2 about server*/
+  #subpage2 {
+    width: 100%;
+    height: 500px;
+  }
+  .server_f,
+  .server_b {
+    height: 100%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    display: none;
+  }
+  .server_m {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  /*the element of the server title*/
+  .server_title {
+    width: 100%;
+    height: 135px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-pack: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .server_title_c {
+    word-spacing: 3px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  /*the element of the server item*/
+  .server_item {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .server_item_ver {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-pack: justify;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+  }
+  .server_item_hor {
+    width: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    margin-bottom: 13px;
+  }
+  .server_item_pic_box {
+    width: 100%;
+    height: 80px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-pack: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+  }
+  .server_item_pic_box > img {
+    width: 100px;
+  }
+  .server_item_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px;
+  }
+  .server_item_info {
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+  }
+  /*subpage4 about the cooperator*/
+  .cooperator_m {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .cooperator_f,
+  .cooperator_b {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .coo_title {
+    width: 100%;
+    height: 135px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .coo_content {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .coo_font,
+  .coo_US_font,
+  .coo_bottom_line {
+    width: 100%;
+    text-align: center;
+  }
+  .coo_font {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .coo_bottom_line {
+    height: 25px;
+    width: 30px;
+    border-bottom: 5px solid #6699ff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .coo_school {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .school_box {
+    height: 188px;
+    width: 188px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: transform 2s;
+    -webkit-transition: -webkit-transform 2s;
+  }
+  .school_box:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+  /*some extra info in the footer*/
+  .footer {
+    width: 100%;
+    height: 270px;
+    display: -webkit-box;
+    display: -moz-box;
+    background: #fbfbfb;
+  }
+  .footer_m {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    margin-left: 20px;
+    margin-right: 50px;
+  }
+  .footer_f {
+    display: none;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+    /*         
+            display: -moz-box;
+            display: -webkit-box;
+            -webkit-box-orient:vertical;
+            -moz-box-orient:vertical;
+            box-orient:vertical;*/
+  }
+  .footer_b {
+    display: none;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+    /*         
+            display: -moz-box;
+            display: -webkit-box;
+            -webkit-box-orient:vertical;
+            -moz-box-orient:vertical;
+            box-orient:vertical;*/
+  }
+  /*the left part of the footer about logo and logo info*/
+  .footer_logo,
+  .footer_logo_font {
+    width: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    box-pack: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+  }
+  .footer_logo {
+    box-align: end;
+    -webkit-box-align: end;
+    -moz-box-align: end;
+  }
+  .footer_logo_box {
+    display: block;
+    height: 50px;
+    width: 225px;
+    margin-bottom: 10px;
+  }
+  .footer_logo_font {
+    font-size: 14px;
+  }
+  /*the middle part of the footer with some introduce to web*/
+  .footer_part {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .footer_part_title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+  }
+  .footer_part_info {
+    text-align: center;
+    font-size: 14px;
+    color: #888888;
+    margin: 8px;
+  }
+  /*the right part of the footer including some address and tel*/
+  .footer_b_title {
+    width: 100%;
+    color: #6699ff;
+    font-size: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+    margin-bottom: 13px;
+  }
+  .footer_b_info {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+@media only screen and (min-width: 920px) {
+  /*the header of the web such as the logo , guide ,login and regist*/
+  .header {
+    height: 74px;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .header_m {
+    height: 100%;
+    width: 810px;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .header_f,
+  .header_b {
+    height: 100%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  /*the content in the header*/
+  .logo_box {
+    height: 100%;
+    width: 234px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .b_logo_item {
+    height: 100%;
+    box-flex: 1;
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .item_box {
+    height: 100%;
+    width: 400px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  /*in the logo_box*/
+  .login_box {
+    display: none;
+  }
+  .logo_u,
+  .logo_d {
+    width: 100%;
+    box-flex: 1;
+    -ms-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+  }
+  .logo_c {
+    width: 100%;
+    height: 60px;
+  }
+  /*in the item_box*/
+  #item_c_mob {
+    display: none;
+  }
+  .item_u,
+  .item_d {
+    box-flex: 1;
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+  }
+  .item_e {
+    margin-left: 10px;
+    display: inline-block;
+    border-radius: 9px;
+    padding: 8px 25px;
+  }
+  .item_e:hover {
+    display: inline-block;
+    background-color: #6699ff;
+    color: white;
+    cursor: pointer;
+  }
+  .item_e_active {
+    display: inline-block;
+    border-radius: 9px;
+    padding: 8px 25px;
+    background-color: #6699ff;
+    color: white;
+    cursor: default;
+  }
+  /*in the login*/
+  .login_f,
+  .login_b {
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+  }
+  .login_m {
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+  }
+  .login_u,
+  .login_d {
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    width: 100%;
+  }
+  .login_e {
+    display: inline-block;
+    padding: 7px;
+  }
+  .login_e:hover {
+    color: #555555;
+    cursor: pointer;
+  }
+  .item_box_mob {
+    display: none;
+  }
+  /*the content area such as some subpage (1,2,3,4)*/
+  .subpage {
+    width: 100%;
+    height: 500px;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  #subpage3 {
+    height: 460px;
+  }
+  #subpage3 > img {
+    display: block;
+  }
+  /*subpage1 about carousel*/
+  #subpage1 {
+    position: relative;
+  }
+  .carousel_box {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+  .carousel {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  /*subpage2 about server*/
+  .server_f,
+  .server_b {
+    height: 100%;
+    -ms-box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+  }
+  .server_m {
+    width: 860px;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -ms-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  /*the element of the server title*/
+  .server_title {
+    width: 100%;
+    height: 135px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-pack: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .server_title_c {
+    word-spacing: 3px;
+    text-align: center;
+    font-size: 25px;
+  }
+  /*the element of the server item*/
+  .server_item {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .server_item_ver {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-pack: justify;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+  }
+  .server_item_hor {
+    width: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    margin-bottom: 13px;
+  }
+  .server_item_pic_box {
+    width: 100%;
+    height: 80px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-pack: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+  }
+  .server_item_pic_box > img {
+    width: 100px;
+  }
+  .server_item_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px;
+  }
+  .server_item_info {
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+  }
+  /*subpage4 about the cooperator*/
+  .cooperator_m {
+    width: 860px;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .cooperator_f,
+  .cooperator_b {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .coo_title {
+    width: 100%;
+    height: 135px;
+    display: -webkit-box;
+    display: -moz-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  }
+  .coo_content {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+  }
+  .coo_font,
+  .coo_US_font,
+  .coo_bottom_line {
+    width: 100%;
+    text-align: center;
+  }
+  .coo_font {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .coo_bottom_line {
+    height: 25px;
+    width: 30px;
+    border-bottom: 5px solid #6699ff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .coo_school {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .school_box {
+    height: 188px;
+    width: 188px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: transform 2s;
+    -webkit-transition: -webkit-transform 2s;
+  }
+  .school_box:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+  /*some extra info in the footer*/
+  .footer {
+    width: 100%;
+    height: 270px;
+    display: -webkit-box;
+    display: -moz-box;
+    background: #fbfbfb;
+  }
+  .footer_m {
+    width: 480px;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    margin-left: 20px;
+    margin-right: 50px;
+  }
+  .footer_f {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+  }
+  .footer_b {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    height: 100%;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+  }
+  /*the left part of the footer about logo and logo info*/
+  .footer_logo,
+  .footer_logo_font {
+    width: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    box-pack: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+  }
+  .footer_logo {
+    box-align: end;
+    -webkit-box-align: end;
+    -moz-box-align: end;
+  }
+  .footer_logo_box {
+    display: block;
+    height: 50px;
+    width: 225px;
+    margin-bottom: 30px;
+  }
+  .footer_logo_font {
+    font-size: 14px;
+    position: relative;
+    bottom: 20px;
+  }
+  /*the middle part of the footer with some introduce to web*/
+  .footer_part {
+    height: 100%;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  }
+  .footer_part_title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+  }
+  .footer_part_info {
+    text-align: center;
+    font-size: 14px;
+    color: #888888;
+    margin: 8px;
+  }
+  /*the right part of the footer including some address and tel*/
+  .footer_b_title {
+    width: 100%;
+    color: #6699ff;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 13px;
+  }
+  .footer_b_info {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}

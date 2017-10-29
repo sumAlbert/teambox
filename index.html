@@ -3,7 +3,236 @@
 <head>
 	<title></title>
 </head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="./css/index.css">
 <body>
+<div class="main">`
+	<div class="header">
+		<div class="header_f"></div>
+		<div class="header_m">
+			<div class="logo_box">
+				<div class="logo_u"></div>
+				<div class="logo_c">
+					<img src="./images/index/teambox_logo.png">
+				</div>
+				<div class="logo_d"></div>
+			</div>
+			<div class="b_logo_item"></div>
+			<div class="item_box">
+				<div class="item_u"></div>
+				<div class="item_c" id="item_c_mob"></div>
+				<div class="item_c" id="item_c_pc">
+					<div class="item_e_active" onclick="window.location.reload();">首页</div>
+					<div class="item_e" onclick="window.location.href='findperson.html';">个人</div>
+					<div class="item_e" onclick="window.location.href='findteam.html';">团队</div>
+					<div class="item_e" onclick="window.location.reload();">联系</div>
+				</div>
+				<div class="item_d"></div>
+			</div>
+			<div class="login_box">
+				<div class="login_u"></div>
+				<div class="login_c"></div>
+				<div class="login_d"></div>
+			</div>
+		</div>
+		<div class="header_b">
+			<div class="login_f"></div>
+			<div class="login_m">
+				<div class="login_u"></div>
+				<div class="login_c">
+					<div class="login_e" id="username">登录</div>
+					<div class="login_e" id="logout">注册</div>
+				</div>
+				<div class="login_d"></div>
+			</div>
+			<div class="login_b"></div>
+		</div>
+	</div>
+	<div class="item_box_mob">
+		<div class="item_e_mob">
+			<div class="item_e_mob_u"></div>
+			<div class="item_e_mob_c">首页</div>
+			<div class="item_e_mob_d"></div>
+		</div>
+		<div class="item_e_mob">
+			<div class="item_e_mob_u"></div>
+			<div class="item_e_mob_c">个人</div>
+			<div class="item_e_mob_d"></div>
+		</div>
+		<div class="item_e_mob">
+			<div class="item_e_mob_u"></div>
+			<div class="item_e_mob_c">团队</div>
+			<div class="item_e_mob_d"></div>
+		</div>
+		<div class="item_e_mob">
+			<div class="item_e_mob_u"></div>
+			<div class="item_e_mob_c">联系</div>
+			<div class="item_e_mob_d"></div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="subpage" id="subpage1">
+			<div class="carousel_box">
+				<img src="./images/index/pic1.png" class="carousel">
+				<img src="./images/index/pic2.png" class="carousel">
+				<div style="width: 50%;position: absolute;height: 50%;overflow: hidden;">
+					<img class="slipper_back" src="./images/index/pic2.png" style="position: absolute;width: 200%;height: 200%;left: -20%; top: -20%;">
+					<img class="slipper" style=" display:block; position: absolute;width: 200%;height: 200%;" src="./images/index/pic1.png" alt="pic1">
 
+				</div>
+				<div style="width: 50%;position: absolute;height: 50%;right:0;overflow: hidden;">
+					<img class="slipper_back" src="./images/index/pic2.png" style="position: absolute;width: 200%;height: 200%;right: -20%;top: -20%;">
+					<img class="slipper" style="display:block; position: absolute;width: 200%;height: 200%;right:0;" src="./images/index/pic1.png" alt="pic1">
+				</div>
+				<div style="width: 50%;position: absolute;height: 50%;bottom:0;right:0;overflow: hidden;">
+					<img class="slipper_back" src="./images/index/pic2.png" style="position: absolute;width: 200%;height: 200%;bottom: -20%;right: -20%;">
+					<img class="slipper" style="display:block; position: absolute;width: 200%;height: 200%;bottom:0;right:0;" src="./images/index/pic1.png" alt="pic1">
+				</div>
+				<div style="width: 50%;position: absolute;height: 50%;bottom:0;overflow: hidden;">
+					<img class="slipper_back" src="./images/index/pic2.png" style="position: absolute;width: 200%;height: 200%;bottom: -20%;left: -20%">
+					<img class="slipper" style="display:block; position: absolute;width: 200%;height: 200%;bottom:0;" src="./images/index/pic1.png" alt="pic1">
+				</div>
+
+			</div>
+		</div>
+		<div class="subpage" id="subpage2">
+			<div class="server_f"></div>
+			<div class="server_m">
+				<div class="server_title">
+					<div class="server_title_c">我们的服务</div>
+				</div>
+				<div class="server_item">
+					<div class="server_item_ver">
+						<div class="server_item_hor">
+							<div class="server_item_pic_box">
+								<img src="./images/index/server1.png" onclick="window.location.href='findperson.html';">
+							</div>
+							<div class="server_item_title">招兵买马</div>
+							<div class="server_item_info">寻找队友</div>
+							<div class="server_item_info">定制团队</div>
+						</div>
+						<div class="server_item_hor">
+							<div class="server_item_pic_box">
+								<img src="./images/index/server4.png" onclick="window.location.href='require_team.html';">
+							</div>
+							<div class="server_item_title">需求发布</div>
+							<div class="server_item_info">组队竞赛</div>
+							<div class="server_item_info">一键满足</div>
+						</div>
+					</div>
+					<div class="server_item_ver">
+						<div class="server_item_hor">
+							<div class="server_item_pic_box">
+								<img src="./images/index/server2.png" onclick="window.location.href='findteam.html';">
+							</div>
+							<div class="server_item_title">团队查找</div>
+							<div class="server_item_info">一键搜索</div>
+							<div class="server_item_info">海量团队</div>
+						</div>
+						<div class="server_item_hor">
+							<div class="server_item_pic_box">
+								<img src="./images/index/server5.png" onclick="window.location.href='require_person.html';">
+							</div>
+							<div class="server_item_title">个人简历</div>
+							<div class="server_item_info">个人资料</div>
+							<div class="server_item_info">一应俱全</div>
+						</div>
+					</div>
+					<div class="server_item_ver">
+						<div class="server_item_hor">
+							<div class="server_item_pic_box" style="overflow:hidden;" onclick="window.location.href='signup.html';">
+								<img src="./images/index/server3.png">
+							</div>
+							<div class="server_item_title">一键绑定</div>
+							<div class="server_item_info">注册登录</div>
+							<div class="server_item_info">瞬间绑定</div>
+						</div>
+						<div class="server_item_hor">
+							<div class="server_item_pic_box">
+								<img src="./images/index/server6.png" onclick="window.location.href='center.html';">
+							</div>
+							<div class="server_item_title">个人中心</div>
+							<div class="server_item_info">个性设置</div>
+							<div class="server_item_info">花样随心</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="server_b"></div>
+		</div>
+		<div class="subpage" id="subpage3">
+			<img src="./images/index/page3.jpg">
+		</div>
+		<div class="subpage" id="subpage4">
+			<div class="cooperator_f"></div>
+			<div class="cooperator_m">
+				<div class="coo_title">
+					<div class="coo_font">合作伙伴</div>
+					<div class="coo_US_font">COOPERATIVE PARTNER</div>
+					<div class="coo_bottom_line"></div>
+				</div>
+				<div class="coo_content">
+					<div class="coo_school">
+						<div class="school_box">
+							<img src="./images/index/ECNU.png">
+						</div>
+					</div>
+					<div class="coo_school">
+						<div class="school_box">
+							<img src="./images/index/TJ.png">
+						</div>
+					</div>
+					<div class="coo_school">
+						<div class="school_box">
+							<img src="./images/index/SHJT.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cooperator_b"></div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer_f">
+			<div class="footer_logo">
+				<div class="footer_logo_box">
+					<img src="./images/index/teambox_logo.png">
+				</div>
+			</div>
+			<div class="footer_logo_font">专注团队组建</div>
+		</div>
+		<div class="footer_m">
+			<div class="footer_part">
+				<div class="footer_part_title">我们</div>
+				<div class="footer_part_info">服务项目</div>
+				<div class="footer_part_info">关于我们</div>
+				<div class="footer_part_info">联系我们</div>
+			</div>
+			<div class="footer_part">
+				<div class="footer_part_title">方案</div>
+				<div class="footer_part_info">创新创业</div>
+				<div class="footer_part_info">社会实践</div>
+				<div class="footer_part_info">学术研究</div>
+			</div>
+			<div class="footer_part">
+				<div class="footer_part_title">发现</div>
+				<div class="footer_part_info">战略伙伴</div>
+				<div class="footer_part_info">官方博客</div>
+				<div class="footer_part_info">友情链接</div>
+			</div>
+		</div>
+		<div class="footer_b">
+			<div class="footer_b_title">联系我们</div>
+			<div class="footer_b_info">地址：上海市普陀区中山北路3663号</div>
+			<div class="footer_b_info">客服QQ：123456789</div>
+			<div class="footer_b_info">电话：020-12345678</div>
+			<div class="footer_b_info">邮箱：123456@qq.com</div>
+		</div>
+	</div>
+</div>
 </body>
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/header.js"></script>
 </html>
