@@ -74,6 +74,6 @@ $(document).ready(function(){
 	}
 	function toindex()
 	{
-		window.location.href="TeamBox.html";
+		window.location.href="index.html";
 	}
 })
