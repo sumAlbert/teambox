@@ -60,6 +60,7 @@ $(document).ready(function(){
     initLoginState=function initd(state,data){
     	if(state){
             $("#username").html(data.username);
+            $("#username").attr("href","personInfo.html");
             $("#logout").html("注销");
 		}
 		else{

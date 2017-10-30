@@ -75,6 +75,28 @@ $(document).ready(function(){
 				}
 		}
 	});
+	//注销
+    $.ajax({
+        url:"./php/index.php",
+        type: "post",
+        data: {
+            class:"User",
+            action:"logOut"
+        },
+        success:function (data) {
+            console.log(data);
+            var data_JSON=JSON.parse(data);
+            if (data_JSON.state === "Success") {
+                console.log("注销成功");
+            }
+            else{
+                console.log("未登录");
+            }
+        },
+        error: function () {
+            console.log("error");
+        }
+    });
 	function createCode()
 	{
 		var checkCode=document.getElementById("checkCode");
@@ -138,7 +160,7 @@ $(document).ready(function(){
 		}
 		return 1;
 	}
-		function toindex()
+    function toindex()
 	{
 		window.location.href="index.html";
 	}
