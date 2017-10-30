@@ -244,7 +244,7 @@ class UserController extends Controller{
 	 * 
 	 *  Post参数: 
 	 *  'key' 关键词搜索
-	 * 
+	 *  'selections' json编码的数组
 	 *  返回值:
 	 *  'state':'Fail'/'Success'
 	 *  

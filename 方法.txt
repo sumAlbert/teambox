@@ -181,4 +181,63 @@ action:changePassWord
 返回值:
  'state':'Success'/'Wrong PassWord'/'Fail'
 --------------------------------
+获取用户创建的团队ID以及name
 
+Post参数:
+class:Team
+action:getSelfTeam
+
+返回值:
+'state':'Success'/'Fail'
+'result':[{'id':,'projectname':},]
+---------------------------------------
+获取用户加入的团队ID以及name
+
+Post参数:
+class：Team
+action:getJoinedTeam
+
+返回值：
+'state':'Success'
+'result':[{'id':,'projectname':},]
+-----------------------------------------
+ 获取一个团队的信息
+
+Post参数:
+class:Team
+action:getTeamInfo
+id(团队id)
+
+返回值:
+'state':'Success'/'Fail'
+'reault':{}
+---------------------------------------
+获取团队的成员信息
+
+Post参数:
+class:Team
+action：members
+id(团队id)
+
+返回值:
+'state':'Success'/'Fail'
+'result':[{'id':,'username':,'email':},]
+-----------------------------------------
+创建新的团队
+
+Post参数:
+class:Team
+action:setNewTeam
+projectname 项目名
+introduction 介绍
+requirement 需求
+aim 目的
+phone 
+email 
+qq
+weChat
+link
+
+返回值:
+'state'
+-------------------------------

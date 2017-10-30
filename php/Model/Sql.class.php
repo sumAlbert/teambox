@@ -67,16 +67,19 @@ class Sql {
 	}
 	
 	/*根据多个条件and后查询内容*/
-	function selectItem2($tableName,$columes,$values){
+	function selectItem2($tableName,$columns,$values){
 		$this->_result=array();
 		if($this->_dbLink==NULL) return 0;
+		//echo json_encode($columes);
 		$values=$this->cleanParas($values);
 		$select="select * from `$tableName` where ";
-		for($i=0;$i<count($columes);$i++){
-			$select=$select."`$columes[$i]` = $values[$i] ";
-			if($i!=count($columes)-1) $select=$select."and "; 
+		for($i=0;$i<count($columns);$i++){
+			$select=$select."`$columns[$i]` = $values[$i] ";
+			//echo $select;
+			if($i!=count($columns)-1) $select=$select."and "; 
 		}
-		
+		//echo json_encode($values);
+		//echo $select;
 		$res=$this->_dbLink->query($select);
 		
 		if($res == false) return 0;//查询失败
@@ -86,6 +89,7 @@ class Sql {
 			$this->_result[$i]=$row;
 			$i++;
 		}
+		//echo json_encode($this->_result);
 		return 1;
 	}
 	/*插入内容*/
