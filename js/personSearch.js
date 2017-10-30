@@ -8,6 +8,7 @@ $(document).ready(function(){
 		if(!hover_lock)
 		{	
 			hover_lock=true;
+
 			$(".person-menu-hidden").fadeIn(50);
 			$(".person-menu-hidden").animate({height:'7em'},100,function(){
 				hover_lock=false;
