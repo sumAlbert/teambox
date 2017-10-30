@@ -52,6 +52,93 @@ $(document).ready(function(){
 			}
 		}
     });
+
+    initLoginState=function initd(state,data){
+        console.log(data);
+        if(state){
+            $(".person-info-name").html(data.username);
+            $(".content-username").html(data.username);
+            $.ajax({
+                url:"./php/index.php",
+                type:"post",
+                data:{
+                    class: "User",
+                    action: "getSelfInfo"
+                },
+                success: function (data) {
+                    var JSON_data=JSON.parse(data);
+                    console.log(JSON_data);
+                    if(JSON_data.state==="Success"){
+                        var JSON_result=JSON_data.result;
+                        if(JSON_result["name_v"]==="no"){
+                        	json_Info.switch_name=false;
+                            $(".switch_name").children(".switch-inner").css({background:'#ddd'});
+                            $(".switch_name").children(".switch-inner").animate({
+                                right:'2em'
+                            },300);
+						}
+                        if(JSON_result["phone_v"]==="no"){
+                            json_Info.switch_qq=false;
+                            $(".switch_tel").children(".switch-inner").css({background:'#ddd'});
+                            $(".switch_tel").children(".switch-inner").animate({
+                                right:'2em'
+                            },300);
+                        }
+                        if(JSON_result["college_v"]==="no"){
+                            json_Info.switch_qq=false;
+                            $(".switch_school").children(".switch-inner").css({background:'#ddd'});
+                            $(".switch_school").children(".switch-inner").animate({
+                                right:'2em'
+                            },300);
+                        }
+                        if(JSON_result["qq_v"]==="no"){
+                            json_Info.switch_qq=false;
+                            $(".switch_qq").children(".switch-inner").css({background:'#ddd'});
+                            $(".switch_qq").children(".switch-inner").animate({
+                                right:'2em'
+                            },300);
+                        }
+                        if(JSON_result["wechat_v"]==="no"){
+                            json_Info.switch_qq=false;
+                            $(".switch_wechat").children(".switch-inner").css({background:'#ddd'});
+                            $(".switch_wechat").children(".switch-inner").animate({
+                                right:'2em'
+                            },300);
+                        }
+                        if(JSON_result["state"]==="warm"){
+                            json_Info.switch_hot=false;
+                            $(".switch_hot").children(".switch-inner").css({background:'#ddd'});
+                            $(".switch_hot").children(".switch-inner").animate({
+                                right:'2em'
+                            },300);
+                        }
+                        if(JSON_result["visible"]==="no"){
+                            json_Info.switch_stop=false;
+                            $(".switch_stop").children(".switch-inner").css({background:'#ddd'});
+                            $(".switch_stop").children(".switch-inner").animate({
+                                right:'2em'
+                            },300);
+                        }
+                        if(JSON_result["protection"]==="no"){
+                            json_Info.switch_save=false;
+                            $(".switch_save").children(".switch-inner").css({background:'#ddd'});
+                            $(".switch_save").children(".switch-inner").animate({
+                                right:'2em'
+                            },300);
+                        }
+                    }
+                },
+                error:function () {
+                    console.log("获取用户信息失败");
+                }
+
+            })
+        }
+        else{
+            alert("登陆失败，请重新登陆");
+            window.location.href="index.html";
+        }
+    };
 	/*表单提交*/
 	// $(".content-part-item-submit-button").click(function(){
 	// 	name=$(".input-name").val();

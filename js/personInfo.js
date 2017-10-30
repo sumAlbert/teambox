@@ -179,4 +179,50 @@ $(document).ready(function(){
 				}
 		}
 	}
+
+    initLoginState=function initd(state,data){
+        console.log(data);
+	    if(state){
+            $(".person-info-name").html(data.username);
+            $(".content-username").html(data.username);
+            $.ajax({
+                url:"./php/index.php",
+                type:"post",
+                data:{
+                    class: "User",
+                    action: "getSelfInfo"
+                },
+                success: function (data) {
+                    var JSON_data=JSON.parse(data);
+                    console.log(JSON_data);
+                    if(JSON_data.state==="Success"){
+                        var JSON_result=JSON_data.result;
+                        $(".input-name").attr("placeholder",JSON_result.username);
+                        if(JSON_result.date){
+                            $(".data-show-info-year").html(JSON_result.date.split("-")[0]);
+                            $(".data-show-info-month").html(JSON_result.date.split("-")[1]);
+                            $(".data-show-info-day").html(JSON_result.date.split("-")[2]);
+                        }
+                        $(".input-degree").attr("placeholder",JSON_result.education||"未填写");
+                        $(".input-school").attr("placeholder",JSON_result.school||"未填写");
+                        $(".input-campus").attr("placeholder",JSON_result.college||"未填写");
+                        $(".input-tel").attr("placeholder",JSON_result.phone||"未填写");
+                        $(".input-email").attr("placeholder",JSON_result.email||"未填写");
+                        $(".input-qq").attr("placeholder",JSON_result.qq||"未填写");
+                        $(".input-wechat").attr("placeholder",JSON_result.wechat||"未填写");
+                        $("#feature").html(JSON_result.other);
+                        $("#experience").html(JSON_result.experience);
+                    }
+                },
+                error:function () {
+                    console.log("获取用户信息失败");
+                }
+
+            })
+	    }
+        else{
+	        alert("登陆失败，请重新登陆");
+            window.location.href="index.html";
+        }
+    };
 });
