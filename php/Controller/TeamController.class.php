@@ -1,5 +1,17 @@
 <?php
 class TeamController extends Controller{
+	/* 建立新的任务
+	 * Post参数:
+	 * teamId
+	 * date
+	 * starttime
+	 * endtime
+	 * taskname
+	 * task
+	 * importance
+	 * 返回值：
+	 * state
+	 */
 	function setTask(){
 		$keys=array("teamId","date","starttime","endtime","taskname","task","importance");
 		$this->postCheck($keys);
@@ -36,6 +48,7 @@ class TeamController extends Controller{
 		$this->set('result', $result);
 	}
 	/* 获取用户创建的团队的ID以及name
+	 * checked
 	 * Post参数:
 	 * 无
 	 * 
@@ -51,6 +64,7 @@ class TeamController extends Controller{
 		$this->set('result',$result);
 	}
 	/* 获取用户加入的团队ID以及name
+	 * checked
 	 * Post参数:
 	 * 无
 	 * 
@@ -66,6 +80,7 @@ class TeamController extends Controller{
 		$this->set("result",$result);
 	}
 	/* 获取一个团队的信息
+	 * checked
 	 * Post参数:
 	 * id(团队id)
 	 * 
@@ -86,12 +101,13 @@ class TeamController extends Controller{
 		$this->set('result',$result);
 	}
 	/* 获取团队的成员信息
+	 * checked
 	 * Post参数:
 	 * id(团队id)
 	 * 
 	 * 返回值:
 	 * 'state':'Success'/'Fail'
-	 * 'result':[{'id':,'username',...},]
+	 * 'result':[{'id':,'username':,'email':},]
 	 * 
 	 */
 	function members(){
@@ -103,6 +119,8 @@ class TeamController extends Controller{
 		$this->set('result', $result);
 	}
 	/* 创建新的团队
+	 * checked
+	 * 
 	 * Post参数:
 	 * projectname 项目名
 	 * introduction 介绍
@@ -116,7 +134,7 @@ class TeamController extends Controller{
 	 * 
 	 * 返回值:
 	 * 'state'
-	 * 'result':{'teamId':}
+	 * 
 	 */
 	function setNewTeam(){
 		$this->success();

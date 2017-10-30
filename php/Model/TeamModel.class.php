@@ -6,7 +6,7 @@ class TeamModel extends Model{
 		$this->selectItem(self::table,"id", $id);
 		return $this->_result[0];
 	}
-	/*通过userid获取创建的团队ID以及name*/
+	/*通过userid获取创建的团队ID以及name checked*/
 	function getSelfTeam($id){
 		$this->selectItem(self::table, "leadernumber", $id);
 		$res=$this->_result;
@@ -17,28 +17,33 @@ class TeamModel extends Model{
 		}
 		return $newres;
 	}
-	/*获取用户加入的团队*/
+	/*获取用户加入的团队checked*/
 	function getJoinedTeam($id){
 		$columns=array("firstid","secondtype","relation");
 		$values=array($id,"team","join");
-		$this->selectItem2("relation", $columes, $values);
+		//echo json_encode($values);
+		$this->selectItem2("relation", $columns, $values);
 		$result=$this->_result;
+		//echo json_encode($result);
 		$teams=array();
 		for($i=0;$i<count($result);$i++){
-			array_push($teams, $result['secondid']);
+			$teams[$i]=$result[$i]['secondid'];
 		}
-		$model = new UserModel();
+		
+		//$model = new UserModel();
 		$result=array();
 		$newres=array();
-		for($i=0;$i<count($users);$i++){
+		for($i=0;$i<count($teams);$i++){
 			$result[$i]=$this->getTeamInfo($teams[$i]);
+			$newres[$i]['id']=$result[$i]['id'];
+			$newres[$i]['projectname']=$result[$i]['projectname'];
 		}
-		return $result;
+		return $newres;
 	}
-	/*通过teamid获取成员信息*/
+	/*通过teamid获取成员信息 checked*/
 	function members($teamId){
 		$columns=array("secondid","secondtype");
-		$values=array("$teamId","'team'");
+		$values=array($teamId,"team");
 		$this->selectItem2("relation", $columns, $values);
 		$result=$this->_result;
 		$memberId=array();
@@ -49,7 +54,10 @@ class TeamModel extends Model{
 		$memberInfo=array();
 		for ($i=0;$i<count($memberId);$i++){
 			$this->selectItem("user","id", $memberId[$i]);
-			array_push($memberInfo,$this->_result[0]);
+			$memberInfo[$i]['id']=$this->_result[0]['id'];
+			$memberInfo[$i]['username']=$this->_result[0]['username'];
+			$memberInfo[$i]['email']=$this->_result[0]['email'];
+			//array_push($memberInfo,$this->_result[0]);
 		}
 		return $memberInfo;
 	}
