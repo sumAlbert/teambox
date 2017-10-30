@@ -17,4 +17,8 @@ $(document).ready(function(){
 		$(".person-menu-hidden").animate({height:'0em'},200);
 		$(".person-menu-hidden").fadeOut(100);
 	});
+
+	$.ajax({
+
+	})
 });
