@@ -113,22 +113,22 @@ $(document).ready(function(){
 			type:"post",
 			url:"",
 			data:{
-				name:name,
-				degree:degree,
-				school:school,
-				campus:campus,
-				tel:tel,
+                class: "User",
+                action: "updateInfo",
+                username:name,
+                date:enter_year+"-"+enter_month+"-"+enter_day,
+                education:degree,
+                school:school,
+                college:campus,
+                phone:tel,
 				qq:qq,
 				wechat:wechat,
-				email:email,
-				specialty:specialty,
-				experience:experience,
-				day:enter_day,
-				month:enter_month,
-				year:enter_year
+                email:email,
+                other:specialty,
+                experience:experience,
 			},
 			success:function(data){
-				console.log("success");
+				console.log(data);
 			},
 			error:function(){
 				console.log("error");
