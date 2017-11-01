@@ -28,12 +28,14 @@ require APP_PATH."config.php";
 require APP_PATH."Loader.class.php";
 
 $_POST['class']="Team";
-$_POST['action']="getSelfTeam";
+$_POST['action']="findTeam";
 session_start();
-$_SESSION['user_id']=36;
+$_SESSION['user_id']=33;
 $_SESSION['user_email']='test6@test.com';
 $_SESSION['user_name']='王可';
-$_POST['id']=58;
+$_POST['key']='';
+$_POST['page']=1;
+$_POST['selections']='["Web前端"]';
 // $_POST["verify"]=123;
 // $_SESSION['Verify_Code']=123;
 // session_unset();
@@ -49,8 +51,9 @@ $loader=new Loader();
 $class=$_POST['class'];
 $action=$_POST['action'];
 //echo "a";
-$controllerName=$class."Controller";
-$controller=new $controllerName($class,$action);
+ $controllerName=$class."Controller";
+ $controller=new $controllerName($class,$action);
+
 
 //echo $_SESSION['user_id'].' ';
 // echo $_SESSION['user_email'].' ';

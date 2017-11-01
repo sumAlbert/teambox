@@ -110,21 +110,38 @@ action:favoriteChange
 Post参数: 
 class:User
 action:findPerson
-'key' 关键词搜索(可无)
+'key' 关键词搜索(可以为空)
+'page' 页数
+'selections' json编码的数组
 返回值:
 'state':'Fail'/'Success'
-'result’:[]
-
-示例:
-{
-"state":"Success",
-"result":[
-	{"id":"3","username":"","email":"email","password":"bb","date":"1998-01-01","education":"education","school":"school","college":"","phone":"","qq":"","wechat":"wechat","other":"other","experience":"experience","record":null,"sex":null,"state":"hot","visible":"yes","protection":"yes","name_v":"yes","college_v":"yes","phone_v":"yes","qq_v":"yes","wechat_v":"yes","key":0,"金融\/经济":0,"心理":0,"教育":0,"设计\/美术":0,"软件\/计算机":0,"机械":0,"电子信息工程":0,"航空\/飞行器":0,"体健":0,"微信\/软文":0,"PS\/AI":0,"视频制作":0,"音频制作":0,"PPT制作":0,"英语":0,"日语":0,"法语":0,"韩语":0,"Web前端":0,"数据库":0,"App开发":0,"桌面应用开发":0,"IOS应用开发":0,"Java":0,"PHP":0,"C\/C++":0,"语言表达":0,"播音主持":0,"撰文排版":0,"LOL":0,"守望先锋":0,"狼人杀":0},
-	{"id":"10","username":"","email":"abcde","password":"aabcd","date":null,"education":null,"school":null,"college":"","phone":null,"qq":null,"wechat":null,"other":null,"experience":null,"record":null,"sex":null,"state":"warm","visible":"yes","protection":"no","name_v":"yes","college_v":"yes","phone_v":"no","qq_v":"no","wechat_v":"no","key":0,"金融\/经济":0,"心理":0,"教育":0,"设计\/美术":0,"软件\/计算机":0,"机械":0,"电子信息工程":0,"航空\/飞行器":0,"体健":0,"微信\/软文":0,"PS\/AI":0,"视频制作":0,"音频制作":0,"PPT制作":0,"英语":0,"日语":0,"法语":0,"韩语":0,"Web前端":0,"数据库":0,"App开发":0,"桌面应用开发":0,"IOS应用开发":0,"Java":0,"PHP":0,"C\/C++":0,"语言表达":0,"播音主持":0,"撰文排版":0,"LOL":0,"守望先锋":0,"狼人杀":0}
-	]
+'result’:{
+	users:[{},{},],
+	cur_page:,
+	total_page:
 }
 
-注： 加权的key中文索引
+示例:
+
+参数：
+ key=''
+ page=1
+ selections='["Web前端"]'
+{"state":"Success",
+"result":{
+	"users":[
+		{"id":"32","username":"","email":"test2@test.com","education":"硕士","school":"华东师范大学","college":"","phone":"","qq":"","wechat":"","other":"前端设计，前端工程师","experience":"16级硕士研究生，擅长web前端设计，想要找一个长期的公益项目","total":4},
+		{"id":"38","username":"","email":"392@q.c","education":"本科","school":"上海交通大学","college":"","phone":"13222222222","qq":null,"wechat":null,"other":"WebWeb","experience":"WebWeb","total":4},
+		{"id":"37","username":"","email":"test6@test.com","education":"本科","school":"上海交通大学","college":"","phone":"18965372845","qq":"","wechat":"","other":"Web后端开发 数据挖掘","experience":"擅长PythonPHP","total":1},
+		{"id":"33","username":"","email":"test3@test.com","education":"本科","school":"华东师范大学","college":"","phone":"15866542198","qq":"3986271834","wechat":"","other":"主持","experience":"","total":0},
+		{"id":"34","username":"","email":"test4@test.com","education":"本科","school":"华东师范大学","college":"","phone":"18652938263","qq":"","wechat":"","other":"","experience":"16级本科生，动手能力强，求大腿","total":0},
+		{"id":"35","username":"","email":"test5@test.com","education":"本科","school":"华东师范大学","college":"","phone":"","qq":"","wechat":"","other":"AE,PR,会声会影","experience":"视频剪辑，有多次参赛奖项","total":0}
+		],
+	"cur_page":1,
+	"total_page":2
+	}
+}
+注： selections可有的元素
 '金融/经济','心理','教育','设计/美术','软件/计算机','机械','电子信息工程','航空/飞行器','体健',
 '微信/软文','PS/AI','视频制作','音频制作','PPT制作','英语','日语','法语','韩语',
 'Web前端','数据库','App开发','桌面应用开发','IOS应用开发','Java','PHP','C/C++',
@@ -241,3 +258,41 @@ link
 返回值:
 'state'
 -------------------------------
+获取所有团队
+
+Post参数:
+class:Team
+action:findTeam
+'key' 关键词搜索(可以为空)
+'page' 页数
+'selections' json编码的数组
+返回值:
+'state':'Fail'/'Success'
+'result’:{
+	teams:[{},{},],
+	cur_page:,
+	total_page:
+}
+
+示例:
+参数:
+key=''
+page=1
+selections='["Web前端"]'
+
+{"state":"Success",
+"result":{
+	"teams":[
+		{"id":"55","date":"2017-03-21","projectname":"Get牛项目组","introduction":"“Get牛”是一款校园牛人经验与知识的共享的平台，可点击查看详情http:\/\/dwz.cn\/4gOfHP\n目前也是共享经济的风口，愿做校园间最有趣的分享平台。筹备数月，产品即将上线。 ","requirement":"端：webapp、微信公众号开发，熟悉jquery和ajax。\n后端：熟悉php、ajax，熟悉MVC框架，对数据库有一定了解。 （以上不是硬性要求）","aim":"比赛\/创业\/兴趣","phone":"13167422359","qq":"","weChat":"","link":"ttp:\/\/dwz.cn\/4gOfHP","email":"15317315332@163.com"},
+		{"id":"56","date":"2017-03-21","projectname":"课程学习资料共享iOS app","introduction":"目前该项目团队正在开发一款课程学习资料共享的iOS APP,打算参加学校的创新创业比赛","requirement":"现在招募后台服务器开发人员","aim":"比赛\/兴趣","phone":"13254313543","qq":"27181291","weChat":"","link":"","email":"27181291@qq.com"},
+		{"id":"57","date":"2017-03-21","projectname":"靠谱的","introduction":"现有一个社交类轻应用需要招募【靠谱的】小伙伴一起参加创业比赛，因为是参赛所以并不复杂","requirement":"需要拥有web页面设计\/微店设计\/公众号开发技能的同学一个以及会用ps等软件美术设计的同学一个，需要积极主动，有充裕时间~","aim":"比赛\/","phone":"15839365412","qq":"","weChat":"","link":"","email":"wq@qq.com"},
+		{"id":"58","date":"2017-03-21","projectname":"二手交易平台项目","introduction":"我们正在做一个二手线上交流交易平台，有自己的独特创新点","requirement":"缺少一位懂得做web或APP开发的人员","aim":"创业\/兴趣","phone":"18965273642","qq":"","weChat":"","link":"","email":"986192312@qq.com"},
+		{"id":"59","date":"2017-03-21","projectname":"代取代寄快递平台","introduction":"华师大校内的代取代寄快递平台“快捷无忧”，目前在华师大的关注人数逾4K人，平台已基本成熟，现打算向上海各高校和全国高校进行推广","requirement":"诚招能够负责市场管理、策划和推广的合伙人，希望有意向的同学加入我们团队，一起去努力，请联系15921865025（电话或微信）","aim":"创业\/","phone":"15921865025","qq":"","weChat":"","link":"","email":"ecnuwq@qq.com"},
+		{"id":"60","date":"2017-03-21","projectname":" 众创众工","introduction":"该项目是提供一个机械电子O2O加工的平台，实现加工领域供求双方的信息对接。旨在帮助大学生，创客群体以及一些实业类初创公司，解决加工难的问题。","requirement":"目前招募人员若干，涉及市场分析，经营计划以及财务等","aim":"创业\/","phone":"15539364816","qq":"","weChat":"","link":"","email":"mdh088@126.com"}
+	],
+	"cur_page":1,
+	"total_page":2
+	}
+}
+
+----------------------------------------------

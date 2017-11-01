@@ -156,5 +156,17 @@ class TeamController extends Controller{
 		}
 		
 	}
+	
+	function findTeam(){
+		$this->postCheck(array("selections","key","page"));
+		$team=new TeamModel();
+		$key=null;
+		$key=$_POST['key'];
+		$selections=json_decode($_POST['selections']);
+		$page=$_POST['page'];
+		$result=$team->findTeam($key,$selections,$page);
+		$this->success();
+		$this->set('result', $result);
+	}
 }
 ?>
