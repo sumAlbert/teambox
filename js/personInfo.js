@@ -125,7 +125,7 @@ $(document).ready(function(){
 				wechat:wechat,
                 email:email,
                 other:specialty,
-                experience:experience,
+                experience:experience
 			},
 			success:function(data){
 				console.log(data);
@@ -202,6 +202,9 @@ $(document).ready(function(){
                             $(".data-show-info-year").html(JSON_result.date.split("-")[0]);
                             $(".data-show-info-month").html(JSON_result.date.split("-")[1]);
                             $(".data-show-info-day").html(JSON_result.date.split("-")[2]);
+                            enter_year=JSON_result.date.split("-")[0];
+                            enter_month=JSON_result.date.split("-")[1];
+                            enter_day=JSON_result.date.split("-")[2];
                         }
                         $(".input-degree").attr("placeholder",JSON_result.education||"未填写");
                         $(".input-school").attr("placeholder",JSON_result.school||"未填写");
