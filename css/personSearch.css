@@ -133,33 +133,42 @@ input[type="file"] {
   background: #3da8f5;
   color: white;
 }
-.flag-page-catalog:hover {
-  background: #3da8f5;
-  color: white;
-}
 /*catalog page in detail*/
 .flag-page-items {
   width: 100%;
+  display: none;
   background: white;
-  display: flex;
-  display: -webkit-flex;
   flex-direction: row;
   -webkit-flex-direction: row;
   justify-content: flex-start;
   -webkit-justify-content: flex-start;
   align-items: center;
   -webkit-align-items: center;
+  flex-wrap: wrap;
 }
 .flag-page-item {
   display: block;
   margin: 1em 2em 1em 1em;
   line-height: 1em;
 }
+.flag-page-items-active {
+  display: flex;
+  display: -webkit-flex;
+}
 .radio {
   display: inline-block;
   width: 1em;
   height: 1em;
   background: url("../images/personSearch/radio.png") center center no-repeat;
+  background-size: 100% 100%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.radio-active {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url("../images/personSearch/radio_selected.png") center center no-repeat;
   background-size: 100% 100%;
   vertical-align: middle;
   cursor: pointer;
@@ -387,6 +396,11 @@ input[type="file"] {
   font-weight: 400;
 }
 .page-change-item:hover {
+  color: white;
+  background: #3da8f5;
+  cursor: pointer;
+}
+.page-change-item-active {
   color: white;
   background: #3da8f5;
   cursor: pointer;

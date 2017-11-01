@@ -1,0 +1,12 @@
+$(document).ready(function(){
+	$(".checkbox_box").click(function(){
+		$(this).toggleClass("checkbox_box_check");
+		$(this).toggleClass("checkbox_box_uncheck");
+	});
+	$(".radiobox_box").click(function(){
+		$(this).addClass("radiobox_box_check");
+		$(this).removeClass("radiobox_box_uncheck");
+		$(this).siblings(".radiobox_box").removeClass("radiobox_box_check");
+		$(this).siblings(".radiobox_box").addClass("radiobox_box_uncheck");
+	});
+});

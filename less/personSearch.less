@@ -41,12 +41,14 @@ input[type="file"]{cursor:pointer;}
 .flag-page-catalogs{background: white;width: 100%;line-height: 3.3em;height: 3.3em;border-bottom: 3px solid #3da8f5;margin: 0 auto;vertical-align: top;font-size: 89%}
 .flag-page-catalog{display: inline-block;line-height: 3.3em;text-align: center;width: 6.6em;vertical-align: top;cursor: pointer;}
 .flag-page-catalog-active{background: #3da8f5;color: white;}
-.flag-page-catalog:hover{background: #3da8f5;color: white;}
+//.flag-page-catalog:hover{background: #3da8f5;color: white;}
 
 /*catalog page in detail*/
-.flag-page-items{width:100%;background:white;display: flex;display: -webkit-flex;flex-direction: row;-webkit-flex-direction: row;justify-content: flex-start;-webkit-justify-content: flex-start;align-items: center;-webkit-align-items: center;}
+.flag-page-items{width:100%;display: none;background:white;flex-direction: row;-webkit-flex-direction: row;justify-content: flex-start;-webkit-justify-content: flex-start;align-items: center;-webkit-align-items: center;flex-wrap: wrap;}
 .flag-page-item{display: block;margin: 1em 2em 1em 1em;line-height: 1em;}
+.flag-page-items-active{display: flex;display: -webkit-flex;}
 .radio{display: inline-block;width: 1em;height: 1em;background: url("../images/personSearch/radio.png") center center no-repeat;background-size: 100% 100%;vertical-align: middle;cursor: pointer;}
+.radio-active{display: inline-block;width: 1em;height: 1em;background: url("../images/personSearch/radio_selected.png") center center no-repeat;background-size: 100% 100%;vertical-align: middle;cursor: pointer;}
 .radio-name{display: inline-block;vertical-align: middle;}
 
 /*every line of person info menu*/
@@ -96,3 +98,4 @@ input[type="file"]{cursor:pointer;}
 .page-changes{display: block;text-align: center;margin: 2em 0 2em 0;}
 .page-change-item{display: inline-block;text-align: center;line-height: 2.5em;width: 2.5em; background: white;border-radius: 3px;font-weight: 400;}
 .page-change-item:hover{color: white;background: #3da8f5;cursor: pointer;}
+.page-change-item-active{color: white;background: #3da8f5;cursor: pointer;}

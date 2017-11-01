@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>require_team</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/require_team.css">
+	<link rel="stylesheet" type="text/css" href="">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/require_team.js"></script>
+</head>
+<body>
+	<div class="control-head">
+   		<div class="nav-img">
+			<img src="images/require_team/logo.png" style="cursor:pointer;" onclick="window.location.href='index.html';" /></div>
+            <li><a class="Nav-a" href="personSearch.html">个人</a></li>
+            <li><a class="Nav-a" href="teamSearch.html">团队</a></li>
+			<li><a class="Nav-a" href="index.html">合作</a></li>
+			<div class="head-right">
+			<li><a class="Nav-b" href="#" id="user">冰字典</a></li>
+			<li><a class="Nav-b" href="#" id="out">注销</a></li></div>
+	</div>
+	<div class="top">
+		<img src="images/require_team/top.jpg" alt="top.jpg">
+	</div>
+	<form class="main" method="post" >
+		<div class="part" id="first">
+			<div class="name_part">
+				<strong>团队信息</strong>
+			</div>
+			<div class="division_line_a">
+			</div>
+			<div class="division_line_b">
+				<div class="division_line_b_title">基本描述</div><!--
+				--><div class="division_line_b_dec1"></div>
+				<div class="division_line_b_dec2"></div>
+			</div>
+			<div class="line">
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目名称</label>
+			<input type="text" id="projectName" class="info" required>
+			</div>
+			<div class="line_textarea">
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目介绍</label>
+			<textarea name="introduce" cols="34" rows="6"></textarea>
+			</div>
+			<div class="line_textarea">
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;团队需求</label>
+			<textarea name="requirement" cols="34" rows="6"></textarea>
+			</div>
+			<div class="line">
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;项目目的&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<div class="checkbox_box checkbox_box_uncheck">
+				<input type="checkbox" name="aim" id='aim1' value="比赛">
+			</div><span class="check">比赛</span>
+			<div class="checkbox_box checkbox_box_uncheck">
+				<input type="checkbox" name="aim" id='aim2' value="创业">
+			</div><span class="check">创业</span>
+			<div class="checkbox_box checkbox_box_uncheck">
+				<input type="checkbox" name="aim" id='aim3' value="兴趣">
+			</div><span class="check">兴趣</span>
+			<div class="disappear">
+				<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Addition</label>
+				<input type="text" name="addition" id="addition">
+			</div>
+			</div>
+		</div>
+		<div class="part" id="second">
+			</div>
+			<div class="division_line_b">
+				<div class="division_line_b_title">联系方式</div><!--
+				--><div class="division_line_b_dec1"></div>
+				<div class="division_line_b_dec2"></div>
+			</div>
+			<div>
+				<div class="line">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机号码</label>
+					<input type="text" name="tel" class="info" required>
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子邮箱</label>
+					<input type="text" name="email" class="info">
+				</div>
+				<div class="line">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QQ</label>
+					<input type="text" name="qq" class="info" >
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微信</label>
+					<input type="text" name="weChat" class="info">
+				</div>
+				<div class="line">
+					<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;介绍链接</label>
+					<input type="text" name="linkIntro" class="info">
+				</div>
+			</div>
+		</div>
+		<div id="lastSubmit">
+			<button class="submit" type="button">Go</button>
+		</div>
+	</form>
+	<div class="foot">
+		<p class="note">未经Teambox同意，不得转载本网站之所有项目信息及作品</p>
+		<p class="note">Teambox版权所有©2015-2016</p>
+	</div>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

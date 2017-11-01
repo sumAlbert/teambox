@@ -32,11 +32,12 @@ $(document).ready(function(){
 		createTeamCardDom();
     });
 	function createTeamCardDom(){
-		var $small_card="        <div class=\"create-team-card create-team-card-bg3\">\n" +
-            "                        <div class=\"create-team-card-name\">团队名称</div>\n" +
-            "                        <div class=\"create-team-card-change\"></div>\n" +
-            "                    </div>";
-		$(".create-team-card-add").before($small_card);
+	    window.location.href="require_team.html";
+		// var $small_card="        <div class=\"create-team-card create-team-card-bg3\">\n" +
+         //    "                        <div class=\"create-team-card-name\">团队名称</div>\n" +
+         //    "                        <div class=\"create-team-card-change\"></div>\n" +
+         //    "                    </div>";
+		// $(".create-team-card-add").before($small_card);
 	}
 
 

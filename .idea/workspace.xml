@@ -2,11 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce5f9955-dad5-4e1d-9875-0cf383568b7a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/require_team/check.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/require_team/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/require_team/top.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/require_team/uncheck.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/require_team.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/require_person.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/require_team.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less/require_team.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/require_team.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/personAccountPW.js" afterPath="$PROJECT_DIR$/js/personAccountPW.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/personAccountSafe.js" afterPath="$PROJECT_DIR$/js/personAccountSafe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/personInfo.js" afterPath="$PROJECT_DIR$/js/personInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/personSearch.css" afterPath="$PROJECT_DIR$/css/personSearch.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/personSearch.js" afterPath="$PROJECT_DIR$/js/personSearch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/personTeamManager.js" afterPath="$PROJECT_DIR$/js/personTeamManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/personSearch.less" afterPath="$PROJECT_DIR$/less/personSearch.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personAccountPW.html" afterPath="$PROJECT_DIR$/personAccountPW.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personAccountSafe.html" afterPath="$PROJECT_DIR$/personAccountSafe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personCollection.html" afterPath="$PROJECT_DIR$/personCollection.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personInfo.html" afterPath="$PROJECT_DIR$/personInfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personSearch.html" afterPath="$PROJECT_DIR$/personSearch.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/personTeamManager.html" afterPath="$PROJECT_DIR$/personTeamManager.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,27 +34,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42651656">
+    <splitter split-orientation="horizontal" split-proportion="0.4846779">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="personInfo.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/personInfo.js">
+        <leaf>
+          <file leaf-file-name="personSearch.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/personSearch.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="658">
-                  <caret line="221" column="70" lean-forward="true" selection-start-line="221" selection-start-column="70" selection-end-line="221" selection-end-column="70" />
-                  <folding />
+                <state relative-caret-position="646">
+                  <caret line="83" column="48" lean-forward="true" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+                  <folding>
+                    <element signature="e#191#379#0" expanded="false" />
+                    <element signature="e#390#491#0" expanded="false" />
+                    <element signature="e#538#854#0" expanded="false" />
+                    <element signature="e#4826#5761#0" expanded="false" />
+                    <element signature="e#5785#5992#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="personAccountSafe.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
+          <file leaf-file-name="personSearch.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/personSearch.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="940">
-                  <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+                <state relative-caret-position="617">
+                  <caret line="299" column="34" lean-forward="false" selection-start-line="299" selection-start-column="34" selection-end-line="299" selection-end-column="34" />
                   <folding>
-                    <element signature="e#2634#6715#0" expanded="false" />
+                    <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#1;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#2;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#3;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#5;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="personSearch.less" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/less/personSearch.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="669">
+                  <caret line="94" column="32" lean-forward="false" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -47,22 +88,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="personAccountSafe.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2072">
-                  <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
+        <leaf>
           <file leaf-file-name="方法.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/方法.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="332">
-                  <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+                <state relative-caret-position="522">
+                  <caret line="133" column="95" lean-forward="true" selection-start-line="133" selection-start-column="95" selection-end-line="133" selection-end-column="95" />
                   <folding />
                 </state>
               </provider>
@@ -106,9 +137,10 @@
       <find>display: box;</find>
       <find>.regist</find>
       <find>.</find>
-      <find>团队</find>
       <find>content-main-person</find>
       <find>收藏</find>
+      <find>团队</find>
+      <find>radio</find>
     </findStrings>
     <replaceStrings>
       <replace>90%</replace>
@@ -130,8 +162,6 @@
         <option value="$PROJECT_DIR$/less/personTeamManager.less" />
         <option value="$PROJECT_DIR$/less/personAccountPW.less" />
         <option value="$PROJECT_DIR$/less/personCollection.less" />
-        <option value="$PROJECT_DIR$/personSearch.html" />
-        <option value="$PROJECT_DIR$/less/personSearch.less" />
         <option value="$PROJECT_DIR$/less/teamSearch.less" />
         <option value="$PROJECT_DIR$/teamSearch.html" />
         <option value="$PROJECT_DIR$/less/teamManager.less" />
@@ -142,23 +172,29 @@
         <option value="$PROJECT_DIR$/php/config.php" />
         <option value="$PROJECT_DIR$/signup.html" />
         <option value="$PROJECT_DIR$/less/signup.less" />
-        <option value="$PROJECT_DIR$/js/personSearch.js" />
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/js/signup.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/personInfo.html" />
         <option value="$PROJECT_DIR$/方法.txt" />
-        <option value="$PROJECT_DIR$/personAccountSafe.html" />
-        <option value="$PROJECT_DIR$/personTeamManager.html" />
-        <option value="$PROJECT_DIR$/js/personTeamManager.js" />
         <option value="$PROJECT_DIR$/teamManager.html" />
         <option value="$PROJECT_DIR$/js/personCollection.js" />
         <option value="$PROJECT_DIR$/js/teamManager.js" />
-        <option value="$PROJECT_DIR$/personCollection.html" />
-        <option value="$PROJECT_DIR$/personAccountPW.html" />
         <option value="$PROJECT_DIR$/js/personAccountPW.js" />
         <option value="$PROJECT_DIR$/js/personInfo.js" />
         <option value="$PROJECT_DIR$/js/personAccountSafe.js" />
+        <option value="$PROJECT_DIR$/js/load.js" />
+        <option value="$PROJECT_DIR$/js/personTeamManager.js" />
+        <option value="$PROJECT_DIR$/less/require_team.less" />
+        <option value="$PROJECT_DIR$/js/require_team.js" />
+        <option value="$PROJECT_DIR$/require_team.html" />
+        <option value="$PROJECT_DIR$/personCollection.html" />
+        <option value="$PROJECT_DIR$/personAccountSafe.html" />
+        <option value="$PROJECT_DIR$/personAccountPW.html" />
+        <option value="$PROJECT_DIR$/personTeamManager.html" />
+        <option value="$PROJECT_DIR$/personInfo.html" />
+        <option value="$PROJECT_DIR$/personSearch.html" />
+        <option value="$PROJECT_DIR$/less/personSearch.less" />
+        <option value="$PROJECT_DIR$/js/personSearch.js" />
       </list>
     </option>
   </component>
@@ -176,10 +212,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2437" />
-    <option name="y" value="246" />
-    <option name="width" value="625" />
-    <option name="height" value="664" />
+    <option name="x" value="3049" />
+    <option name="y" value="439" />
+    <option name="width" value="500" />
+    <option name="height" value="531" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -234,12 +270,23 @@
             <path>
               <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
               <item name="teambox" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teambox" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="personSearch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teambox" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="teambox" type="b2602c69:ProjectViewProjectNode" />
               <item name="teambox" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="less" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -258,11 +305,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\git\github\workspace\teambox\images\signup" />
+      <recent name="D:\git\github\workspace\teambox\images\require_team" />
       <recent name="D:\git\github\workspace\teambox\js" />
-      <recent name="D:\git\github\workspace\teambox\less" />
       <recent name="D:\git\github\workspace\teambox" />
-      <recent name="D:\git\github\workspace\teambox\images\index" />
+      <recent name="D:\git\github\workspace\teambox\images\signup" />
+      <recent name="D:\git\github\workspace\teambox\less" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -305,6 +352,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ce5f9955-dad5-4e1d-9875-0cf383568b7a" name="Default" comment="" />
@@ -337,7 +387,7 @@
       <workItem from="1509358309089" duration="2625000" />
       <workItem from="1509365283240" duration="12541000" />
       <workItem from="1509428356887" duration="1362000" />
-      <workItem from="1509523231886" duration="3760000" />
+      <workItem from="1509523231886" duration="15196000" />
     </task>
     <task id="LOCAL-00001" summary="plan to use webstorm develop this web">
       <created>1504535360843</created>
@@ -500,11 +550,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509524280559</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="some easy changes">
+      <created>1509527014509</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1509527014509</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99320000" />
+    <option name="totallyTimeSpent" value="110756000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -552,42 +609,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/design/HTML/HTML/teambox2/images/index/u89.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/personCollection/star.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/personSearch.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5587">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/design/HTML/HTML/teambox3/images/index/u6.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/personSearch.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="96" column="146" lean-forward="false" selection-start-line="96" selection-start-column="146" selection-end-line="96" selection-end-column="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/personCollection.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less/personCollection.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -722,13 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personSearch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3266">
-          <caret line="142" column="51" lean-forward="false" selection-start-line="142" selection-start-column="51" selection-end-line="142" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DB.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
@@ -757,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/personSearch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -782,13 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="86" column="36" lean-forward="false" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personTeamManager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="103" column="61" lean-forward="false" selection-start-line="103" selection-start-column="61" selection-end-line="103" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -821,18 +821,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personAccountPW.html">
+    <entry file="file://$PROJECT_DIR$/js/personAccountPW.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="90" column="51" lean-forward="true" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+        <state relative-caret-position="-86">
+          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/require_person.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/load.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/personInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="221" column="70" lean-forward="true" selection-start-line="221" selection-start-column="70" selection-end-line="221" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/require_team.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="35" column="31" lean-forward="true" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <folding>
+            <element signature="e#2634#6715#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/require_team.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/require_team.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personTeamManager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="70" lean-forward="false" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/personCollection.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="156" column="7" lean-forward="true" selection-start-line="156" selection-start-column="7" selection-end-line="156" selection-end-column="7" />
+        <state relative-caret-position="209">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -842,62 +926,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personAccountSafe.html">
+    <entry file="file://$PROJECT_DIR$/personAccountPW.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2072">
-          <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state relative-caret-position="209">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/personTeamManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1349">
-          <caret line="101" column="42" lean-forward="true" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
+        <state relative-caret-position="422">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="85" selection-end-column="18" />
           <folding>
-            <element signature="e#1699#3197#0" expanded="false" />
+            <element signature="e#1761#3259#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/personInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="59" column="44" lean-forward="false" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/personInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="221" column="70" lean-forward="true" selection-start-line="221" selection-start-column="70" selection-end-line="221" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/personAccountPW.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86">
-          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/方法.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="522">
+          <caret line="133" column="95" lean-forward="true" selection-start-line="133" selection-start-column="95" selection-end-line="133" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/personAccountSafe.js">
+    <entry file="file://$PROJECT_DIR$/less/personSearch.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+        <state relative-caret-position="669">
+          <caret line="94" column="32" lean-forward="false" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/personSearch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="299" column="34" lean-forward="false" selection-start-line="299" selection-start-column="34" selection-end-line="299" selection-end-column="34" />
           <folding>
-            <element signature="e#2634#6715#0" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#7;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/personSearch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="83" column="48" lean-forward="true" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+          <folding>
+            <element signature="e#191#379#0" expanded="false" />
+            <element signature="e#390#491#0" expanded="false" />
+            <element signature="e#538#854#0" expanded="false" />
+            <element signature="e#4826#5761#0" expanded="false" />
+            <element signature="e#5785#5992#0" expanded="false" />
           </folding>
         </state>
       </provider>

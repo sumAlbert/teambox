@@ -9,7 +9,7 @@
 <body>
 <div class="main">
 	<div class="header">
-		<a href="#" class="logo"></a>
+		<a href="index.html" class="logo"></a>
 		<div class="page-name">首页</div>
 		<div class="page-name">个人</div>
 		<div class="page-name">团队</div>
@@ -27,15 +27,15 @@
 				<div class="person-info-name">吗字典</div>
 			</a>
 			<div class="person-menu-hidden">
-				<a href="#" class="person-hidden-info person-hidden-info-special">
+				<a href="personInfo.html" class="person-hidden-info person-hidden-info-special">
 					<div class="person-hidden-info-logo"></div>
 					<div class="person-hidden-info-name"></div>
 				</a>
-				<a href="#" class="person-hidden-info">
+				<a href="personInfo.html" class="person-hidden-info">
 					<div class="person-hidden-info-logo"></div>
 					<div class="person-hidden-info-name">账户设置</div>
 				</a>
-				<a href="#" class="person-hidden-info">
+				<a href="signup.html" class="person-hidden-info">
 					<div class="person-hidden-info-logo"></div>
 					<div class="person-hidden-info-name">退出登录</div>
 				</a>
@@ -44,14 +44,14 @@
 	</div>
 	<div class="content">
 		<div class="flag-page-catalogs">
-			<div class="flag-page-catalog flag-page-catalog-active">专业</div><!--
-			--><div class="flag-page-catalog">宣传</div><!--
-			--><div class="flag-page-catalog">语言</div><!--
-			--><div class="flag-page-catalog">开发</div><!--
-			--><div class="flag-page-catalog">表达</div><!--
-			--><div class="flag-page-catalog">娱乐</div>
+			<div class="flag-page-catalog flag-page-catalog-active" data-save="0">专业</div><!--
+			--><div class="flag-page-catalog" data-save="1">宣传</div><!--
+			--><div class="flag-page-catalog" data-save="2">语言</div><!--
+			--><div class="flag-page-catalog" data-save="3">开发</div><!--
+			--><div class="flag-page-catalog" data-save="4">表达</div><!--
+			--><div class="flag-page-catalog" data-save="5">娱乐</div>
 		</div>
-		<div class="flag-page-items">
+		<div class="flag-page-items flag-page-items-active flag-page-items-0">
 			<div class="flag-page-item">
 				<div class="radio"></div>
 				<div class="radio-name">金融/经济</div>
@@ -60,118 +60,244 @@
 				<div class="radio"></div>
 				<div class="radio-name">心理</div>
 			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">教育</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">设计/美术</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">软件/计算机</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">机械</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">电子信息工程</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">航空/飞行器</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">体健</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-1">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">微信/软文</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">PS/AI</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">视频制作</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">音频制作</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">PPT制作</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-2">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">英语</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">日语</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">法语</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">韩语</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-3">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">Web前端</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">数据库</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">App开发</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">桌面应用开发</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">IOS应用开发</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">Java</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">PHP</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">C/C++</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-4">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">语言表达</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">波音主持</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">撰文排版</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-5">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">LOL</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">守望先锋</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">狼人杀</div>
+			</div>
 		</div>
 		<div class="person-search">
-			<div class="person-card">
-				<div class="person-card-line">
-					<div class="person-name">张三</div>
-					<div class="person-hot"></div>
-					<div class="person-collection"></div>
-				</div>
-				<div class="person-extra-info">
-					<div class="person-gender">女</div>
-					<div class="person-school">华东师范大学</div>
-				</div>
-				<div class="person-info-special-name">个人特长</div>
-				<div class="person-info-special">视频处理，音频处理</div>
-				<div class="person-info-special-name">个人经历</div>
-				<div class="person-info-experience">视频剪辑，有多次参赛经验</div>
-				<div class="person-info-special-name">联系方式</div>
-				<div class="person-info-email">982675088@qq.com</div>
-				<div class="person-info-tel">15317315332</div>
-			</div>
-			<div class="person-card">
-				<div class="person-card-line">
-					<div class="person-name">张三</div>
-					<div class="person-hot"></div>
-					<div class="person-collection"></div>
-				</div>
-				<div class="person-extra-info">
-					<div class="person-gender">女</div>
-					<div class="person-school">华东师范大学</div>
-				</div>
-				<div class="person-info-special-name">个人特长</div>
-				<div class="person-info-special">视频处理，音频处理</div>
-				<div class="person-info-special-name">个人经历</div>
-				<div class="person-info-experience">视频剪辑，有多次参赛经验</div>
-				<div class="person-info-special-name">联系方式</div>
-				<div class="person-info-email">982675088@qq.com</div>
-			</div>
-			<div class="person-card">
-				<div class="person-card-line">
-					<div class="person-name">张三</div>
-					<div class="person-hot"></div>
-					<div class="person-collection"></div>
-				</div>
-				<div class="person-extra-info">
-					<div class="person-gender">女</div>
-					<div class="person-school">华东师范大学</div>
-				</div>
-				<div class="person-info-special-name">个人特长</div>
-				<div class="person-info-special">视频处理，音频处理</div>
-				<div class="person-info-special-name">个人经历</div>
-				<div class="person-info-experience">视频剪辑，有多次参赛经验</div>
-				<div class="person-info-special-name">联系方式</div>
-				<div class="person-info-email">982675088@qq.com</div>
-			</div>
-			<div class="person-card">
-				<div class="person-card-line">
-					<div class="person-name">张三</div>
-					<div class="person-hot"></div>
-					<div class="person-collection"></div>
-				</div>
-				<div class="person-extra-info">
-					<div class="person-gender">女</div>
-					<div class="person-school">华东师范大学</div>
-				</div>
-				<div class="person-info-special-name">个人特长</div>
-				<div class="person-info-special">视频处理，音频处理</div>
-				<div class="person-info-special-name">个人经历</div>
-				<div class="person-info-experience">视频剪辑，有多次参赛经验</div>
-				<div class="person-info-special-name">联系方式</div>
-				<div class="person-info-email">982675088@qq.com</div>
-				<div class="person-info-tel">15317315332</div>
-			</div>
-			<div class="person-card">
-				<div class="person-card-line">
-					<div class="person-name">张三</div>
-					<div class="person-hot"></div>
-					<div class="person-collection"></div>
-				</div>
-				<div class="person-extra-info">
-					<div class="person-gender">女</div>
-					<div class="person-school">华东师范大学</div>
-				</div>
-				<div class="person-info-special-name">个人特长</div>
-				<div class="person-info-special">视频处理，音频处理</div>
-				<div class="person-info-special-name">个人经历</div>
-				<div class="person-info-experience">视频剪辑，有多次参赛经验</div>
-				<div class="person-info-special-name">联系方式</div>
-				<div class="person-info-email">982675088@qq.com</div>
-			</div>
-			<div class="person-card">
-				<div class="person-card-line">
-					<div class="person-name">张三</div>
-					<div class="person-hot"></div>
-					<div class="person-collection"></div>
-				</div>
-				<div class="person-extra-info">
-					<div class="person-gender">女</div>
-					<div class="person-school">华东师范大学</div>
-				</div>
-				<div class="person-info-special-name">个人特长</div>
-				<div class="person-info-special">视频处理，音频处理</div>
-				<div class="person-info-special-name">个人经历</div>
-				<div class="person-info-experience">视频剪辑，有多次参赛经验</div>
-				<div class="person-info-special-name">联系方式</div>
-				<div class="person-info-email">982675088@qq.com</div>
-			</div>
+			<!--<div class="person-card">-->
+				<!--<div class="person-card-line">-->
+					<!--<div class="person-name">张三</div>-->
+					<!--<div class="person-hot"></div>-->
+					<!--<div class="person-collection"></div>-->
+				<!--</div>-->
+				<!--<div class="person-extra-info">-->
+					<!--<div class="person-gender">女</div>-->
+					<!--<div class="person-school">华东师范大学</div>-->
+				<!--</div>-->
+				<!--<div class="person-info-special-name">个人特长</div>-->
+				<!--<div class="person-info-special">视频处理，音频处理</div>-->
+				<!--<div class="person-info-special-name">个人经历</div>-->
+				<!--<div class="person-info-experience">视频剪辑，有多次参赛经验</div>-->
+				<!--<div class="person-info-special-name">联系方式</div>-->
+				<!--<div class="person-info-email">982675088@qq.com</div>-->
+				<!--<div class="person-info-tel">15317315332</div>-->
+			<!--</div>-->
+			<!--<div class="person-card">-->
+				<!--<div class="person-card-line">-->
+					<!--<div class="person-name">张三</div>-->
+					<!--<div class="person-hot"></div>-->
+					<!--<div class="person-collection"></div>-->
+				<!--</div>-->
+				<!--<div class="person-extra-info">-->
+					<!--<div class="person-gender">女</div>-->
+					<!--<div class="person-school">华东师范大学</div>-->
+				<!--</div>-->
+				<!--<div class="person-info-special-name">个人特长</div>-->
+				<!--<div class="person-info-special">视频处理，音频处理</div>-->
+				<!--<div class="person-info-special-name">个人经历</div>-->
+				<!--<div class="person-info-experience">视频剪辑，有多次参赛经验</div>-->
+				<!--<div class="person-info-special-name">联系方式</div>-->
+				<!--<div class="person-info-email">982675088@qq.com</div>-->
+			<!--</div>-->
+			<!--<div class="person-card">-->
+				<!--<div class="person-card-line">-->
+					<!--<div class="person-name">张三</div>-->
+					<!--<div class="person-hot"></div>-->
+					<!--<div class="person-collection"></div>-->
+				<!--</div>-->
+				<!--<div class="person-extra-info">-->
+					<!--<div class="person-gender">女</div>-->
+					<!--<div class="person-school">华东师范大学</div>-->
+				<!--</div>-->
+				<!--<div class="person-info-special-name">个人特长</div>-->
+				<!--<div class="person-info-special">视频处理，音频处理</div>-->
+				<!--<div class="person-info-special-name">个人经历</div>-->
+				<!--<div class="person-info-experience">视频剪辑，有多次参赛经验</div>-->
+				<!--<div class="person-info-special-name">联系方式</div>-->
+				<!--<div class="person-info-email">982675088@qq.com</div>-->
+			<!--</div>-->
+			<!--<div class="person-card">-->
+				<!--<div class="person-card-line">-->
+					<!--<div class="person-name">张三</div>-->
+					<!--<div class="person-hot"></div>-->
+					<!--<div class="person-collection"></div>-->
+				<!--</div>-->
+				<!--<div class="person-extra-info">-->
+					<!--<div class="person-gender">女</div>-->
+					<!--<div class="person-school">华东师范大学</div>-->
+				<!--</div>-->
+				<!--<div class="person-info-special-name">个人特长</div>-->
+				<!--<div class="person-info-special">视频处理，音频处理</div>-->
+				<!--<div class="person-info-special-name">个人经历</div>-->
+				<!--<div class="person-info-experience">视频剪辑，有多次参赛经验</div>-->
+				<!--<div class="person-info-special-name">联系方式</div>-->
+				<!--<div class="person-info-email">982675088@qq.com</div>-->
+				<!--<div class="person-info-tel">15317315332</div>-->
+			<!--</div>-->
+			<!--<div class="person-card">-->
+				<!--<div class="person-card-line">-->
+					<!--<div class="person-name">张三</div>-->
+					<!--<div class="person-hot"></div>-->
+					<!--<div class="person-collection"></div>-->
+				<!--</div>-->
+				<!--<div class="person-extra-info">-->
+					<!--<div class="person-gender">女</div>-->
+					<!--<div class="person-school">华东师范大学</div>-->
+				<!--</div>-->
+				<!--<div class="person-info-special-name">个人特长</div>-->
+				<!--<div class="person-info-special">视频处理，音频处理</div>-->
+				<!--<div class="person-info-special-name">个人经历</div>-->
+				<!--<div class="person-info-experience">视频剪辑，有多次参赛经验</div>-->
+				<!--<div class="person-info-special-name">联系方式</div>-->
+				<!--<div class="person-info-email">982675088@qq.com</div>-->
+			<!--</div>-->
+			<!--<div class="person-card">-->
+				<!--<div class="person-card-line">-->
+					<!--<div class="person-name">张三</div>-->
+					<!--<div class="person-hot"></div>-->
+					<!--<div class="person-collection"></div>-->
+				<!--</div>-->
+				<!--<div class="person-extra-info">-->
+					<!--<div class="person-gender">女</div>-->
+					<!--<div class="person-school">华东师范大学</div>-->
+				<!--</div>-->
+				<!--<div class="person-info-special-name">个人特长</div>-->
+				<!--<div class="person-info-special">视频处理，音频处理</div>-->
+				<!--<div class="person-info-special-name">个人经历</div>-->
+				<!--<div class="person-info-experience">视频剪辑，有多次参赛经验</div>-->
+				<!--<div class="person-info-special-name">联系方式</div>-->
+				<!--<div class="person-info-email">982675088@qq.com</div>-->
+			<!--</div>-->
 		</div>
 		<div class="page-changes">
-			<div class="page-change-item"><</div>
-			<div class="page-change-item">1</div>
-			<div class="page-change-item">2</div>
-			<div class="page-change-item">></div>
 		</div>
 	</div>
 </div>
