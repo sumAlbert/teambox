@@ -153,7 +153,7 @@ class UserModel extends Model{
 	
 	
 	/*获取用户群 加权 隐藏信息 checked*/
-	function findperson($search){
+	function findperson($search,$selections,$page){
 		$users=$this->selectAllUsers();
 		$count=count($users);
 		$columns=array('金融/经济','心理','教育','设计/美术','软件/计算机','机械','电子信息工程','航空/飞行器','体健',
@@ -169,7 +169,7 @@ class UserModel extends Model{
 		
 		for($i=0;$i<$count;$i++){
 			//关键字加权
-			$users[$i]['key']=$this->setValue($users[$i]['experience'].$users[$i]['other'], $search)*50;
+			
 			for($j=0;$j<count($columns);$j++){
 				$users[$i][$columns[$j]]=$this->setValue($users[$i]['experience'].$users[$i]['other'], $keys[$j]);
 			}
@@ -179,8 +179,28 @@ class UserModel extends Model{
 			if($users[$i]['phone_v']=='yes') $users[$i]['phone']='';
 			if($users[$i]['qq_v']=='yes') $users[$i]['qq']='';
 			if($users[$i]['weChat_v']=='yes') $users[$i]['weChat']='';
+			//加权求和
+			$users[$i]['total']=0;
+			if($search!=null){
+				$users[$i]['key']=$this->setValue($users[$i]['experience'].$users[$i]['other'], $search)*50;
+				$users[$i]['total']+=$users[$i]['key'];
+			}
+			for($j=0;$j<count($selections);$j++){
+// 				echo $selections[$j].$users[$i][$selections[$j]].'\n';
+				$users[$i]['total']+=$users[$i][$selections[$j]];
+			}
+			$users[$i]=$this->setNewArray($users[$i], array("id","username","email","education","school","college","phone","qq","wechat","other","experience","total"));
 		}
-		return $users;
+		
+		/*排序*/
+		array_multisort(array_column($users,"total"),SORT_DESC,$users);
+		
+		$result=array();
+		$result['users']=array_slice($users,($page-1)*6,6,true);
+		$result['cur_page']=$page;
+		$result['total_page']=ceil(count($users)/6);
+		
+		return $result;
 		
 	}
 	/*为关键词加权*/
@@ -189,8 +209,8 @@ class UserModel extends Model{
 		$sum=0;
 		for($i=0;$i<strlen($substr);$i++)
 		{
-			if($substr[$i]!='/') $temp=$temp.$son[$i];
-			if($substr[$i]=='/' || $i= strlen($substr) )
+			if($substr[$i]!='/') $temp=$temp.$substr[$i];
+			if($substr[$i]=='/' || $i== strlen($substr)-1 )
 			{
 				$sum+=substr_count($str, $temp);
 				$temp='';

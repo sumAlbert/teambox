@@ -82,4 +82,65 @@ class TeamModel extends Model{
 		//echo json_encode($info);
 		return $this->insertItem("team", $columns, $values);
 	}
+	/*获取团队群*/
+	function findTeam($key,$selections,$page){
+		$this->selectAll(self::table);
+		$teams=$this->_result;
+		$count=count($teams);
+		$columns=array('金融/经济','心理','教育','设计/美术','软件/计算机','机械','电子信息工程','航空/飞行器','体健',
+				'微信/软文','PS/AI','视频制作','音频制作','PPT制作','英语','日语','法语','韩语',
+				'Web前端','数据库','App开发','桌面应用开发','IOS应用开发','Java','PHP','C/C++',
+				'语言表达','播音主持','撰文排版','LOL','守望先锋','狼人杀'
+		);
+		$keys=array('金融/经济','心理','教育','设计/美术','软件/计算机','机械','电子信息工程','航空/飞行器','体健',
+				'微信/软文','PS/图像/AI/ps/Ps/Ai/ai','视频/AE/PR','音频/Audition','PPT','英语/English/english','日语','法语','韩语',
+				'Web/web/前端','数据库','App/app','桌面/PC/pc','IOS/ios','java/Java/Android','php/PHP','C/C++',
+				'语言/表达','播音/主持','撰文/排版/写作/文案','LOL/英雄联盟','守望先锋/OW','狼人/杀人'
+		);
+		for($i=0;$i<$count;$i++){
+			//关键字加权			
+			for($j=0;$j<count($columns);$j++){
+				$teams[$i][$columns[$j]]=$this->setValue($teams[$i]['projectname'],$keys[$j])*10;
+				$teams[$i][$columns[$j]]=$this->setValue($teams[$i]['introduction'],$keys[$j])*5;
+				$teams[$i][$columns[$j]]=$this->setValue($teams[$i]['requirement'],$keys[$j])*5;
+			}
+			//加权求和
+			$teams[$i]['total']=0;
+			if($search!=null){
+				$teams[$i]['key']=$this->setValue($teams[$i]['projectname'],$search)*20;
+				$teams[$i]['key']=$this->setValue($teams[$i]['introduction'],$search)*10;
+				$teams[$i]['key']=$this->setValue($teams[$i]['requirement'],$search)*10;
+				$teams[$i]['total']+=$teams[$i]['key'];
+			}
+			for($j=0;$j<count($selections);$j++){
+				// 				echo $selections[$j].$teams[$i][$selections[$j]].'\n';
+				$teams[$i]['total']+=$teams[$i][$selections[$j]];
+			}
+			$teams[$i]=$this->setNewArray($teams[$i], array("id","date","projectname","introduction","requirement","aim","phone","qq","weChat","link","email"));
+		}
+		/*排序*/
+		array_multisort(array_column($teams,"total"),SORT_DESC,$teams);
+		
+		$result=array();
+		$result['teams']=array_slice($teams,($page-1)*6,6,true);
+		$result['cur_page']=$page;
+		$result['total_page']=ceil(count($teams)/6);
+		
+		return $result;
+	}
+	/*为关键词加权*/
+	private function setValue($str,$substr){
+		$temp='';
+		$sum=0;
+		for($i=0;$i<strlen($substr);$i++)
+		{
+			if($substr[$i]!='/') $temp=$temp.$substr[$i];
+			if($substr[$i]=='/' || $i== strlen($substr)-1 )
+			{
+				$sum+=substr_count($str, $temp);
+				$temp='';
+			}
+		}
+		return $sum;
+	}
 }

@@ -245,17 +245,20 @@ class UserController extends Controller{
 	 *  Post参数: 
 	 *  'key' 关键词搜索
 	 *  'selections' json编码的数组
+	 *  'page'
 	 *  返回值:
 	 *  'state':'Fail'/'Success'
 	 *  
 	 */
 	function findPerson(){
-		$key=null;
-		if(isset($_POST['key'])){
-			$key=$_POST['key'];
-		}
+
+		$this->postCheck(array("selections","key","page"));
 		$user=new UserModel();
-		$result=$user->findPerson($key);
+		$key=null;
+		$key=$_POST['key'];
+		$selections=json_decode($_POST['selections']);
+		$page=$_POST['page'];
+		$result=$user->findPerson($key,$selections,$page);
 		$this->success();
 		$this->set('result', $result);
 	}
