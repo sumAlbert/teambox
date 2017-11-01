@@ -28,6 +28,40 @@ $(document).ready(function(){
         $(this).parent().css({"border": "#c9c9c9 1px solid"});
     });
 
+    $("#pw-button").click(function(){
+        var old_pw=$(".input-old-pw").val();
+        var new_pw=$(".input-new-pw").val();
+        var again=$(".input-again-pw").val();
+        if(new_pw!==again){
+            alert("两次密码输入不相同")
+        }
+        else{
+            $.ajax({
+                type:"post",
+                url:"./php/index.php",
+                data:{
+                    class: "User",
+                    action: "changePassWord",
+                    oldPassWord: $.md5(old_pw),
+                    newPassWord: $.md5(new_pw)
+                },
+                success:function(data){
+                    console.log(data);
+                    var JSON_data=JSON.parse(data);
+                    if(JSON_data.state==="Success"){
+                        alert("修改成功");
+                    }
+                    else{
+                        alert("旧密码错误");
+                    }
+                },
+                error:function(){
+                    console.log("error");
+                }
+            })
+        }
+    });
+
     initLoginState=function initd(state,data){
         console.log(data);
         if(state){

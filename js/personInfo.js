@@ -100,7 +100,7 @@ $(document).ready(function(){
 	/*表单提交*/
 	$(".content-part-item-submit-button").click(function(){
 		name=$(".input-name").val();
-		degree=$(".inpupt-degree").val();
+		degree=$(".input-degree").val();
 		school=$(".input-school").val();
 		campus=$(".input-campus").val();
 		tel=$(".input-tel").val();
@@ -111,7 +111,7 @@ $(document).ready(function(){
 		experience=$("#experience").val();
 		$.ajax({
 			type:"post",
-			url:"",
+			url:"./php/index.php",
 			data:{
                 class: "User",
                 action: "updateInfo",
@@ -129,6 +129,10 @@ $(document).ready(function(){
 			},
 			success:function(data){
 				console.log(data);
+				var JSON_data=JSON.parse(data);
+				if(JSON_data.state==="Success"){
+					alert("修改成功");
+				}
 			},
 			error:function(){
 				console.log("error");
@@ -197,7 +201,7 @@ $(document).ready(function(){
                     console.log(JSON_data);
                     if(JSON_data.state==="Success"){
                         var JSON_result=JSON_data.result;
-                        $(".input-name").attr("placeholder",JSON_result.username);
+                        $(".input-name").attr("value",JSON_result.username);
                         if(JSON_result.date){
                             $(".data-show-info-year").html(JSON_result.date.split("-")[0]);
                             $(".data-show-info-month").html(JSON_result.date.split("-")[1]);
@@ -206,15 +210,17 @@ $(document).ready(function(){
                             enter_month=JSON_result.date.split("-")[1];
                             enter_day=JSON_result.date.split("-")[2];
                         }
-                        $(".input-degree").attr("placeholder",JSON_result.education||"未填写");
-                        $(".input-school").attr("placeholder",JSON_result.school||"未填写");
-                        $(".input-campus").attr("placeholder",JSON_result.college||"未填写");
-                        $(".input-tel").attr("placeholder",JSON_result.phone||"未填写");
-                        $(".input-email").attr("placeholder",JSON_result.email||"未填写");
-                        $(".input-qq").attr("placeholder",JSON_result.qq||"未填写");
-                        $(".input-wechat").attr("placeholder",JSON_result.wechat||"未填写");
+                        $(".input-degree").attr("value",JSON_result.education||"");
+                        $(".input-school").attr("value",JSON_result.school||"");
+                        $(".input-campus").attr("value",JSON_result.college||"");
+                        $(".input-tel").attr("value",JSON_result.phone||"");
+                        $(".input-email").attr("value",JSON_result.email||"");
+                        $(".input-qq").attr("value",JSON_result.qq||"");
+                        $(".input-wechat").attr("value",JSON_result.wechat||"");
                         $("#feature").html(JSON_result.other);
+                        specialty=JSON_result.other;
                         $("#experience").html(JSON_result.experience);
+                        experience=JSON_result.experience;
                     }
                 },
                 error:function () {

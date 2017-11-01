@@ -34,6 +34,7 @@ $(document).ready(function(){
             console.log(json_Info[switch_item_name]);
 			if(json_Info[switch_item_name]){
                 json_Info[switch_item_name]=false;
+                submitForm();
                 $(this).children(".switch-inner").css({background:'#ddd'});
                 $(this).children(".switch-inner").animate({
 					right:'2em'
@@ -43,6 +44,7 @@ $(document).ready(function(){
 			}
 			else{
                 json_Info[switch_item_name]=true;
+                submitForm();
                 $(this).children(".switch-inner").css({background:'rgba(26, 188, 156, 1)'});
                 $(this).children(".switch-inner").animate({
 					right:'0em'
@@ -52,6 +54,35 @@ $(document).ready(function(){
 			}
 		}
     });
+
+	function submitForm(){
+        $.ajax({
+            type:"post",
+            url:"./php/index.php",
+            data:{
+                class: "User",
+                action: "visibleChange",
+                name_v:json_Info.switch_name?"yes":"no",
+                college_v:json_Info.switch_school?"yes":"no",
+                phone_v:json_Info.switch_tel?"yes":"no",
+                qq_v:json_Info.switch_qq?"yes":"no",
+                wechat_v:json_Info.switch_wechat?"yes":"no",
+                state:json_Info.switch_hot?"hot":"warm",
+                visible:json_Info.switch_stop?"yes":"no",
+                protection:json_Info.switch_save?"yes":"no",
+            },
+            success:function(data){
+                console.log(data);
+                var JSON_data=JSON.parse(data);
+                if(JSON_data.state==="Success"){
+                    console.log("修改成功");
+                }
+            },
+            error:function(){
+                console.log("error");
+            }
+        })
+    }
 
     initLoginState=function initd(state,data){
         console.log(data);
