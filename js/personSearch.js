@@ -6,21 +6,23 @@ $(document).ready(function(){
 	var total=1;
 	/*锁，避免多次运行*/
 	var hover_lock=false;
-
+	var login_lock=false;
 
 
     submit();
 
 	/*标题栏右边的菜单*/
 	$(".person-menu").hover(function(){
-		if(!hover_lock)
-		{	
-			hover_lock=true;
+		if(login_lock){
+            if(!hover_lock)
+            {
+                hover_lock=true;
 
-			$(".person-menu-hidden").fadeIn(50);
-			$(".person-menu-hidden").animate({height:'7em'},100,function(){
-				hover_lock=false;
-			});
+                $(".person-menu-hidden").fadeIn(50);
+                $(".person-menu-hidden").animate({height:'7em'},100,function(){
+                    hover_lock=false;
+                });
+            }
 		}
 	},function(){
 		$(".person-menu-hidden").animate({height:'0em'},200);
@@ -166,4 +168,20 @@ $(document).ready(function(){
 		}
 		submit();
 	}
+
+    initLoginState=function initd(state,data){
+        console.log(data);
+        if(state){
+        	login_lock=true;
+            $(".person-info-name").html(data.username);
+        }
+        else{
+        	login_lock=false;
+            $(".person-info-name").html("登录");
+            $(".person-info-name").on("click",function () {
+				window.location.href="signup.html";
+            });
+            $(".person-info-logo").hide();
+        }
+    };
 });

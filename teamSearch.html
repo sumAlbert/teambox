@@ -9,10 +9,10 @@
 <body>
 <div class="main">
 	<div class="header">
-		<a href="#" class="logo"></a>
-		<div class="page-name">首页</div>
-		<div class="page-name">个人</div>
-		<div class="page-name">团队</div>
+		<a href="index.html" class="logo"></a>
+		<div class="page-name" onclick="window.location.href='index.html'">首页</div>
+		<div class="page-name" onclick="window.location.href='personSearch.html'">个人</div>
+		<div class="page-name" onclick="window.location.href='teamSearch.html'">团队</div>
 		<div class="page-name">联系</div>
 		<div class="page-search-box">
 			<input class="input-page-search" type="text">
@@ -44,14 +44,14 @@
 	</div>
 	<div class="content">
 		<div class="flag-page-catalogs">
-			<div class="flag-page-catalog flag-page-catalog-active">专业</div><!--
-			--><div class="flag-page-catalog">宣传</div><!--
-			--><div class="flag-page-catalog">语言</div><!--
-			--><div class="flag-page-catalog">开发</div><!--
-			--><div class="flag-page-catalog">表达</div><!--
-			--><div class="flag-page-catalog">娱乐</div>
+			<div class="flag-page-catalog flag-page-catalog-active" data-save="0">专业</div><!--
+			--><div class="flag-page-catalog" data-save="1">宣传</div><!--
+			--><div class="flag-page-catalog" data-save="2">语言</div><!--
+			--><div class="flag-page-catalog" data-save="3">开发</div><!--
+			--><div class="flag-page-catalog" data-save="4">表达</div><!--
+			--><div class="flag-page-catalog" data-save="5">娱乐</div>
 		</div>
-		<div class="flag-page-items">
+		<div class="flag-page-items flag-page-items-active flag-page-items-0">
 			<div class="flag-page-item">
 				<div class="radio"></div>
 				<div class="radio-name">金融/经济</div>
@@ -60,132 +60,263 @@
 				<div class="radio"></div>
 				<div class="radio-name">心理</div>
 			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">教育</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">设计/美术</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">软件/计算机</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">机械</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">电子信息工程</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">航空/飞行器</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">体健</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-1">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">微信/软文</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">PS/AI</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">视频制作</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">音频制作</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">PPT制作</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-2">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">英语</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">日语</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">法语</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">韩语</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-3">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">Web前端</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">数据库</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">App开发</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">桌面应用开发</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">IOS应用开发</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">Java</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">PHP</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">C/C++</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-4">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">语言表达</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">波音主持</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">撰文排版</div>
+			</div>
+		</div>
+		<div class="flag-page-items flag-page-items-5">
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">LOL</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">守望先锋</div>
+			</div>
+			<div class="flag-page-item">
+				<div class="radio"></div>
+				<div class="radio-name">狼人杀</div>
+			</div>
 		</div>
 		<div class="person-search">
-			<div class="content-main-person-teams">
-				<div class="team-card">
-					<div class="team-card-line">
-						<div class="team-name">Get牛项目组</div>
-						<div class="team-collection"></div>
-					</div>
-					<div class="team-extra-info">
-						<div class="team-date">2017-03-21</div>
-						<div class="team-aim">比赛/创业/兴趣</div>
-					</div>
-					<div class="team-info-special-name">项目介绍</div>
-					<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>
-					<div class="team-info-special-name">项目需求</div>
-					<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>
-					<div class="team-info-special-name">联系方式</div>
-					<div class="team-info-email">982675088@qq.com</div>
-					<div class="team-info-tel">15317315332</div>
-				</div>
-			</div>
-			<div class="content-main-person-teams">
-				<div class="team-card">
-					<div class="team-card-line">
-						<div class="team-name">Get牛项目组</div>
-						<div class="team-collection"></div>
-					</div>
-					<div class="team-extra-info">
-						<div class="team-date">2017-03-21</div>
-						<div class="team-aim">比赛/创业/兴趣</div>
-					</div>
-					<div class="team-info-special-name">项目介绍</div>
-					<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>
-					<div class="team-info-special-name">项目需求</div>
-					<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>
-					<div class="team-info-special-name">联系方式</div>
-					<div class="team-info-email">982675088@qq.com</div>
-					<div class="team-info-tel">15317315332</div>
-				</div>
-			</div>
-			<div class="content-main-person-teams">
-				<div class="team-card">
-					<div class="team-card-line">
-						<div class="team-name">Get牛项目组</div>
-						<div class="team-collection"></div>
-					</div>
-					<div class="team-extra-info">
-						<div class="team-date">2017-03-21</div>
-						<div class="team-aim">比赛/创业/兴趣</div>
-					</div>
-					<div class="team-info-special-name">项目介绍</div>
-					<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>
-					<div class="team-info-special-name">项目需求</div>
-					<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>
-					<div class="team-info-special-name">联系方式</div>
-					<div class="team-info-email">982675088@qq.com</div>
-					<div class="team-info-tel">15317315332</div>
-				</div>
-			</div>
-			<div class="content-main-person-teams">
-				<div class="team-card">
-					<div class="team-card-line">
-						<div class="team-name">Get牛项目组</div>
-						<div class="team-collection"></div>
-					</div>
-					<div class="team-extra-info">
-						<div class="team-date">2017-03-21</div>
-						<div class="team-aim">比赛/创业/兴趣</div>
-					</div>
-					<div class="team-info-special-name">项目介绍</div>
-					<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>
-					<div class="team-info-special-name">项目需求</div>
-					<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>
-					<div class="team-info-special-name">联系方式</div>
-					<div class="team-info-email">982675088@qq.com</div>
-					<div class="team-info-tel">15317315332</div>
-				</div>
-			</div>
-			<div class="content-main-person-teams">
-				<div class="team-card">
-					<div class="team-card-line">
-						<div class="team-name">Get牛项目组</div>
-						<div class="team-collection"></div>
-					</div>
-					<div class="team-extra-info">
-						<div class="team-date">2017-03-21</div>
-						<div class="team-aim">比赛/创业/兴趣</div>
-					</div>
-					<div class="team-info-special-name">项目介绍</div>
-					<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>
-					<div class="team-info-special-name">项目需求</div>
-					<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>
-					<div class="team-info-special-name">联系方式</div>
-					<div class="team-info-email">982675088@qq.com</div>
-					<div class="team-info-tel">15317315332</div>
-				</div>
-			</div>
-			<div class="content-main-person-teams">
-				<div class="team-card">
-					<div class="team-card-line">
-						<div class="team-name">Get牛项目组</div>
-						<div class="team-collection"></div>
-					</div>
-					<div class="team-extra-info">
-						<div class="team-date">2017-03-21</div>
-						<div class="team-aim">比赛/创业/兴趣</div>
-					</div>
-					<div class="team-info-special-name">项目介绍</div>
-					<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>
-					<div class="team-info-special-name">项目需求</div>
-					<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>
-					<div class="team-info-special-name">联系方式</div>
-					<div class="team-info-email">982675088@qq.com</div>
-					<div class="team-info-tel">15317315332</div>
-				</div>
-			</div>
+			<!--<div class="content-main-person-teams">-->
+				<!--<div class="team-card">-->
+					<!--<div class="team-card-line">-->
+						<!--<div class="team-name">Get牛项目组</div>-->
+						<!--<div class="team-collection"></div>-->
+					<!--</div>-->
+					<!--<div class="team-extra-info">-->
+						<!--<div class="team-date">2017-03-21</div>-->
+						<!--<div class="team-aim">比赛/创业/兴趣</div>-->
+					<!--</div>-->
+					<!--<div class="team-info-special-name">项目介绍</div>-->
+					<!--<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>-->
+					<!--<div class="team-info-special-name">项目需求</div>-->
+					<!--<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>-->
+					<!--<div class="team-info-special-name">联系方式</div>-->
+					<!--<div class="team-info-email">982675088@qq.com</div>-->
+					<!--<div class="team-info-tel">15317315332</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="content-main-person-teams">-->
+				<!--<div class="team-card">-->
+					<!--<div class="team-card-line">-->
+						<!--<div class="team-name">Get牛项目组</div>-->
+						<!--<div class="team-collection"></div>-->
+					<!--</div>-->
+					<!--<div class="team-extra-info">-->
+						<!--<div class="team-date">2017-03-21</div>-->
+						<!--<div class="team-aim">比赛/创业/兴趣</div>-->
+					<!--</div>-->
+					<!--<div class="team-info-special-name">项目介绍</div>-->
+					<!--<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>-->
+					<!--<div class="team-info-special-name">项目需求</div>-->
+					<!--<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>-->
+					<!--<div class="team-info-special-name">联系方式</div>-->
+					<!--<div class="team-info-email">982675088@qq.com</div>-->
+					<!--<div class="team-info-tel">15317315332</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="content-main-person-teams">-->
+				<!--<div class="team-card">-->
+					<!--<div class="team-card-line">-->
+						<!--<div class="team-name">Get牛项目组</div>-->
+						<!--<div class="team-collection"></div>-->
+					<!--</div>-->
+					<!--<div class="team-extra-info">-->
+						<!--<div class="team-date">2017-03-21</div>-->
+						<!--<div class="team-aim">比赛/创业/兴趣</div>-->
+					<!--</div>-->
+					<!--<div class="team-info-special-name">项目介绍</div>-->
+					<!--<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>-->
+					<!--<div class="team-info-special-name">项目需求</div>-->
+					<!--<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>-->
+					<!--<div class="team-info-special-name">联系方式</div>-->
+					<!--<div class="team-info-email">982675088@qq.com</div>-->
+					<!--<div class="team-info-tel">15317315332</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="content-main-person-teams">-->
+				<!--<div class="team-card">-->
+					<!--<div class="team-card-line">-->
+						<!--<div class="team-name">Get牛项目组</div>-->
+						<!--<div class="team-collection"></div>-->
+					<!--</div>-->
+					<!--<div class="team-extra-info">-->
+						<!--<div class="team-date">2017-03-21</div>-->
+						<!--<div class="team-aim">比赛/创业/兴趣</div>-->
+					<!--</div>-->
+					<!--<div class="team-info-special-name">项目介绍</div>-->
+					<!--<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>-->
+					<!--<div class="team-info-special-name">项目需求</div>-->
+					<!--<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>-->
+					<!--<div class="team-info-special-name">联系方式</div>-->
+					<!--<div class="team-info-email">982675088@qq.com</div>-->
+					<!--<div class="team-info-tel">15317315332</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="content-main-person-teams">-->
+				<!--<div class="team-card">-->
+					<!--<div class="team-card-line">-->
+						<!--<div class="team-name">Get牛项目组</div>-->
+						<!--<div class="team-collection"></div>-->
+					<!--</div>-->
+					<!--<div class="team-extra-info">-->
+						<!--<div class="team-date">2017-03-21</div>-->
+						<!--<div class="team-aim">比赛/创业/兴趣</div>-->
+					<!--</div>-->
+					<!--<div class="team-info-special-name">项目介绍</div>-->
+					<!--<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>-->
+					<!--<div class="team-info-special-name">项目需求</div>-->
+					<!--<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>-->
+					<!--<div class="team-info-special-name">联系方式</div>-->
+					<!--<div class="team-info-email">982675088@qq.com</div>-->
+					<!--<div class="team-info-tel">15317315332</div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="content-main-person-teams">-->
+				<!--<div class="team-card">-->
+					<!--<div class="team-card-line">-->
+						<!--<div class="team-name">Get牛项目组</div>-->
+						<!--<div class="team-collection"></div>-->
+					<!--</div>-->
+					<!--<div class="team-extra-info">-->
+						<!--<div class="team-date">2017-03-21</div>-->
+						<!--<div class="team-aim">比赛/创业/兴趣</div>-->
+					<!--</div>-->
+					<!--<div class="team-info-special-name">项目介绍</div>-->
+					<!--<div class="team-info-intro">长江，是中国的母亲河。长江流域还是大熊猫、江豚、雪豹等旗舰物种生活了上万甚至上千万年的家园。但在过去几十年间，重工业的发展、水坝的建设和不合理的土地利用使长江成为世界上受污染和破坏最严重的河流之一。</div>-->
+					<!--<div class="team-info-special-name">项目需求</div>-->
+					<!--<div class="team-info-need">缺少一位懂得web前端开发的工程师</div>-->
+					<!--<div class="team-info-special-name">联系方式</div>-->
+					<!--<div class="team-info-email">982675088@qq.com</div>-->
+					<!--<div class="team-info-tel">15317315332</div>-->
+				<!--</div>-->
+			<!--</div>-->
 		</div>
 		<div class="page-changes">
-			<div class="page-change-item"><</div>
-			<div class="page-change-item">1</div>
-			<div class="page-change-item">2</div>
-			<div class="page-change-item">></div>
+			<!--<div class="page-change-item"><</div>-->
+			<!--<div class="page-change-item">1</div>-->
+			<!--<div class="page-change-item">2</div>-->
+			<!--<div class="page-change-item">></div>-->
 		</div>
 	</div>
 </div>
 </body>
 <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="./js/teamSearch.js"></script>
+<script type="text/javascript" src="./js/header.js"></script>
 </html>
