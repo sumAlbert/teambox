@@ -1,0 +1,154 @@
+@charset "utf-8";
+/*less setting*/
+/*css global settings*/
+html,
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  align-items: center;
+  background: #ededed;
+}
+.main {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  align-items: center;
+  background: #ededed;
+}
+a {
+  text-decoration: none;
+}
+.pic {
+  height: 100%;
+  width: 100%;
+}
+input[type="file"] {
+  cursor: pointer;
+}
+/*title bar*/
+.header {
+  position: fixed;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  align-items: center;
+  height: 3.5em;
+  width: 100%;
+  box-shadow: 0 0.1em 0.4em 0.02em rgba(153, 153, 153, 0.6);
+  background: white;
+  z-index: 10;
+}
+/*the left part of title bar(logo and page name)*/
+.logo {
+  position: relative;
+  height: 3.5em;
+  width: 11.25em;
+  margin: 0 .06em 0 1em;
+  background: url(../images/header/logo1.png) 0% 60% no-repeat;
+  background-size: 100% 71%;
+}
+.page-name {
+  font-size: 1.01em;
+  font-weight: bold;
+  color: #666;
+  margin: 0;
+}
+.flex-space {
+  flex: 1;
+  -webkit-flex: 1;
+}
+.content {
+  padding: 4.5em 0 1em;
+  max-width: 55em;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.item-line1 {
+  margin: 4em 0 0 0;
+  display: flex;
+  flex-direction: row;
+  height: 5em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.avatar1 {
+  width: 3.5em;
+  height: 3.5em;
+  margin: 0 2em 0 0;
+}
+.avatar2 {
+  width: 3.5em;
+  height: 3.5em;
+  margin: 0 0 0 2em;
+}
+.add-icon {
+  background: url("../images/requestLink/add.png") center center no-repeat;
+  background-size: 80% 80%;
+  width: 3em;
+  height: 3em;
+}
+.item-line2 {
+  margin: .5em 0 0 0;
+  display: flex;
+  flex-direction: row;
+  height: 5em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.request-name {
+  font-size: 220%;
+  color: #3da7f4;
+}
+.request-word {
+  font-size: 220%;
+  color: #666;
+  margin: 0 1.3em;
+}
+.team-name {
+  font-size: 220%;
+  color: #666;
+}
+.item-line3 {
+  margin: 9em 0 0 0;
+  display: flex;
+  flex-direction: row;
+  height: 5em;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.agree-button {
+  padding: .6em 2.1em;
+  margin: 0 1em 0 0;
+  background: #3da7f4;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.disagree-button {
+  padding: .6em 2.1em;
+  margin: 0 0 0 1em;
+  background: #AAA;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.item-line4 {
+  text-align: center;
+  border-top: 1px solid #bbb;
+  color: #bbb;
+  width: 80%;
+  margin: 1.5em auto;
+  padding: .5em 0 0 0;
+}

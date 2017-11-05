@@ -17,7 +17,29 @@ $(document).ready(function(){
 		$(".person-menu-hidden").animate({height:'0em'},200);
 		$(".person-menu-hidden").fadeOut(100);
 	});
+    $('#startDataPicker').datetimepicker({
+        format: 'yyyy-mm-dd hh:ii',
+        autoclose: true,
+        minView: "hour"
+    }).on('changeDate',function (ev) {
+        $(".start-time > span").html(ev.date.getFullYear()+"-"+ev.date.getMonth()+"-"+ev.date.getDay()+" "+ev.date.getHours()+":"+ev.date.getMinutes());
+    });
+    $('#stopDataPicker').datetimepicker({
+        format: 'yyyy-mm-dd hh:ii',
+        autoclose: true,
+        minView: "hour"
+    }).on('changeDate',function (ev) {
+        $(".stop-time > span").html(ev.date.getFullYear()+"-"+ev.date.getMonth()+"-"+ev.date.getDay()+" "+ev.date.getHours()+":"+ev.date.getMinutes());
+    });
+    $(".window-prompt-line1-item3").click(function () {
+        $(".main-hidden").addClass("main-hidden-display");
+    });
+    $(".content-add-task").click(function () {
+        $(".main-hidden").removeClass("main-hidden-display");
+    });
+    $(".window-prompt-line4").click(function () {
 
+    });
 
     initLoginState=function initd(state,data){
         console.log(data);

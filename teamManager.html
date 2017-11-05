@@ -4,10 +4,12 @@
 	<title>teamManager</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-datetimepicker.min.css">
 	<link rel="stylesheet" type="text/css" href="./css/teamManager.css">
 </head>
 <body>
-	<div class="main">
+<div class="main">
 		<div class="header">
 			<a href="#" class="logo"></a>
 			<div class="page-name">团队管理中心·项目名字</div>
@@ -148,9 +150,39 @@
 				</div>
 			</div>
 		</div>
+		<div class="main-hidden main-hidden-display">
+			<div class="window-prompt">
+				<div class="window-prompt-line1">
+					<div class="window-prompt-line1-item1">任务名称：</div>
+					<input class="window-prompt-line1-item2" placeholder="请输入名称"/>
+					<div class="window-prompt-line1-item3"></div>
+				</div>
+				<div class="window-prompt-line2">
+					<textarea placeholder="请输入任务描述" class="window-prompt-line2-item1"></textarea>
+				</div>
+				<div class="window-prompt-line3">
+					<img src="images/teamManager/data.png" class="window-prompt-line3-item1" />
+					<div class="start-time">
+						<span>2017-11-6 21:05</span>
+						<input type="text" value="2017-11-6 21:05" id="startDataPicker">
+					</div>--
+					<div class="stop-time">
+						<span>2017-11-6 21:05</span>
+						<input type="text" value="2017-11-6 21:05" id="stopDataPicker">
+					</div>
+				</div>
+				<div class="window-prompt-line4">提交</div>
+			</div>
+		</div>
 	</div>
+
 </body>
 <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="./js/teamManager.js"></script>
 <script type="text/javascript" src="./js/header.js"></script>
+<script>
+
+</script>
 </html>
