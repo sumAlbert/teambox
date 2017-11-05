@@ -13,7 +13,7 @@ $(document).ready(function(){
 				if(ifEmail())
 				{
 						var $aimString='';
-
+						console.log("success");
 						if($("#aim1").parent().attr("class")=="checkbox_box checkbox_box_check")
 							$aimString+='比赛/';
 						if($("#aim2").parent().attr("class")=="checkbox_box checkbox_box_check")
@@ -39,7 +39,7 @@ $(document).ready(function(){
                                 aim:$aimString,
 								},
 							success:function(data){
-								console.log(data);
+								window.location.href="./personTeamManager.html";
 							}
 						});
 				}

@@ -69,6 +69,7 @@ $(document).ready(function(){
             success: function (data) {
                 $(".person-search").html("");
                 var JSON_data=JSON.parse(data);
+                console.log(JSON_data);
                 if(JSON_data.state==="Success"){
                     var JSON_users=JSON_data.result.teams;
                     page=JSON_data.result.cur_page;

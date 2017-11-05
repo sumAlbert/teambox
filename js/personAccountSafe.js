@@ -68,7 +68,7 @@ $(document).ready(function(){
                 qq_v:json_Info.switch_qq?"yes":"no",
                 wechat_v:json_Info.switch_wechat?"yes":"no",
                 state:json_Info.switch_hot?"hot":"warm",
-                visible:json_Info.switch_stop?"yes":"no",
+                visible:json_Info.switch_stop?"no":"yes",
                 protection:json_Info.switch_save?"yes":"no",
             },
             success:function(data){
@@ -143,7 +143,7 @@ $(document).ready(function(){
                                 right:'2em'
                             },300);
                         }
-                        if(JSON_result["visible"]==="no"){
+                        if(JSON_result["visible"]==="yes"){
                             json_Info.switch_stop=false;
                             $(".switch_stop").children(".switch-inner").css({background:'#ddd'});
                             $(".switch_stop").children(".switch-inner").animate({

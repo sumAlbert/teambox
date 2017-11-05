@@ -56,6 +56,9 @@ $(document).ready(function(){
 		}
 		submit();
     });
+	$(".page-search-icon").click(function () {
+		submit();
+    });
 
 	function submit(){
 		$.ajax({
@@ -64,13 +67,14 @@ $(document).ready(function(){
             data:{
                 class: "User",
                 action: "findPerson",
-				key: "",
+				key: $("#person-search-123").val()||"",
 				page: page,
                 selections:JSON.stringify(submitEL)
             },
 			success: function (data) {
                 $(".person-search").html("");
 				var JSON_data=JSON.parse(data);
+				console.log(JSON_data);
 				if(JSON_data.state==="Success"){
 					var JSON_users=JSON_data.result.users;
 					page=JSON_data.result.cur_page;

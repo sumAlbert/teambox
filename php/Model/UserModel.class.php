@@ -29,11 +29,11 @@ class UserModel extends Model{
 	function getUserInfo($id){
 		$result=$this->selectUser($id);
 		
-		if($result['name_v']=='yes') $result['username']='';
-		if($result['college_v']=='yes') $result['college']='';
-		if($result['phone_v']=='yes') $result['phone']='';
-		if($result['qq_v']=='yes') $result['qq']='';
-		if($result['weChat_v']=='yes') $result['weChat']='';
+		if($result['name_v']!='yes') $result['username']='';
+		if($result['college_v']!='yes') $result['college']='';
+		if($result['phone_v']!='yes') $result['phone']='';
+		if($result['qq_v']!='yes') $result['qq']='';
+		if($result['weChat_v']!='yes') $result['weChat']='';
 		return $result;
 	}
 	/*用户注册 checked*/
@@ -174,11 +174,11 @@ class UserModel extends Model{
 				$users[$i][$columns[$j]]=$this->setValue($users[$i]['experience'].$users[$i]['other'], $keys[$j]);
 			}
 			//隐藏信息
-			if($users[$i]['name_v']=='yes') $users[$i]['username']='';
-			if($users[$i]['college_v']=='yes') $users[$i]['college']='';
-			if($users[$i]['phone_v']=='yes') $users[$i]['phone']='';
-			if($users[$i]['qq_v']=='yes') $users[$i]['qq']='';
-			if($users[$i]['weChat_v']=='yes') $users[$i]['weChat']='';
+			if($users[$i]['name_v']!='yes') $users[$i]['username']='';
+			if($users[$i]['college_v']!='yes') $users[$i]['college']='';
+			if($users[$i]['phone_v']!='yes') $users[$i]['phone']='';
+			if($users[$i]['qq_v']!='yes') $users[$i]['qq']='';
+			if($users[$i]['weChat_v']!='yes') $users[$i]['weChat']='';
 			//加权求和
 			$users[$i]['total']=0;
 			if($search!=null){
