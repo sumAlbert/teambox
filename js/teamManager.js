@@ -64,9 +64,41 @@ $(document).ready(function(){
             }
         })
     });
+    $(".content-members-icon").click(function () {
+        console.log($(".input-members-add").val());
+        $.ajax({
+            url:"./php/index.php",
+            type:"post",
+            data:{
+                class: "Team",
+                action: "inviteUser",
+                teamId: window.location.search.split("=")[1],
+                userEmail: $(".input-members-add").val()
+            },
+            success: function (data) {
+                var JSON_data=JSON.parse(data);
+                console.log(JSON_data);
+                if(JSON_data.state==="Success"){
+                    alert("已发送邀请");
+                }else if(JSON_data.state==="Invited"){
+                    alert("已经邀请过了");
+                }else if(JSON_data.state==="Not Leader"){
+                    alert("不是项目建立者");
+                }else if(JSON_data.state==="Wrong Email"){
+                    alert("不存在该用户");
+                }else{
+                    window.location.reload();
+                }
+            },
+            error:function () {
+                console.log("获取用户信息失败");
+            }
+        })
+    });
 
     initLoginState=function initd(state,data){
         console.log(data);
+        var color=["avatar_blue.png","avatar_green.png","avatar_red.png","avatar_yellow.png"];
         if(state){
             $(".person-info-name").html(data.username);
             $.ajax({
@@ -97,7 +129,7 @@ $(document).ready(function(){
                 error:function () {
                     console.log("获取用户信息失败");
                 }
-            })
+            });
             $.ajax({
                 url:"./php/index.php",
                 type:"post",
