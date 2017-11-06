@@ -27,8 +27,8 @@ defined('APP_PATH') or define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'
 require APP_PATH."config.php";
 require APP_PATH."Loader.class.php";
 
-$_POST['class']="User";
-$_POST['action']="declineInvitation";
+$_POST['class']="Team";
+$_POST['action']="getInvitation";
 session_start();
 $_SESSION['user_id']=33;
 $_SESSION['user_email']='test6@test.com';

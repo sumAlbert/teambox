@@ -6,5 +6,5 @@ define("DBUSER","root",false);
 define("DBPASSWORD","123456",false);
 define("DBNAME","db_teambox2",false);
 //网站地址
-define("WEBADDRESS","localhost:80",false);
+define("WEBADDRESS","http://localhost:80",false);
 ?>

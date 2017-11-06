@@ -265,6 +265,9 @@ class UserModel extends Model{
 		$relationId=$this->_result[0]['id'];
 		return $this->deleteItem("relation", "id", $relationId);
 	}
+	function getInvitation($teamId,$email){
+		
+	}
 
 
 }
