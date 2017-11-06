@@ -186,6 +186,7 @@ class TeamController extends Controller{
 		$teamId=$_POST['teamId'];
 		$userEmail=$_POST['userEmail'];
 		$userId=$_SESSION['user_id'];
+		$userEmail=base64_decode($userEmail);
 		$result=$team->inviteUser($teamId, $userEmail,$userId);
 		if(!$result){
 			$this->set("state", "Wrong Email");
@@ -205,11 +206,12 @@ class TeamController extends Controller{
 	}
 	
 	function sendEmail($email,$id){
-		//$email_64=base64_encode($email);
+		//$email_64=base64_decode($email);
+		//echo  $email;
 		$mailtitle = 'TeamBox团队的邀请';//邮件主题
 		$url= WEBADDRESS.'/requestLink.html?user='.base64_encode($email)."&id=$id";
 		$mailcontent =//邮件内容
-		"<img></img> <a>$url</a>";
+		"<img src='http://115.159.152.82/invitation.jpg'></img><div> <a href='$url'>$url</a></div>";
 		//$mailtitle = 'TeamBox用户的申请';//邮件主题
 		//$mailcontent ='a';//邮件内容
 		//******************** 配置信息 ********************************
@@ -224,6 +226,7 @@ class TeamController extends Controller{
 		$smtp = new smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);//这里面的一个true是表示使用身份验证,否则不使用身份验证.
 		$smtp->debug = false;//是否显示发送的调试信息
 		$state = $smtp->sendmail($smtpemailto, $smtpusermail, $mailtitle, $mailcontent, $mailtype);
+		//echo $state;
 		return $state==''?0:1;
 	}
 	
