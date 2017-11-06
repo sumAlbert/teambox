@@ -240,6 +240,31 @@ class UserModel extends Model{
 		}
 		return $this->updateItem(self::table,array("password"),array($newPasswd),"id",$id );
 	}
+	
+	function acceptInvitation($teamId,$email){
+		$userid=$this->getId($email);
+		$this->selectItem2("relation",
+				array("firstid","secondid","secondtype","relation"),
+				array($userid,$teamId,"team","invite"));
+		//echo json_encode($this->_result);
+		if(empty($this->_result)) return 0;
+		$relationId=$this->_result[0]['id'];
+		return $this->updateItem("relation",
+				array("relation"),
+				array("join"),
+				"id",$relationId);
+	}
+	
+	function declineInvitation($teamId,$email){
+		$userid=$this->getId($email);
+		$this->selectItem2("relation",
+				array("firstid","secondid","secondtype","relation"),
+				array($userid,$teamId,"team","invite"));
+		//echo json_encode($this->_result);
+		if(empty($this->_result)) return 0;
+		$relationId=$this->_result[0]['id'];
+		return $this->deleteItem("relation", "id", $relationId);
+	}
 
 
 }

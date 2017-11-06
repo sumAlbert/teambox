@@ -11,6 +11,7 @@ class Loader{
 		require APP_PATH.'Model/Model'.$EXT;
 		require APP_PATH.'View/View'.$EXT;
 		require APP_PATH.'Controller/Controller'.$EXT;
+		require APP_PATH.'smtp'.$EXT;
 	}
 	function loadClass($class){
 		$EXT='.class.php';

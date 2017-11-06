@@ -125,7 +125,7 @@ class Sql {
 			if($i!=$len-1) $update=$update.",";
 		}
 		$update=$update." where `$keyCol`=$keyVal";
-		
+		//echo $update;
 		$res=$this->_dbLink->query($update);
 		if($res == false) return 0;
 		else return 1;

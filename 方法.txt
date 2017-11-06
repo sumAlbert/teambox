@@ -320,3 +320,34 @@ action:getTask
 返回值:
  'state':'Success'/'Fail'
  'result':[{},]
+
+-----------------------------------------------
+邀请用户加入团队
+
+class:Team
+action:inviteUser
+teamId
+userEmail
+
+返回值
+state: 'Wrong Email'没有这个用户 'Invited'已经邀请过了或者已经是成员 
+'Not Leader'不是项目建立者 'Success'
+-----------------------------------------------
+接受邀请
+
+class:User
+action:acceptInvitation
+email
+teamId
+
+返回值
+state Success Fail
+------------------------------------------------
+拒接邀请
+class：User
+action:declineInvitation
+email
+teamId
+
+返回值
+state Success Fail

@@ -181,24 +181,50 @@ class TeamController extends Controller{
 	}
 	
 	function inviteUser(){
-		$this->postCheck("teamId","userEmail");
+		$this->postCheck(array("teamId","userEmail"));
 		$team=new TeamModel();
-		$teamId=$_SESSION['teamId'];
-		$userEmail=$_SERVER['userEmail'];
-		$result=$team->inviteUser($teamId, $userEmail);
+		$teamId=$_POST['teamId'];
+		$userEmail=$_POST['userEmail'];
+		$userId=$_SESSION['user_id'];
+		$result=$team->inviteUser($teamId, $userEmail,$userId);
 		if(!$result){
 			$this->set("state", "Wrong Email");
 		}else{
-			if($result<0){
+			if($result==-1){
 				$this->set("state", "Invited");
 			}else{
-				$this->success();
+				if($result==-2){
+					$this->set('state', 'Not Leader');
+				}
+				else{
+					if($this->sendEmail($userEmail, $teamId))
+						$this->success();
+				}	
 			}
 		}
 	}
 	
-	function sendEmail(){
-		
+	function sendEmail($email,$id){
+		//$email_64=base64_encode($email);
+		$mailtitle = 'TeamBox团队的邀请';//邮件主题
+		$url= WEBADDRESS.'/requestLink.html?user='.base64_encode($email)."&id=$id";
+		$mailcontent =//邮件内容
+		"<img></img> <a>$url</a>";
+		//$mailtitle = 'TeamBox用户的申请';//邮件主题
+		//$mailcontent ='a';//邮件内容
+		//******************** 配置信息 ********************************
+		$smtpserver = "smtp.163.com";//SMTP服务器
+		$smtpserverport =25;//SMTP服务器端口
+		$smtpusermail = "15317315332@163.com";//SMTP服务器的用户邮箱
+		$smtpemailto = $email;//发送给谁
+		$smtpuser = "15317315332@163.com";//SMTP服务器的用户帐号
+		$smtppass = "123aaaaaa";//SMTP服务器的用户密码
+		$mailtype = "HTML";//邮件格式（HTML/TXT）,TXT为文本邮件
+		//************************ 配置信息 ****************************
+		$smtp = new smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);//这里面的一个true是表示使用身份验证,否则不使用身份验证.
+		$smtp->debug = false;//是否显示发送的调试信息
+		$state = $smtp->sendmail($smtpemailto, $smtpusermail, $mailtitle, $mailcontent, $mailtype);
+		return $state==''?0:1;
 	}
 }
 ?>

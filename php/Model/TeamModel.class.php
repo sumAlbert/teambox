@@ -141,28 +141,32 @@ class TeamModel extends Model{
 		
 		return $result;
 	}
-	function inviteUser($teamId,$userEmail){
+	function inviteUser($teamId,$userEmail,$leaderId){
+		$this->selectItem("team", "id", $teamId);
+		$realLeaderId=$this->_result[0]['leadernumber'];
+		//echo json_encode($this->_result);
+		if($leaderId!=$realLeaderId) return -2;//不是创建者操作
 		$this->selectItem("user", "email", $userEmail);
 		if(empty($this->_result)) return 0;
 		else {
 			$userId=$this->_result[0]['id'];
 			$this->selectItem2("relation", array("firstid","secondid","secondtype","relation"), 
 					array($userId,$teamId,"team","invite"));
-			if(!empty($this->_result)) return -1;
+			if(!empty($this->_result)) return -1;//被邀请过
 			else {
 				$this->selectItem2("relation", array("firstid","secondid","secondtype","relation"),
-						array($userId,$teamId,"team","join"));
+						array($userId,$teamId,"team","join"));//已经是成员
 				if(!empty($this->_result)) return -1;
 				else{
 					$this->selectItem("team", "leadernumber", $userId);
-					if(!empty($this->_result)) return -1;
+					if(!empty($this->_result)) return -1;//邀请创建者
 					else{
 						$this->insertItem("relation", array("firstid","secondid","secondtype","relation"),
 								array($userId,$teamId,"team","invite"));
 						return 1;
 					}
 				}
-				
+	
 			}
 		}
 	}

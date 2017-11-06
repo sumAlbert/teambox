@@ -27,26 +27,27 @@ defined('APP_PATH') or define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'
 require APP_PATH."config.php";
 require APP_PATH."Loader.class.php";
 
-$_POST['class']="Team";
-$_POST['action']="findTeam";
+$_POST['class']="User";
+$_POST['action']="declineInvitation";
 session_start();
 $_SESSION['user_id']=33;
 $_SESSION['user_email']='test6@test.com';
-$_SESSION['user_name']='王可';
-$_POST['key']='';
-$_POST['page']=1;
+$_SESSION['user_name']='王海';
+$_POST["teamId"]=63;
+$_POST['email']="MzAzMzE2NzI3QHFxLmNvbQ==";
+$_POST["userEmail"]='303316727@qq.com';
 $_POST['selections']='["Web前端"]';
 // $_POST["verify"]=123;
 // $_SESSION['Verify_Code']=123;
 // session_unset();
-$keys=array("projectname","introduction","requirement","date",
-				"aim","phone","email","qq","weChat","link");
-$values=array("projectname","introduction","requirement","1998-01-02",
-				"aim","1234567","email","1234","weChat","link");
+// $keys=array("projectname","introduction","requirement","date",
+// 				"aim","phone","email","qq","weChat","link");
+// $values=array("projectname","introduction","requirement","1998-01-02",
+// 				"aim","1234567","email","1234","weChat","link");
 
-for($i=0;$i<count($keys);$i++){
-	$_POST[$keys[$i]]=$values[$i];
-}
+// for($i=0;$i<count($keys);$i++){
+// 	$_POST[$keys[$i]]=$values[$i];
+// }
 $loader=new Loader();
 $class=$_POST['class'];
 $action=$_POST['action'];

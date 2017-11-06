@@ -287,5 +287,29 @@ class UserController extends Controller{
 		}
 		else $this->set('state', "Fail");
 	}
+	
+	function acceptInvitation(){
+		$this->postCheck(array("email","teamId"));
+		$email=$_POST['email'];
+		$email=base64_decode($email);
+		$teamId=$_POST['teamId'];
+		$user=new UserModel();
+		//echo $email;
+		//echo $teamId;
+		if($user->acceptInvitation($teamId, $email))
+			$this->success();
+		else $this->set('state','Fail');
+	}
+	
+	function declineInvitation(){
+		$this->postCheck(array("email","teamId"));
+		$email=$_POST['email'];
+		$email=base64_decode($email);
+		$teamId=$_POST['teamId'];
+		$user=new UserModel();
+		if($user->declineInvitation($teamId, $email))
+			$this->success();
+		else $this->set('state','Fail');
+	}
 }
 ?>
