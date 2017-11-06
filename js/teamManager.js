@@ -57,6 +57,7 @@ $(document).ready(function(){
                 var JSON_data=JSON.parse(data);
                 console.log(JSON_data);
                 $(".main-hidden").addClass("main-hidden-display");
+                window.location.reload();
             },
             error:function () {
                 console.log("获取用户信息失败");
@@ -91,6 +92,55 @@ $(document).ready(function(){
                                 "\t\t\t\t</div>";
                         	$(".content-members-add").append($small_member);
 						}
+                    }
+                },
+                error:function () {
+                    console.log("获取用户信息失败");
+                }
+            })
+            $.ajax({
+                url:"./php/index.php",
+                type:"post",
+                data:{
+                    class: "Team",
+                    action: "getTask",
+                    teamid: window.location.search.split("=")[1]
+                },
+                success: function (data) {
+                    var JSON_data=JSON.parse(data);
+                    console.log(JSON_data);
+                    if(JSON_data.state==="Success"){
+                        var JSON_result=JSON_data.result;
+                        for(var i=0;i<JSON_result.length;i++){
+                            let startDate=new Date(JSON_result[i].starttime);
+                            let stopDate=new Date(JSON_result[i].endtime);
+                            var $small_task="<div class=\"content-task-list\">\n" +
+                                "\t\t\t\t\t<div class=\"content-task-item\">\n" +
+                                "\t\t\t\t\t\t<div class=\"content-task-item-headers\">\n" +
+                                "\t\t\t\t\t\t\t<div class=\"content-task-item-day\"></div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"content-task-item-data\">"+JSON_result[i].date+"</div>\n" +
+                                "\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t<div class=\"content-task-infos\">\n" +
+                                "\t\t\t\t\t\t\t<div class=\"content-task-duration\">\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"content-task-start-time\">"+startDate.getMonth()+"月"+startDate.getDay()+"日 "+startDate.getHours()+":"+startDate.getMinutes()+"</div>\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"content-task-icon-time\">~</div>\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"content-task-end-time\">"+stopDate.getMonth()+"月"+stopDate.getDay()+"日 "+stopDate.getHours()+":"+stopDate.getMinutes()+"</div>\n" +
+                                "\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"content-task-main-infos\">\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"content-task-name\">"+JSON_result[i].taskname+"</div>\n" +
+                                "\t\t\t\t\t\t\t\t<br />\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"content-task-requirement\">"+JSON_result[i].task+"</div>\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"content-task-stars\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<div class=\"content-task-star\"></div>\n" +
+                                "\t\t\t\t\t\t\t\t\t<div class=\"content-task-star\"></div>\n" +
+                                "\t\t\t\t\t\t\t\t\t<div class=\"content-task-star\"></div>\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t</div>";
+                            $(".content-task-cut-off").before($small_task);
+                        }
                     }
                 },
                 error:function () {
