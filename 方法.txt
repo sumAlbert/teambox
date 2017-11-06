@@ -362,3 +362,11 @@ teamId=url里的id
 state Success
 result:{"user":"\u738b\u6d77","team":"TeamBox"}
 -----------------------------------------------
+退出加入的团队
+
+class:Team
+action:deleteTeam
+teamId 退出的团队id
+
+返回值:
+state Success Fail

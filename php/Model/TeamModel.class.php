@@ -179,6 +179,12 @@ class TeamModel extends Model{
 		$result=array("user"=>$username,"team"=>$teamname);
 		return $result;
 	}
+	function deleteTeam($teamId,$userId){
+		return $this->deleteItems("relation", 
+				array("firstid","secondid","secondtype","relation"), 
+				array($userId,$teamId,"team","join"));
+		
+	}
 	/*为关键词加权*/
 	private function setValue($str,$substr){
 		$temp='';

@@ -235,5 +235,16 @@ class TeamController extends Controller{
 		$this->success();
 		$this->set("result", $result);
 	}
+	
+	function deleteTeam(){
+		$this->postCheck(array("teamId"));
+		$teamId=$_POST['teamId'];
+		$userId=$_SESSION['user_id'];
+		$team=new TeamModel();
+		if($team->deleteTeam($teamId, $userId))
+			$this->success();
+		else $this->set("state", "Fail");
+		
+	}
 }
 ?>
