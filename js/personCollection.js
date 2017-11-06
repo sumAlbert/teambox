@@ -35,14 +35,15 @@ $(document).ready(function(){
                     if(JSON_data.state==="Success"){
                         var JSON_result=JSON_data.result;
                         console.log(JSON_result);
-                        for(var i=0;i<JSON_result.length;i++){
-                        	if(JSON_result.name_v){
-                        		var name=JSON_result.username||"";
+                        for(var i=0;i<JSON_result.user.length;i++){
+                            console.log(i);
+                        	if(JSON_result.user[i].name_v){
+                        		var name=JSON_result.user[i].username||"";
 							}else{
                         		var name="匿名";
 							}
-                            if(JSON_phone._v){
-                                var phone=JSON_result.phone||"";
+                            if(JSON_result.user[i].phone_v){
+                                var phone=JSON_result.user[i].phone||"";
                             }else{
                                 var phone="";
                             }
@@ -53,25 +54,46 @@ $(document).ready(function(){
                                 "\t\t\t\t\t\t\t<div class=\"person-collection\"></div>\n" +
                                 "\t\t\t\t\t\t</div>\n" +
                                 "\t\t\t\t\t\t<div class=\"person-extra-info\">\n" +
-                                "\t\t\t\t\t\t\t<div class=\"person-gender\">"+(JSON_result.sex||"")+"</div>\n" +
-                                "\t\t\t\t\t\t\t<div class=\"person-school\">"+(JSON_result.school||"")+"</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"person-gender\">"+(JSON_result.user[i].sex||"")+"</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"person-school\">"+(JSON_result.user[i].school||"")+"</div>\n" +
                                 "\t\t\t\t\t\t</div>\n" +
                                 "\t\t\t\t\t\t<div class=\"person-info-special-name\">个人特长</div>\n" +
-                                "\t\t\t\t\t\t<div class=\"person-info-special\">"+(JSON_result.other||"")+"</div>\n" +
+                                "\t\t\t\t\t\t<div class=\"person-info-special\">"+(JSON_result.user[i].other||"")+"</div>\n" +
                                 "\t\t\t\t\t\t<div class=\"person-info-special-name\">个人经历</div>\n" +
-                                "\t\t\t\t\t\t<div class=\"person-info-experience\">"+(JSON_result.experience||"")+"</div>\n" +
+                                "\t\t\t\t\t\t<div class=\"person-info-experience\">"+(JSON_result.user[i].experience||"")+"</div>\n" +
                                 "\t\t\t\t\t\t<div class=\"person-info-special-name\">联系方式</div>\n" +
-                                "\t\t\t\t\t\t<div class=\"person-info-email\">"+JSON_result.email+"</div>\n" +
+                                "\t\t\t\t\t\t<div class=\"person-info-email\">"+JSON_result.user[i].email+"</div>\n" +
                                 "\t\t\t\t\t\t<div class=\"person-info-tel\">"+phone+"</div>\n" +
                                 "\t\t\t\t\t</div>";
                             $("#content-main-person").append($small_member);
+                        }
+                        for(var i=0;i<JSON_result.team.length;i++){
+                            console.log(i);
+                            var $small_member="<div class=\"team-card\">\n" +
+                                "\t\t\t\t\t\t\t<div class=\"team-card-line\">\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"team-name\">"+JSON_result.team[i].projectname+"</div>\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"team-collection\"></div>\n" +
+                                "\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"team-extra-info\">\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"team-date\">"+JSON_result.team[i].date+"</div>\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"team-aim\">"+JSON_result.team[i].aim+"</div>\n" +
+                                "\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"team-info-special-name\">项目介绍</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"team-info-intro\">"+JSON_result.team[i].intrduction+"</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"team-info-special-name\">项目需求</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"team-info-need\">"+JSON_result.team[i].requirement+"</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"team-info-special-name\">联系方式</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"team-info-email\">"+JSON_result.team[i].email+"</div>\n" +
+                                "\t\t\t\t\t\t\t<div class=\"team-info-tel\">"+JSON_result.team[i].phone+"</div>\n" +
+                                "\t\t\t\t\t\t</div>";
+                            $("#content-main-team").append($small_member);
                         }
                     }
                 },
                 error:function () {
                     console.log("获取用户信息失败");
                 }
-            })
+            });
         }
         else{
             alert("登陆失败，请重新登陆");

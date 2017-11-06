@@ -310,6 +310,17 @@ input[type="file"] {
   cursor: pointer;
   right: -0.3em;
 }
+.person-collection-inactive {
+  display: inline-block;
+  position: relative;
+  float: right;
+  width: 2em;
+  height: 2em;
+  background: url("../images/personCollection/star.png") center center no-repeat;
+  background-size: 70% 70%;
+  cursor: pointer;
+  right: -0.3em;
+}
 .person-extra-info {
   display: block;
   color: #666;

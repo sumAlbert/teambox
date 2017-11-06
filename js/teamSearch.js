@@ -77,11 +77,12 @@ $(document).ready(function(){
                     pageButtons(page,total);
                     if(JSON_users.length){
                         for(var i=0;i<JSON_users.length;i++){
+                            console.log(JSON_users[i].favorite==="yes"?"person-collection":"person-collection-inactive");
                             var $small_card="<div class=\"content-main-person-teams\">\n" +
                                 "\t\t\t\t<div class=\"team-card\">\n" +
                                 "\t\t\t\t\t<div class=\"team-card-line\">\n" +
-                                "\t\t\t\t\t\t<div class=\"team-name\">"+JSON_users[i].projectname+"</div>\n" +
-                                "\t\t\t\t\t\t<div class=\"team-collection\"></div>\n" +
+                                "\t\t\t\t\t\t<div class=\"team-name\">"+JSON_users[i].projectname.substr(0,8)+"</div>\n" +
+                                "\t\t\t\t\t\t<div id=\"star"+i+"\" class=\""+(JSON_users[i].favorite==="yes"?"team-collection":"team-collection-inactive")+"\"></div>\n" +
                                 "\t\t\t\t\t</div>\n" +
                                 "\t\t\t\t\t<div class=\"team-extra-info\">\n" +
                                 "\t\t\t\t\t\t<div class=\"team-date\">"+(JSON_users[i].data||"")+"</div>\n" +
@@ -97,14 +98,41 @@ $(document).ready(function(){
                                 "\t\t\t\t</div>\n" +
                                 "\t\t\t</div>";
                             $(".person-search").append($small_card);
+                            $("#star"+i).on("click",["team",JSON_users[i].id,i],function (event) {
+                                $.ajax({
+                                    url:"./php/index.php",
+                                    type:"post",
+                                    data:{
+                                        class: "User",
+                                        action: "favoriteChange",
+                                        type: event.data[0],
+                                        id: event.data[1]
+                                    },
+                                    success: function(data){
+                                        var JSON_data=JSON.parse(data);
+                                        console.log(JSON_data);
+                                        if($("#star"+event.data[2]).attr("class")==="team-collection-inactive"){
+                                            $("#star"+event.data[2]).addClass("team-collection");
+                                            $("#star"+event.data[2]).removeClass("team-collection-inactive");
+                                        }else{
+                                            $("#star"+event.data[2]).removeClass("team-collection");
+                                            $("#star"+event.data[2]).addClass("team-collection-inactive");
+                                        }
+                                    },
+                                    error: function (data) {
+                                        console.log("添加失败");
+                                    }
+                                })
+                            })
                         }
                     }
                     else{
+                        console.log(JSON_users.favorite);
                         var $small_card="<div class=\"content-main-person-teams\">\n" +
                             "\t\t\t\t<div class=\"team-card\">\n" +
                             "\t\t\t\t\t<div class=\"team-card-line\">\n" +
-                            "\t\t\t\t\t\t<div class=\"team-name\">"+JSON_users.projectname+"</div>\n" +
-                            "\t\t\t\t\t\t<div class=\"team-collection\"></div>\n" +
+                            "\t\t\t\t\t\t<div class=\"team-name\">"+JSON_users.projectname.substr(0,8)+"</div>\n" +
+                            "\t\t\t\t\t\t<div id=\"star\""+0+" class=\""+(JSON_users.favorite==="yes"?"team-collection":"team-collection-inactive")+"\"></div>\n" +
                             "\t\t\t\t\t</div>\n" +
                             "\t\t\t\t\t<div class=\"team-extra-info\">\n" +
                             "\t\t\t\t\t\t<div class=\"team-date\">"+(JSON_users.data||"")+"</div>\n" +
@@ -120,6 +148,32 @@ $(document).ready(function(){
                             "\t\t\t\t</div>\n" +
                             "\t\t\t</div>";
                         $(".person-search").append($small_card);
+                        $("#star0").on("click",["team",JSON_users.id,0],function (event) {
+                            $.ajax({
+                                url:"./php/index.php",
+                                type:"post",
+                                data:{
+                                    class: "User",
+                                    action: "favoriteChange",
+                                    type: event.data[0],
+                                    id: event.data[1]
+                                },
+                                success: function(data){
+                                    var JSON_data=JSON.parse(data);
+                                    console.log(JSON_data);
+                                    if($("#star"+event.data[2]).attr("class")==="team-collection-inactive"){
+                                        $("#star"+event.data[2]).addClass("team-collection");
+                                        $("#star"+event.data[2]).removeClass("team-collection-inactive");
+                                    }else{
+                                        $("#star"+event.data[2]).removeClass("team-collection");
+                                        $("#star"+event.data[2]).addClass("team-collection-inactive");
+                                    }
+                                },
+                                error: function (data) {
+                                    console.log("添加失败");
+                                }
+                            })
+                        })
                     }
                 }
             },

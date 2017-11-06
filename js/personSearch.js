@@ -86,7 +86,7 @@ $(document).ready(function(){
                                 "\t\t\t\t<div class=\"person-card-line\">\n" +
                                 "\t\t\t\t\t<div class=\"person-name\">"+(JSON_users[i].username||"匿名")+"</div>\n" +
                                 "\t\t\t\t\t<div class=\"person-hot\"></div>\n" +
-                                "\t\t\t\t\t<div class=\"person-collection\"></div>\n" +
+                                "\t\t\t\t\t\t<div id=\"star"+i+"\" class=\""+(JSON_users[i].favorite==="yes"?"person-collection":"person-collection-inactive")+"\"></div>\n" +
                                 "\t\t\t\t</div>\n" +
                                 "\t\t\t\t<div class=\"person-extra-info\">\n" +
                                 "\t\t\t\t\t<div class=\"person-gender\">女</div>\n" +
@@ -100,6 +100,33 @@ $(document).ready(function(){
                                 "\t\t\t\t<div class=\"person-info-email\">"+JSON_users[i].email+"</div>\n" +
                                 "\t\t\t</div>";
                             $(".person-search").append($small_card);
+                            $("#star"+i).on("click",["user",JSON_users[i].id,i],function (event) {
+                                $.ajax({
+                                    url:"./php/index.php",
+                                    type:"post",
+                                    data:{
+                                        class: "User",
+                                        action: "favoriteChange",
+                                        type: event.data[0],
+                                        id: event.data[1]
+                                    },
+                                    success: function(data){
+                                        var JSON_data=JSON.parse(data);
+                                        console.log(JSON_data);
+                                        console.log("#star"+event.data[2]);
+                                        if($("#star"+event.data[2]).attr("class")==="person-collection-inactive"){
+                                            $("#star"+event.data[2]).addClass("person-collection");
+                                            $("#star"+event.data[2]).removeClass("person-collection-inactive");
+                                        }else{
+                                            $("#star"+event.data[2]).removeClass("person-collection");
+                                            $("#star"+event.data[2]).addClass("person-collection-inactive");
+                                        }
+                                    },
+                                    error: function (data) {
+                                        console.log("添加失败");
+                                    }
+                                })
+                            })
                         }
 					}
 					else{
@@ -107,7 +134,7 @@ $(document).ready(function(){
 							"\t\t\t\t<div class=\"person-card-line\">\n" +
 							"\t\t\t\t\t<div class=\"person-name\">"+(JSON_users.username||"匿名")+"</div>\n" +
 							"\t\t\t\t\t<div class=\"person-hot\"></div>\n" +
-							"\t\t\t\t\t<div class=\"person-collection\"></div>\n" +
+                            "\t\t\t\t\t\t<div id=\"star\""+0+" class=\""+(JSON_users.favorite==="yes"?"person-collection":"person-collection-inactive")+"\"></div>\n" +
 							"\t\t\t\t</div>\n" +
 							"\t\t\t\t<div class=\"person-extra-info\">\n" +
 							"\t\t\t\t\t<div class=\"person-gender\">女</div>\n" +
@@ -121,8 +148,33 @@ $(document).ready(function(){
 							"\t\t\t\t<div class=\"person-info-email\">"+JSON_users.email+"</div>\n" +
 							"\t\t\t</div>";
 						$(".person-search").append($small_card);
+                        $("#star"+0).on("click",["user",JSON_users.id,0],function (event) {
+                            $.ajax({
+                                url:"./php/index.php",
+                                type:"post",
+                                data:{
+                                    class: "User",
+                                    action: "favoriteChange",
+                                    type: event.data[0],
+                                    id: event.data[1]
+                                },
+                                success: function(data){
+                                    var JSON_data=JSON.parse(data);
+                                    console.log(JSON_data);
+                                    if($("#star"+event.data[2]).attr("class")==="person-collection-inactive"){
+                                        $("#star"+event.data[2]).addClass("person-collection");
+                                        $("#star"+event.data[2]).removeClass("person-collection-inactive");
+                                    }else{
+                                        $("#star"+event.data[2]).removeClass("person-collection");
+                                        $("#star"+event.data[2]).addClass("person-collection-inactive");
+                                    }
+                                },
+                                error: function (data) {
+                                    console.log("添加失败");
+                                }
+                            })
+                        })
 					}
-
 				}
             },
 			error: function () {
