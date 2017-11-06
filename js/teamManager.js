@@ -38,7 +38,30 @@ $(document).ready(function(){
         $(".main-hidden").removeClass("main-hidden-display");
     });
     $(".window-prompt-line4").click(function () {
-
+        var locationDate = new Date();
+        $.ajax({
+            url:"./php/index.php",
+            type:"post",
+            data:{
+                class: "Team",
+                action: "setTask",
+                teamId: window.location.search.split("=")[1],
+                date: locationDate.getFullYear()+"-"+locationDate.getMonth()+"-"+locationDate.getDay(),
+                starttime:$(".start-time > span").html(),
+                endtime: $(".stop-time > span").html(),
+                taskname: $(".window-prompt-line1-item2").val(),
+                task: $(".window-prompt-line2-item1").val(),
+                importance: 3
+            },
+            success: function (data) {
+                var JSON_data=JSON.parse(data);
+                console.log(JSON_data);
+                $(".main-hidden").addClass("main-hidden-display");
+            },
+            error:function () {
+                console.log("获取用户信息失败");
+            }
+        })
     });
 
     initLoginState=function initd(state,data){
@@ -51,7 +74,7 @@ $(document).ready(function(){
                 data:{
                     class: "Team",
                     action: "members",
-					id: id
+					id: window.location.search.split("=")[1]
                 },
                 success: function (data) {
                     var JSON_data=JSON.parse(data);

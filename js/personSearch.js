@@ -139,7 +139,10 @@ $(document).ready(function(){
         	var start_flag=0;
 		}
 		else{
-            var start_flag=(current-2>=stop_current?stop_current-1:current-3);
+            if(total>8)
+                var start_flag=(current-2>=stop_current?stop_current-1:current-3);
+            else
+                var start_flag=0;
 		}
         for(var i=start_flag;i<len+start_flag;i++){
         	if(i===start_flag){
