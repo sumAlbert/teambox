@@ -226,5 +226,14 @@ class TeamController extends Controller{
 		$state = $smtp->sendmail($smtpemailto, $smtpusermail, $mailtitle, $mailcontent, $mailtype);
 		return $state==''?0:1;
 	}
+	
+	function getInvitation(){
+		$this->postCheck(array("teamId"));
+		$teamId=$_POST["teamId"];
+		$team=new TeamModel();
+		$result=$team->getInvitation($teamId);
+		$this->success();
+		$this->set("result", $result);
+	}
 }
 ?>
