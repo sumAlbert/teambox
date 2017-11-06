@@ -200,6 +200,7 @@ class TeamController extends Controller{
 				else{
 					if($this->sendEmail($userEmail, $teamId))
 						$this->success();
+					else $this->success();
 				}	
 			}
 		}
@@ -247,7 +248,6 @@ class TeamController extends Controller{
 		if($team->deleteTeam($teamId, $userId))
 			$this->success();
 		else $this->set("state", "Fail");
-		
 	}
 }
 ?>
