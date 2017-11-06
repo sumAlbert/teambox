@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ce5f9955-dad5-4e1d-9875-0cf383568b7a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/teamManager.js" afterPath="$PROJECT_DIR$/js/teamManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teamManager.html" afterPath="$PROJECT_DIR$/teamManager.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,8 +37,8 @@
           <file leaf-file-name="方法.txt" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/方法.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="213">
-                  <caret line="321" column="15" lean-forward="true" selection-start-line="321" selection-start-column="15" selection-end-line="321" selection-end-column="15" />
+                <state relative-caret-position="236">
+                  <caret line="322" column="0" lean-forward="true" selection-start-line="322" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -53,10 +51,12 @@
           <file leaf-file-name="teamManager.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/teamManager.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="567">
-                  <caret line="122" column="56" lean-forward="true" selection-start-line="122" selection-start-column="56" selection-end-line="122" selection-end-column="56" />
+                <state relative-caret-position="475">
+                  <caret line="100" column="19" lean-forward="false" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
                   <folding>
+                    <element signature="e#2552#3959#0" expanded="false" />
                     <element signature="e#3095#3805#0" expanded="false" />
+                    <element signature="e#3980#7268#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -491,7 +491,7 @@
       <workItem from="1509721491325" duration="995000" />
       <workItem from="1509885557928" duration="15216000" />
       <workItem from="1509966799275" duration="952000" />
-      <workItem from="1509970115124" duration="5131000" />
+      <workItem from="1509970115124" duration="5489000" />
     </task>
     <task id="LOCAL-00001" summary="plan to use webstorm develop this web">
       <created>1504535360843</created>
@@ -696,11 +696,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509973292035</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="some easy changes">
+      <created>1509975292638</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1509975292638</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137998000" />
+    <option name="totallyTimeSpent" value="138356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1072,16 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/teamManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="122" column="56" lean-forward="true" selection-start-line="122" selection-start-column="56" selection-end-line="122" selection-end-column="56" />
-          <folding>
-            <element signature="e#3095#3805#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/teamManager.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
@@ -1098,9 +1095,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/方法.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="321" column="15" lean-forward="true" selection-start-line="321" selection-start-column="15" selection-end-line="321" selection-end-column="15" />
+        <state relative-caret-position="236">
+          <caret line="322" column="0" lean-forward="true" selection-start-line="322" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/teamManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="100" column="19" lean-forward="false" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+          <folding>
+            <element signature="e#2552#3959#0" expanded="false" />
+            <element signature="e#3095#3805#0" expanded="false" />
+            <element signature="e#3980#7268#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
