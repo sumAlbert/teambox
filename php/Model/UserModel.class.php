@@ -153,7 +153,7 @@ class UserModel extends Model{
 	
 	
 	/*获取用户群 加权 隐藏信息 checked*/
-	function findperson($search,$selections,$page){
+	function findperson($search,$selections,$page,$user_id){
 		$users=$this->selectAllUsers();
 		$count=count($users);
 		$columns=array('金融/经济','心理','教育','设计/美术','软件/计算机','机械','电子信息工程','航空/飞行器','体健',
@@ -189,17 +189,31 @@ class UserModel extends Model{
 // 				echo $selections[$j].$users[$i][$selections[$j]].'\n';
 				$users[$i]['total']+=$users[$i][$selections[$j]];
 			}
-			$users[$i]=$this->setNewArray($users[$i], array("id","username","email","education","school","college","phone","qq","wechat","other","experience","total"));
+			/*设置收藏*/
+			if($user_id<0) $users[$i]['favorite']='no';
+			else{
+				
+				$this->selectItem2("relation",array("firstid","secondtype","secondid","relation"), array($user_id,"user",$users[$i]['id'],"favorite"));
+				if($this->_result!=null) $users[$i]['favorite']='yes';
+				else $users[$i]['favorite']='no';
+			}
+			$users[$i]=$this->setNewArray($users[$i], array("id","username","email","education","school","college","phone","qq","wechat","other","experience","total","favorite"));
 		}
 		
 		/*排序*/
 		array_multisort(array_column($users,"total"),SORT_DESC,$users);
 		
 		$result=array();
-		$result['users']=array_slice($users,($page-1)*6,6,true);
+		
+		$offset=($page-1)*6;
+		
+		for($i=$offset;$i<$page*6 && $i<count($users);$i++){
+			$result['users'][$i-$offset]=$users[$i];	
+		}
 		$result['cur_page']=$page;
 		$result['total_page']=ceil(count($users)/6);
 		
+	
 		return $result;
 		
 	}
@@ -226,6 +240,8 @@ class UserModel extends Model{
 		}
 		return $this->updateItem(self::table,array("password"),array($newPasswd),"id",$id );
 	}
+
+
 }
 
 ?>

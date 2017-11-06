@@ -7,22 +7,30 @@
     <script type="text/javascript">
     	$(document).ready(function(){
     		//alert('a');
-    		$.ajax({
-    			url:"test.php",
-    			type:"post",
-    			data:{
-    				a:'a',
-    				b:'b',
-    				c:''
-    			},
-    			success:function(ans){
-    				alert(ans);
-    			}
+    		
+    		$("#a").click(function(){
+    			//alert("a");
+    			var formData = new FormData();
+    			formData.append('file', $('#file')[0].files[0]);
+    			formData.append("name","123");
+    			$.ajax({
+    				url:"test2.php",
+    				type:"post",
+    				contentType: false,
+    				processData: false,
+    				data:formData,
+    				success:function(ans){
+    					alert(ans);
+    				}
+    			
+    			});
     		});
+
     	});
     </script>
 </head>
 <body>
-	
+	<input type="file" id="file">
+	<button id="a">a</button>
 </body>
 </html>

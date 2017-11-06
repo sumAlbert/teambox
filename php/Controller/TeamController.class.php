@@ -156,7 +156,16 @@ class TeamController extends Controller{
 		}
 		
 	}
-	
+	/*  获取团队列表
+	 *  checked
+	 *  Post参数:
+	 *  'key' 关键词搜索
+	 *  'selections' json编码的数组
+	 *  'page'
+	 *  返回值:
+	 *  'state':'Fail'/'Success'
+	 *
+	 */
 	function findTeam(){
 		$this->postCheck(array("selections","key","page"));
 		$team=new TeamModel();
@@ -164,9 +173,32 @@ class TeamController extends Controller{
 		$key=$_POST['key'];
 		$selections=json_decode($_POST['selections']);
 		$page=$_POST['page'];
-		$result=$team->findTeam($key,$selections,$page);
+		if(!isset($_SESSION['user_id'])) $id=-1;
+		else $id=$_SESSION['user_id'];
+		$result=$team->findTeam($key,$selections,$page,$id);
 		$this->success();
 		$this->set('result', $result);
+	}
+	
+	function inviteUser(){
+		$this->postCheck("teamId","userEmail");
+		$team=new TeamModel();
+		$teamId=$_SESSION['teamId'];
+		$userEmail=$_SERVER['userEmail'];
+		$result=$team->inviteUser($teamId, $userEmail);
+		if(!$result){
+			$this->set("state", "Wrong Email");
+		}else{
+			if($result<0){
+				$this->set("state", "Invited");
+			}else{
+				$this->success();
+			}
+		}
+	}
+	
+	function sendEmail(){
+		
 	}
 }
 ?>

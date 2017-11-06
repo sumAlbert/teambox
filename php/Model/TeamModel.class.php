@@ -83,7 +83,7 @@ class TeamModel extends Model{
 		return $this->insertItem("team", $columns, $values);
 	}
 	/*获取团队群*/
-	function findTeam($key,$selections,$page){
+	function findTeam($key,$selections,$page,$user_id){
 		$this->selectAll(self::table);
 		$teams=$this->_result;
 		$count=count($teams);
@@ -116,17 +116,55 @@ class TeamModel extends Model{
 				// 				echo $selections[$j].$teams[$i][$selections[$j]].'\n';
 				$teams[$i]['total']+=$teams[$i][$selections[$j]];
 			}
-			$teams[$i]=$this->setNewArray($teams[$i], array("id","date","projectname","introduction","requirement","aim","phone","qq","weChat","link","email"));
+			//处理收藏
+			if($user_id<0) $teams[$i]['favorite']='no';
+			else{
+			
+				$this->selectItem2("relation",array("firstid","secondtype","secondid","relation"), array($user_id,"team",$teams[$i]['id'],"favorite"));
+				if($this->_result!=null) $teams[$i]['favorite']='yes';
+				else $teams[$i]['favorite']='no';
+			}
+			$teams[$i]=$this->setNewArray($teams[$i], array("id","date","projectname","introduction","requirement","aim","phone","qq","weChat","link","email","total","favorite"));
 		}
 		/*排序*/
 		array_multisort(array_column($teams,"total"),SORT_DESC,$teams);
 		
 		$result=array();
-		$result['teams']=array_slice($teams,($page-1)*6,6,true);
+		$offset=($page-1)*6;
+		
+		for($i=$offset;$i<$page*6 && $i<count($teams);$i++){
+			$result['teams'][$i-$offset]=$teams[$i];
+		}
+// 		$result['teams']=array_slice($teams,($page-1)*6,6,true);
 		$result['cur_page']=$page;
 		$result['total_page']=ceil(count($teams)/6);
 		
 		return $result;
+	}
+	function inviteUser($teamId,$userEmail){
+		$this->selectItem("user", "email", $userEmail);
+		if(empty($this->_result)) return 0;
+		else {
+			$userId=$this->_result[0]['id'];
+			$this->selectItem2("relation", array("firstid","secondid","secondtype","relation"), 
+					array($userId,$teamId,"team","invite"));
+			if(!empty($this->_result)) return -1;
+			else {
+				$this->selectItem2("relation", array("firstid","secondid","secondtype","relation"),
+						array($userId,$teamId,"team","join"));
+				if(!empty($this->_result)) return -1;
+				else{
+					$this->selectItem("team", "leadernumber", $userId);
+					if(!empty($this->_result)) return -1;
+					else{
+						$this->insertItem("relation", array("firstid","secondid","secondtype","relation"),
+								array($userId,$teamId,"team","invite"));
+						return 1;
+					}
+				}
+				
+			}
+		}
 	}
 	/*为关键词加权*/
 	private function setValue($str,$substr){

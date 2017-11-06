@@ -31,5 +31,14 @@ class Model extends Sql{
 		}
 		return $newArray;
 	}
+	/* 关联数组转换为索引数组*/
+	function arrayChange($old){
+		$newArray=array();
+		$i=0;
+		foreach ($old as $key => $value){
+			array_push($newArray, $value);
+		}
+		return $newArray;
+	}
 }
 ?>

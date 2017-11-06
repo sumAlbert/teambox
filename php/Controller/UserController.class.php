@@ -258,7 +258,9 @@ class UserController extends Controller{
 		$key=$_POST['key'];
 		$selections=json_decode($_POST['selections']);
 		$page=$_POST['page'];
-		$result=$user->findPerson($key,$selections,$page);
+		if(isset($_SESSION['user_id'])) $id=$_SESSION['user_id'];
+		else $id=-1;
+		$result=$user->findPerson($key,$selections,$page,$id);
 		$this->success();
 		$this->set('result', $result);
 	}

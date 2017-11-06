@@ -296,3 +296,27 @@ selections='["Web前端"]'
 }
 
 ----------------------------------------------
+ 建立新的任务
+Post参数:
+class:Team
+action:setTask
+teamId
+date
+starttime
+endtime
+taskname
+task
+importance
+返回值：
+state
+
+-----------------------------------------------
+获取团队的任务
+ Post参数:
+class:Team
+action:getTask
+'teamid'团队id
+
+返回值:
+ 'state':'Success'/'Fail'
+ 'result':[{},]
