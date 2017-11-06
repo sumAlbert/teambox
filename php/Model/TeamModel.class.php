@@ -48,7 +48,7 @@ class TeamModel extends Model{
 		$result=$this->_result;
 		$memberId=array();
 		for($i=0;$result[$i]!=null;$i++){
-			if($result[$i]["relation"] != 'favorite')
+			if($result[$i]["relation"] == 'join')
 				array_push($memberId, $result[$i]['firstid']);
 		}
 		$memberInfo=array();
