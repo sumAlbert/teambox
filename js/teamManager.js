@@ -118,11 +118,11 @@ $(document).ready(function(){
                         	var $small_member="\t\t\t\t<div class=\"content-member\">\n" +
                                 "\t\t\t\t\t<img src=\"./images/teamManager/"+color[i%4]+"\" class=\"img-avatar\">\n" +
                                 "\t\t\t\t\t<div class=\"content-member-infos\">\n" +
-                                "\t\t\t\t\t\t<div class=\"content-member-name\">"+JSON_result.username+"</div>\n" +
-                                "\t\t\t\t\t\t<div class=\"content-member-email\">"+JSON_result.email+"</div>\n" +
+                                "\t\t\t\t\t\t<div class=\"content-member-name\">"+JSON_result[i].username+"</div>\n" +
+                                "\t\t\t\t\t\t<div class=\"content-member-email\">"+JSON_result[i].email+"</div>\n" +
                                 "\t\t\t\t\t</div>\n" +
                                 "\t\t\t\t</div>";
-                        	$(".content-members-add").append($small_member);
+                        	$(".content-members").append($small_member);
 						}
                     }
                 },
