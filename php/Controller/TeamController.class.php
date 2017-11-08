@@ -186,7 +186,7 @@ class TeamController extends Controller{
 		$teamId=$_POST['teamId'];
 		$userEmail=$_POST['userEmail'];
 		$userId=$_SESSION['user_id'];
-		$userEmail=base64_decode($userEmail);
+		//$userEmail=base64_decode($userEmail);
 		$result=$team->inviteUser($teamId, $userEmail,$userId);
 		if(!$result){
 			$this->set("state", "Wrong Email");
